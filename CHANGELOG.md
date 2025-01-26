@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/Notifycal/shared/compare/v1.4.0...v1.5.0) (2025-01-26)
+
+
+### Features
+
+* handle sleep function ([#1](https://github.com/Notifycal/shared/issues/1)) ([75eb8d1](https://github.com/Notifycal/shared/commit/75eb8d1a19a8b7f895be6de12daefae6444169c5))
+
 ## [1.4.0](https://github.com/Notifycal/shared/compare/v1.3.0...v1.4.0) (2025-01-26)
 
 
