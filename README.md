@@ -14,6 +14,7 @@ Check how it's done in the `"exports"` key of [`package.json`](./package.json).
 
 ## How to install
 
+### From Github registry
 1. Create a Personal Access Token (classic)
 
 Go to your Github profile > Settings. Then open Developer Settings in the sidebar, and Personal access tokens > Tokens (classic). Or click [here](https://github.com/settings/tokens).
@@ -42,3 +43,8 @@ up to date, audited 752 packages in 1s
 
 found 0 vulnerabilities
 ```
+
+### Using `npm link` for development
+
+1. First run `npm link` from this package folder.
+2. Then run `npm link @notifycal/shared` from the package that wants to install it.
