@@ -1,0 +1,42 @@
+{
+  "name": "@notifycal/shared",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "lint": "echo TODO",
+    "lint:fix": "echo TODO",
+    "prettier": "prettier . --check",
+    "prettier:fix": "$npm_execpath run prettier -- --write",
+    "test": "echo TODO"
+  },
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "keywords": [],
+  "author": "Notifycal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Notifycal/shared.git"
+  },
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "eslint": "^9.19.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3"
+  }
+}

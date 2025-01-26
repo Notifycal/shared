@@ -1,0 +1,89 @@
+name: CD
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'CHANGELOG.md' # This is what release-please changes in the release PRs
+
+concurrency:
+  # github.head_ref is only set when the workflow was triggered by a pull_request and it
+  # contains the value of the source branch of the PR.
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - run: npm ci
+      - name: Lint files
+        id: lint
+        run: npm run lint
+        continue-on-error: true
+      - name: Check formatting
+        id: format
+        run: npm run prettier
+        continue-on-error: true
+      - name: Tests
+        id: tests
+        run: npm run test
+        continue-on-error: true
+      - run: npm run build
+        id: build
+        continue-on-error: true
+      - name: Pass or fail?
+        # Check previous step outcomes (only if the step has an id)
+        run: |
+          if [[ ${{ contains(steps.*.outcome, 'failure') }} == "true" ]]; then exit 1; else exit 0; fi
+
+  release:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+      packages: write
+    if: github.event_name != 'pull_request'
+    steps:
+      - id: release-please
+        if: github.event_name != 'pull_request'
+        uses: googleapis/release-please-action@v4
+        with:
+          release-type: node
+
+      # The logic below handles the npm publication:
+      - uses: actions/checkout@v4
+        # these if statements ensure that a publication only occurs when
+        # a new release is created:
+        if: ${{ steps.release-please.outputs.release_created }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://npm.pkg.github.com'
+          cache: 'npm'
+        if: ${{ steps.release-please.outputs.release_created }}
+
+      - run: npm ci && npm run build
+        if: ${{ steps.release-please.outputs.release_created }}
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ steps.release-please.outputs.release_created }}
