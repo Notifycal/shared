@@ -58,6 +58,7 @@ jobs:
       contents: write
       pull-requests: write
       id-token: write
+      packages: write
     if: github.event_name != 'pull_request'
     steps:
       - id: release-please
