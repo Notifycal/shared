@@ -15,6 +15,7 @@ Check how it's done in the `"exports"` key of [`package.json`](./package.json).
 ## How to install
 
 ### From Github registry
+
 1. Create a Personal Access Token (classic)
 
 Go to your Github profile > Settings. Then open Developer Settings in the sidebar, and Personal access tokens > Tokens (classic). Or click [here](https://github.com/settings/tokens).
