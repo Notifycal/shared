@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Notifycal/shared/compare/v0.1.0...v0.2.0) (2025-01-26)
+
+
+### Features
+
+* publish npm package onto github registry ([#11](https://github.com/Notifycal/shared/issues/11)) ([239e402](https://github.com/Notifycal/shared/commit/239e40273b1da1807e162baa4226ccc2b46e45f6))
+
 ## [0.1.0](https://github.com/Notifycal/shared/compare/v1.5.0...v0.1.0) (2025-01-26)
 
 
