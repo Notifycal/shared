@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Notifycal/shared/compare/v0.2.0...v0.2.1) (2025-01-26)
+
+
+### Bug Fixes
+
+* add permission to publish packages ([aa8305b](https://github.com/Notifycal/shared/commit/aa8305b3bd6158221121594a9f3bb22ec7372ee0))
+
 ## [0.2.0](https://github.com/Notifycal/shared/compare/v0.1.0...v0.2.0) (2025-01-26)
 
 
