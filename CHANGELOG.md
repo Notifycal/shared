@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/Notifycal/shared/compare/v0.3.0...v0.3.1) (2025-01-26)
+
+
+### Bug Fixes
+
+* set registry in action too ([53cec5c](https://github.com/Notifycal/shared/commit/53cec5cf93253bcb5b5bbaf21071366e8a10fcae))
+
 ## [0.3.0](https://github.com/Notifycal/shared/compare/v0.2.1...v0.3.0) (2025-01-26)
 
 
