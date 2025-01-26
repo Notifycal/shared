@@ -68,25 +68,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # - uses: actions/download-artifact@v4
-      #   with:
-      #     name: build
-      #     path: dist/
+      - uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: dist/
 
-      # - name: Display structure of downloaded files
-      #   run: ls -R
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - id: release-please
         if: github.event_name != 'pull_request'
-        uses: googleapis/release-please-action@v4.1.0
+        uses: googleapis/release-please-action@v4
         with:
-          # Hoping this automatically updates package*.json
           release-type: node
 
-      # - name: Upload node artifact to release
-      #   if: ${{ steps.release-please.outputs.release_created }}
-      #   run: |
-      #     zip dist.zip ./dist/* -r
-      #     gh release upload ${{ steps.release-please.outputs.tag_name }} ./dist.zip
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload node artifact to release
+        if: ${{ steps.release-please.outputs.release_created }}
+        run: |
+          zip dist.zip ./dist/* -r
+          gh release upload ${{ steps.release-please.outputs.tag_name }} ./dist.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
