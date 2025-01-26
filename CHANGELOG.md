@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/Notifycal/shared/compare/v0.2.1...v0.3.0) (2025-01-26)
+
+
+### Features
+
+* add readme ([aa6f5fe](https://github.com/Notifycal/shared/commit/aa6f5fee5fd2b236328eb5d9382373486687bfd4))
+
+
+### Bug Fixes
+
+* set registry in .npmrc ([6fb1ac8](https://github.com/Notifycal/shared/commit/6fb1ac828bfb58ad6c0eda926f0874d0a9bb0c33))
+
 ## [0.2.1](https://github.com/Notifycal/shared/compare/v0.2.0...v0.2.1) (2025-01-26)
 
 
