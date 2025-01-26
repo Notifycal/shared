@@ -79,7 +79,7 @@ jobs:
           cache: 'npm'
         if: ${{ steps.release-please.outputs.release_created }}
 
-      - run: npm ci
+      - run: npm ci && npm run build
         if: ${{ steps.release-please.outputs.release_created }}
 
       - run: npm publish
