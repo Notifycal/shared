@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/Notifycal/shared/compare/v0.1.0...v0.1.1) (2025-01-30)
+
+
+### Bug Fixes
+
+* more renaming and file organization ([#20](https://github.com/Notifycal/shared/issues/20)) ([f45f8ac](https://github.com/Notifycal/shared/commit/f45f8ac8add3c4e4e973b1f97566f2e823a3b1a3))
+
 ## [0.1.0](https://github.com/Notifycal/shared/compare/v0.0.1...v0.1.0) (2025-01-30)
 
 
