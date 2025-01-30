@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { calendarSchema } from './calendar.js';
+import { calendarSchema } from './calendar';
 
 export const reminderConfigSchema = z.object({
   calendars: z.array(calendarSchema).min(1),
