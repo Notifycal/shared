@@ -1,4 +1,4 @@
-import { Email, IdpId, UnixTimestamp, UserId } from '../common';
+import { Email, IdpId, UnixTimestamp, UserId } from '../common.js';
 
 // When time comes, append IdpName with | 'idpName2'
 export type IdpName = 'google.com';

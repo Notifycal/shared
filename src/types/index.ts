@@ -1,2 +1,2 @@
-export * from './api/index';
-export * from './common';
+export * from './api/index.js';
+export * from './common.js';
