@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/Notifycal/shared/compare/v0.1.4...v0.1.5) (2025-01-30)
+
+
+### Bug Fixes
+
+* ts extension madness with relative imports v2 ([#26](https://github.com/Notifycal/shared/issues/26)) ([6cc5062](https://github.com/Notifycal/shared/commit/6cc50628a4b7841f574aa42ffdbf35e037e4e8e6))
+
 ## [0.1.4](https://github.com/Notifycal/shared/compare/v0.1.3...v0.1.4) (2025-01-30)
 
 
