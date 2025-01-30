@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/Notifycal/shared/compare/v0.0.1...v0.1.0) (2025-01-30)
+
+
+### Features
+
+* receive models from backend repo ([#17](https://github.com/Notifycal/shared/issues/17)) ([126c96c](https://github.com/Notifycal/shared/commit/126c96cf6d9192e3abe76465ee8903290ac1bcb1))
+
 ## 0.0.1 (2025-01-26)
 
 
