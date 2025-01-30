@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/Notifycal/shared/compare/v0.1.1...v0.1.2) (2025-01-30)
+
+
+### Bug Fixes
+
+* import issue where stuff in api can't be found ([3b6a1b4](https://github.com/Notifycal/shared/commit/3b6a1b4ef62c36cf0eff427f9315cdf8738232c1))
+
 ## [0.1.1](https://github.com/Notifycal/shared/compare/v0.1.0...v0.1.1) (2025-01-30)
 
 
