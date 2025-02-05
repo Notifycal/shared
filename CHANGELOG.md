@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/Notifycal/shared/compare/v0.1.5...v0.1.6) (2025-02-05)
+
+
+### Bug Fixes
+
+* export brand type ([#31](https://github.com/Notifycal/shared/issues/31)) ([b88f6d1](https://github.com/Notifycal/shared/commit/b88f6d138c2380927ef8be55cc5055e87a9b270d))
+
 ## [0.1.5](https://github.com/Notifycal/shared/compare/v0.1.4...v0.1.5) (2025-01-30)
 
 
