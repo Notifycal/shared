@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/Notifycal/shared/compare/v0.2.0...v0.3.0) (2025-02-06)
+
+
+### Features
+
+* phone number type ([#35](https://github.com/Notifycal/shared/issues/35)) ([fe78ec3](https://github.com/Notifycal/shared/commit/fe78ec32ab3bb4d0721f909d55d036983dc917eb))
+
 ## [0.2.0](https://github.com/Notifycal/shared/compare/v0.1.6...v0.2.0) (2025-02-06)
 
 
