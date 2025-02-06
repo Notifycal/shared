@@ -14,3 +14,8 @@ export type CalendarId = Brand<string, 'CalendarId'>;
 export type CalendarName = Brand<string, 'CalendarName'>;
 export type BusinessName = Brand<string, 'BusinessName'>;
 export type BusinessAddress = Brand<string, 'BusinessAddress'>;
+
+export type EventId = Brand<string, 'EventId'>;
+export type CorrelationId = Brand<string, 'CorrelationId'>;
+export type DateTime = Brand<string, 'DateTime'>;
+export type TemplateId = Brand<string, 'TemplateId'>;
