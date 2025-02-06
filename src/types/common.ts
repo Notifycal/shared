@@ -6,6 +6,7 @@ export type Brand<T, BRAND extends string | number | symbol> = T & z.BRAND<BRAND
 
 export type Jwt = Brand<string, 'Jwt'>;
 export type Email = Brand<string, 'Email'>;
+export type PhoneNumber = Brand<string, 'PhoneNumber'>;
 export type Uuid = Brand<string, 'Uuid'>;
 export type UserId = Brand<string, 'UserId'> | Uuid;
 export type IdpId = Brand<string, 'IdpId'>;
