@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Notifycal/shared/compare/v0.1.6...v0.2.0) (2025-02-06)
+
+
+### Features
+
+* extract more stuff for reuse ([#33](https://github.com/Notifycal/shared/issues/33)) ([8a8a425](https://github.com/Notifycal/shared/commit/8a8a4250e655753d4612070e0a40750083a264e1))
+
 ## [0.1.6](https://github.com/Notifycal/shared/compare/v0.1.5...v0.1.6) (2025-02-05)
 
 
