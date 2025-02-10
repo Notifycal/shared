@@ -1,4 +1,5 @@
+import { calendarEventSchema, calendarSchema } from '@schemas/calendar';
 import { z } from 'zod';
-import { calendarSchema } from '@schemas/calendar';
 
 export type Calendar = z.infer<typeof calendarSchema>;
+export type CalendarEvent = z.infer<typeof calendarEventSchema>;
