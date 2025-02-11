@@ -6,3 +6,4 @@ export const uuidSchema = unsafeUuidSchema.brand('Uuid');
 export const unixTimestampSchema = z.number().brand('UnixTimestamp');
 export const emailSchema = z.string().email().brand('Email');
 export const idpIdSchema = z.string().brand('IdpId');
+export const dateTimeSchema = z.string().datetime().brand('DateTime');
