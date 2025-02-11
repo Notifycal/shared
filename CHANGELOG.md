@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Notifycal/shared/compare/v1.0.0...v1.1.0) (2025-02-11)
+
+
+### Features
+
+* calendar event types ([#40](https://github.com/Notifycal/shared/issues/40)) ([1a13f17](https://github.com/Notifycal/shared/commit/1a13f17ffa0500adc725b3bc1969122fea638dbb))
+
 ## [1.0.0](https://github.com/Notifycal/shared/compare/v0.3.0...v1.0.0) (2025-02-11)
 
 
