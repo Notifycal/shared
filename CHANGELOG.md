@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/Notifycal/shared/compare/v0.3.0...v1.0.0) (2025-02-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* make schemas top level export, rather than within types/ ([#41](https://github.com/Notifycal/shared/issues/41))
+
+### Features
+
+* make schemas top level export, rather than within types/ ([#41](https://github.com/Notifycal/shared/issues/41)) ([b0eed71](https://github.com/Notifycal/shared/commit/b0eed71a1fdaa02c3f04288ad74d1fe43dab7721))
+
 ## [0.3.0](https://github.com/Notifycal/shared/compare/v0.2.0...v0.3.0) (2025-02-06)
 
 
