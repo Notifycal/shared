@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Notifycal/shared/compare/v1.2.0...v1.3.0) (2025-02-13)
+
+
+### Features
+
+* more schmas and types ([#46](https://github.com/Notifycal/shared/issues/46)) ([f15c02f](https://github.com/Notifycal/shared/commit/f15c02f3fc3dce425f26ac41e5c531336872971c))
+
 ## [1.2.0](https://github.com/Notifycal/shared/compare/v1.1.0...v1.2.0) (2025-02-13)
 
 
