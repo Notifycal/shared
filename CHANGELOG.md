@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Notifycal/shared/compare/v1.1.0...v1.2.0) (2025-02-13)
+
+
+### Features
+
+* extend calendar event to contain attendees ([#44](https://github.com/Notifycal/shared/issues/44)) ([5cf01fa](https://github.com/Notifycal/shared/commit/5cf01fa490bd32f58c53bd139f4418e00a4189a3))
+
 ## [1.1.0](https://github.com/Notifycal/shared/compare/v1.0.0...v1.1.0) (2025-02-11)
 
 
