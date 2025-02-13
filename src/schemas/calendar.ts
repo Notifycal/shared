@@ -6,9 +6,14 @@ export const calendarSchema = z.object({
   name: z.string().brand('CalendarName')
 });
 
+const attendeeSchema = z.object({
+  id: z.string()
+});
+
 export const calendarEventSchema = z.object({
   id: z.string(),
   description: z.string().optional(),
   startTime: dateTimeSchema,
-  isAllDayEvent: z.boolean()
+  isAllDayEvent: z.boolean(),
+  attendees: z.array(attendeeSchema)
 });
