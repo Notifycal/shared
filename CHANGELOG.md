@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Notifycal/shared/compare/v1.3.0...v1.4.0) (2025-02-20)
+
+
+### Features
+
+* configurable reminder template ([#52](https://github.com/Notifycal/shared/issues/52)) ([e254be7](https://github.com/Notifycal/shared/commit/e254be79c6d1a0bba3b7509d0a71b32591fd7b6e))
+
 ## [1.3.0](https://github.com/Notifycal/shared/compare/v1.2.0...v1.3.0) (2025-02-13)
 
 
