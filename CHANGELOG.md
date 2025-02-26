@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/Notifycal/shared/compare/v1.4.0...v1.5.0) (2025-02-26)
+
+
+### Features
+
+* add type for RCSSenderId ([#57](https://github.com/Notifycal/shared/issues/57)) ([29352ed](https://github.com/Notifycal/shared/commit/29352ed913a62ec3134194b7583c940c79e08e3f))
+
 ## [1.4.0](https://github.com/Notifycal/shared/compare/v1.3.0...v1.4.0) (2025-02-20)
 
 
