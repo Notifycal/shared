@@ -1,5 +1,5 @@
-import { DateTime } from 'luxon';
-import { BusinessAddress, BusinessName, TemplateId } from './common';
+import type { DateTime } from 'luxon';
+import type { BusinessAddress, BusinessName, TemplateId } from './common';
 
 export interface Template {
   id: TemplateId;

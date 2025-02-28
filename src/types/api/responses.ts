@@ -1,4 +1,4 @@
-import { AuthenticationResponse } from './authentication';
+import type { AuthenticationResponse } from './authentication';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type BodyContent = Record<string, any> | Array<unknown>;

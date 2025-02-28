@@ -1,4 +1,4 @@
-import { Jwt } from '../common';
+import type { Jwt } from '../common';
 
 export interface AuthenticationResponse {
   accessToken: Jwt;

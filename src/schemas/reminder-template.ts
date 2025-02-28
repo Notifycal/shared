@@ -1,7 +1,7 @@
-import { z, ZodLiteral } from 'zod';
+import { type ZodLiteral, z } from 'zod';
 
 import { templateMap } from '@templates';
-import { TemplateId } from '@types';
+import type { TemplateId } from '@types';
 import { calendarSchema } from './calendar';
 import { contactSchema } from './common';
 
@@ -9,7 +9,7 @@ export const templateSchema = z.string().max(160).brand('InterpolatedTemplate');
 const templateSchemaIds = Object.values(templateMap)
   .concat(Object.values(templateMap))
   .map((t) => z.literal(t.id)) as unknown as Readonly<
-  [ZodLiteral<TemplateId>, ZodLiteral<TemplateId>, ...ZodLiteral<TemplateId>[]]
+  [ZodLiteral<TemplateId>, ZodLiteral<TemplateId>, ...Array<ZodLiteral<TemplateId>>]
 >;
 export const templateReferenceSchema = z.union(templateSchemaIds);
 

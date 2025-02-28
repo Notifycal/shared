@@ -1,5 +1,5 @@
-import { BusinessAddress, BusinessName, Template, TemplateId, TemplateMap } from '@types';
-import { DateTime } from 'luxon';
+import type { BusinessAddress, BusinessName, Template, TemplateId, TemplateMap } from '@types';
+import type { DateTime } from 'luxon';
 
 // Spanish
 const formalEs01: Template = {
