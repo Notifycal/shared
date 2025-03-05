@@ -1,16 +1,9 @@
-import { type ZodLiteral, z } from 'zod';
-
-import { templateMap } from '@templates';
-import type { TemplateId } from '@types';
+import { templateSchemaIds } from '@templates';
+import { z } from 'zod';
 import { calendarSchema } from './calendar';
 import { contactSchema } from './common';
 
 export const templateSchema = z.string().max(160).brand('InterpolatedTemplate');
-const templateSchemaIds = Object.values(templateMap)
-  .concat(Object.values(templateMap))
-  .map((t) => z.literal(t.id)) as unknown as Readonly<
-  [ZodLiteral<TemplateId>, ZodLiteral<TemplateId>, ...Array<ZodLiteral<TemplateId>>]
->;
 export const templateReferenceSchema = z.union(templateSchemaIds);
 
 export const reminderConfigSchema = z.object({
@@ -21,3 +14,6 @@ export const reminderConfigSchema = z.object({
     contactDetails: contactSchema
   })
 });
+
+// This should really be defined in @types but this is an exception to resolve a circular dependency between @schemas, @templates and @types
+export type ReminderConfig = z.infer<typeof reminderConfigSchema>;
