@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Notifycal/shared/compare/v1.5.0...v1.6.0) (2025-03-06)
+
+
+### Features
+
+* accept sender number to reminder config. Add linting. Fix linting issues. Tool to resolve circular deps ([6700f6c](https://github.com/Notifycal/shared/commit/6700f6c7c7a5227fa8247ceedf417a4b97ed5b80))
+
 ## [1.5.0](https://github.com/Notifycal/shared/compare/v1.4.0...v1.5.0) (2025-02-26)
 
 
