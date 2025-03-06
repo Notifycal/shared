@@ -72,8 +72,6 @@ export const templateMap: TemplateMap = {
   ...templateEnMap
 };
 
-export const templateSchemaIds = Object.values(templateMap)
-  .concat(Object.values(templateMap))
-  .map((t) => z.literal(t.id)) as unknown as Readonly<
+export const templateSchemaIds = Object.values(templateMap).map((t) => z.literal(t.id)) as unknown as Readonly<
   [ZodLiteral<TemplateId>, ZodLiteral<TemplateId>, ...Array<ZodLiteral<TemplateId>>]
 >;
