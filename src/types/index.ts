@@ -1,3 +1,3 @@
-export * from './api/index';
-export * from './common';
-export * from './template';
+export type * from './api/index';
+export type * from './common';
+export type * from './template';

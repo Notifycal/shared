@@ -1,3 +1,3 @@
 export * from './calendar';
 export * from './common';
-export * from './reminder-template';
+export * from './reminder';

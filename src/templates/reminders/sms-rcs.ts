@@ -1,5 +1,6 @@
-import { BusinessAddress, BusinessName, Template, TemplateId, TemplateMap } from '@types';
-import { DateTime } from 'luxon';
+import type { BusinessAddress, BusinessName, Template, TemplateId, TemplateMap } from '@types';
+import type { DateTime } from 'luxon';
+import { type ZodLiteral, z } from 'zod';
 
 // Spanish
 const formalEs01: Template = {
@@ -70,3 +71,7 @@ export const templateMap: TemplateMap = {
   //English
   ...templateEnMap
 };
+
+export const templateSchemaIds = Object.values(templateMap).map((t) => z.literal(t.id)) as unknown as Readonly<
+  [ZodLiteral<TemplateId>, ZodLiteral<TemplateId>, ...Array<ZodLiteral<TemplateId>>]
+>;

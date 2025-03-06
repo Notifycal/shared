@@ -1,5 +1,4 @@
-export * from './authentication';
-export * from './calendar';
-export * from './reminder-config';
-export * from './responses';
-export * from './user';
+export type * from './authentication';
+export type * from './calendar';
+export type * from './responses';
+export type * from './user';
