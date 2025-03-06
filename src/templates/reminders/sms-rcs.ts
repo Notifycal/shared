@@ -1,6 +1,6 @@
 import type { BusinessAddress, BusinessName, Template, TemplateId, TemplateMap } from '@types';
 import type { DateTime } from 'luxon';
-import { z, ZodLiteral } from 'zod';
+import { type ZodLiteral, z } from 'zod';
 
 // Spanish
 const formalEs01: Template = {
