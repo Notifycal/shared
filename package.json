@@ -3,7 +3,7 @@
   "version": "1.6.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && tsc-alias",
+    "build": "rm -rf dist && tsc && cp -R src/assets dist && tsc-alias",
     "lint": "eslint -c ./eslint.config.js",
     "lint:fix": "$npm_execpath run lint -- --fix",
     "prettier": "prettier . --check",
@@ -33,6 +33,10 @@
     "./templates": {
       "import": "./dist/templates/index.js",
       "types": "./dist/templates/index.d.ts"
+    },
+    "./i18n": {
+      "import": "./dist/i18n/index.js",
+      "types": "./dist/i18n/index.d.ts"
     }
   },
   "keywords": [],
