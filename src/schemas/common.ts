@@ -18,7 +18,7 @@ export const phoneContactSchema = z.object({
 
 export const rcsContactSchema = z.object({
   type: z.literal('rcs'),
-  identifier: z.string().brand('RCSId')
+  identifier: z.string().brand('RCSSenderId')
 });
 
 export const contactSchema = z.discriminatedUnion('type', [rcsContactSchema, phoneContactSchema]);
