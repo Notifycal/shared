@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/Notifycal/shared/compare/v1.6.0...v1.7.0) (2025-03-18)
+
+
+### Features
+
+* extract phone stuff. Second stab at i18n ([#68](https://github.com/Notifycal/shared/issues/68)) ([06d8be3](https://github.com/Notifycal/shared/commit/06d8be31918212227014ef227a7165e9e88fe119))
+
 ## [1.6.0](https://github.com/Notifycal/shared/compare/v1.5.0...v1.6.0) (2025-03-06)
 
 
