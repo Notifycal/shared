@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/Notifycal/shared/compare/v1.7.0...v1.7.1) (2025-03-19)
+
+
+### Bug Fixes
+
+* move packages to peerDependencies to force the main package (backend, frontend) to use that version ([#70](https://github.com/Notifycal/shared/issues/70)) ([8b51dc1](https://github.com/Notifycal/shared/commit/8b51dc1e5564af914ff7edac43687ef7f6563d65))
+
 ## [1.7.0](https://github.com/Notifycal/shared/compare/v1.6.0...v1.7.0) (2025-03-18)
 
 
