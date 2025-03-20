@@ -3,7 +3,7 @@
   "version": "1.8.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && cp -R src/assets dist && tsc-alias",
+    "build": "rm -rf dist && tsc && tsc-alias",
     "lint": "eslint -c ./eslint.config.js",
     "lint:fix": "$npm_execpath run lint -- --fix",
     "prettier": "prettier . --check",
