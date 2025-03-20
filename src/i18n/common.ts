@@ -19,6 +19,10 @@ export const phoneData: Record<CountryCode, PhoneData> = {
   }
 };
 
+export const countryDialCodeMatrix: Record<CountryCode, string> = Object.fromEntries(
+  Object.entries(phoneData).map(([key, value]) => [key as CountryCode, value.phoneDetails.dialCode])
+) as Record<CountryCode, string>;
+
 export const languageData: Record<LanguageCode, LanguageData> = {
   es: { label: 'Spanish', code: 'es', image: flagEs },
   en: { label: 'English', code: 'en', image: flagEn }
