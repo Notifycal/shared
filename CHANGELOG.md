@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/Notifycal/shared/compare/v1.7.1...v1.8.0) (2025-03-20)
+
+
+### Features
+
+* country dial code matrix ([#72](https://github.com/Notifycal/shared/issues/72)) ([ff540c7](https://github.com/Notifycal/shared/commit/ff540c7f817ccec6920cdfc1c3afadad2ce7b69c))
+
 ## [1.7.1](https://github.com/Notifycal/shared/compare/v1.7.0...v1.7.1) (2025-03-19)
 
 
