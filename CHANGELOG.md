@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Notifycal/shared/compare/v1.8.0...v2.0.0) (2025-03-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* move back assets to its original location cause they are time c… ([#74](https://github.com/Notifycal/shared/issues/74))
+
+### Bug Fixes
+
+* move back assets to its original location cause they are time c… ([#74](https://github.com/Notifycal/shared/issues/74)) ([2420096](https://github.com/Notifycal/shared/commit/2420096c3a5374dc3904186703579cecff831faa))
+
 ## [1.8.0](https://github.com/Notifycal/shared/compare/v1.7.1...v1.8.0) (2025-03-20)
 
 
