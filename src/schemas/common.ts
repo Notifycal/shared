@@ -10,15 +10,15 @@ export const idpIdSchema = z.string().brand('IdpId');
 export const dateTimeSchema = z.string().datetime().brand('DateTime');
 export const timeZoneSchema = z.string().brand('TimeZone');
 
-export const phoneContactSchema = z.object({
+export const phoneSchema = z.object({
   type: z.literal('phone'),
   countryCode: countryCodeSchema,
   phoneNumber: z.string().brand('PhoneNumber')
 });
 
-export const rcsContactSchema = z.object({
+export const rcsSenderSchema = z.object({
   type: z.literal('rcs'),
   identifier: z.string().brand('RCSSenderId')
 });
 
-export const contactSchema = z.discriminatedUnion('type', [rcsContactSchema, phoneContactSchema]);
+export const senderSchema = z.discriminatedUnion('type', [rcsSenderSchema, phoneSchema]);

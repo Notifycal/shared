@@ -1,7 +1,7 @@
 import { templateSelectionSchema } from '@templates';
 import { z } from 'zod';
 import { calendarSchema } from './calendar';
-import { contactSchema } from './common';
+import { senderSchema } from './common';
 
 export const templateSchema = z.string().max(160).brand('InterpolatedTemplate');
 
@@ -10,7 +10,7 @@ export const reminderConfigSchema = z.object({
   business: z.object({
     name: z.string().min(1).brand('BusinessName'),
     address: z.string().min(1).brand('BusinessAddress'),
-    contactDetails: contactSchema
+    senderContact: senderSchema
   })
 });
 
