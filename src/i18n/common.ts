@@ -8,9 +8,9 @@ export const phoneByCountry: Record<CountryCode, Omit<PhoneData, 'image'>> = {
     code: 'ES',
     phoneDetails: { numberMask: /^(?:\+34\s?)?[67]\d{8}$/, dialCode: '+34' }
   },
-  EN: {
+  GB: {
     label: 'United Kingdom',
-    code: 'EN',
+    code: 'GB',
     phoneDetails: { numberMask: /^(?:\+44\s?|0)7\d{9}$/, dialCode: '+44' }
   }
 };
