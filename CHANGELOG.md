@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.0](https://github.com/Notifycal/shared/compare/v2.0.0...v3.0.0) (2025-03-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* changes that should have commited earlier
+
+### Bug Fixes
+
+* **breaking:** gb country code. Add language to template schema to be able to e… ([#81](https://github.com/Notifycal/shared/issues/81)) ([901617e](https://github.com/Notifycal/shared/commit/901617ebb872ad4d9a654df8dd824a95fd320d3d))
+* changes that should have commited earlier ([e6266e7](https://github.com/Notifycal/shared/commit/e6266e720fb9e3846994e557c899a307eea7108b))
+
 ## [2.0.0](https://github.com/Notifycal/shared/compare/v1.8.0...v2.0.0) (2025-03-21)
 
 
