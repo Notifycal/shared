@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/Notifycal/shared/compare/v3.0.0...v3.0.1) (2025-04-08)
+
+
+### Bug Fixes
+
+* remove registered symbol - it makes messages cost twice as much ([#92](https://github.com/Notifycal/shared/issues/92)) ([c0e90ff](https://github.com/Notifycal/shared/commit/c0e90ff597670c951aeb677c76e36408c44c51cc))
+
 ## [3.0.0](https://github.com/Notifycal/shared/compare/v2.0.0...v3.0.0) (2025-03-27)
 
 
