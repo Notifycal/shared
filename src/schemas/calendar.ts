@@ -12,6 +12,7 @@ const attendeeSchema = z.object({
 
 export const calendarEventSchema = z.object({
   id: z.string(),
+  summary: z.string().optional(),
   description: z.string().optional(),
   startTime: dateTimeSchema,
   isAllDayEvent: z.boolean(),
