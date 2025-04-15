@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/Notifycal/shared/compare/v3.0.1...v3.1.0) (2025-04-15)
+
+
+### Features
+
+* include description in our calendar event ([#94](https://github.com/Notifycal/shared/issues/94)) ([5adb534](https://github.com/Notifycal/shared/commit/5adb5347fe575c478ec81b9d63ac432d79ec3c1b))
+
 ## [3.0.1](https://github.com/Notifycal/shared/compare/v3.0.0...v3.0.1) (2025-04-08)
 
 
