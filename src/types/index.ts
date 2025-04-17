@@ -6,4 +6,3 @@ export type * from './i18n';
 export * from './reminder';
 export type * from './template';
 export type * from './user';
-
