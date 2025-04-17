@@ -13,3 +13,4 @@ export const rcsSenderSchema = z.object({
 });
 
 export const senderSchema = z.discriminatedUnion('type', [rcsSenderSchema, phoneSchema]);
+export const receiverSchema = z.discriminatedUnion('type', [phoneSchema]);

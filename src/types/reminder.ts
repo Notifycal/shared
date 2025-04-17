@@ -1,5 +1,6 @@
 import { calendarSchema } from '@schemas/calendar';
 import { senderSchema } from '@schemas/contact';
+import type { demoReminderPayloadSchema } from '@schemas/reminder';
 import type { DateTime } from 'luxon';
 import { z } from 'zod';
 import type { BusinessAddress, BusinessName, TemplateId } from './common';
@@ -98,3 +99,5 @@ export const reminderConfigSchema = z.object({
     senderContact: senderSchema
   })
 });
+
+export type DemoReminderPayload = z.infer<typeof demoReminderPayloadSchema>;
