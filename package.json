@@ -30,10 +30,6 @@
       "import": "./dist/schemas/index.js",
       "types": "./dist/schemas/index.d.ts"
     },
-    "./templates": {
-      "import": "./dist/templates/index.js",
-      "types": "./dist/templates/index.d.ts"
-    },
     "./i18n": {
       "import": "./dist/i18n/index.js",
       "types": "./dist/i18n/index.d.ts"
