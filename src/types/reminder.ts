@@ -1,6 +1,10 @@
-import type { BusinessAddress, BusinessName, Template, TemplateId, TemplateMap } from '@types';
+import { calendarSchema } from '@schemas/calendar';
+import { senderSchema } from '@schemas/contact';
+import type { demoReminderPayloadSchema } from '@schemas/reminder';
 import type { DateTime } from 'luxon';
 import { z } from 'zod';
+import type { BusinessAddress, BusinessName, TemplateId } from './common';
+import type { Template, TemplateMap } from './template';
 
 // Spanish
 const formalEs01: Template = {
@@ -84,3 +88,16 @@ const templateList = Object.values(templateMap).map((t) =>
 );
 
 export const templateSelectionSchema = z.union([templateList[0]!, templateList[1]!, ...templateList.slice(2)]);
+
+export const templateSchema = z.string().max(160).brand('InterpolatedTemplate');
+
+export const reminderConfigSchema = z.object({
+  calendars: z.array(calendarSchema.extend({ template: templateSelectionSchema })).min(1),
+  business: z.object({
+    name: z.string().min(1).brand('BusinessName'),
+    address: z.string().min(1).brand('BusinessAddress'),
+    senderContact: senderSchema
+  })
+});
+
+export type DemoReminderPayload = z.infer<typeof demoReminderPayloadSchema>;

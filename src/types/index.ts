@@ -1,4 +1,8 @@
 export type * from './api/index';
+export type * from './calendar';
 export type * from './common';
+export type * from './contact';
 export type * from './i18n';
+export * from './reminder';
 export type * from './template';
+export type * from './user';
