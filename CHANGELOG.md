@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/Notifycal/shared/compare/v3.1.1...v4.0.0) (2025-04-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* add config to user model/type. Add types for contacts. ([#111](https://github.com/Notifycal/shared/issues/111))
+
+### Features
+
+* add config to user model/type. Add types for contacts. ([#111](https://github.com/Notifycal/shared/issues/111)) ([4beb054](https://github.com/Notifycal/shared/commit/4beb05449a8dc7873bce91bd46aedfcaf81e17b0))
+
 ## [3.1.1](https://github.com/Notifycal/shared/compare/v3.1.0...v3.1.1) (2025-04-15)
 
 
