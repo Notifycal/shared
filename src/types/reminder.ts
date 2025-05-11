@@ -12,7 +12,7 @@ const formalEs01: Template = {
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DateTime) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Estimado/a cliente, tiene una cita en ${businessName} el ${formattedDate} a las ${formattedTime}, ubicado en ${businessAddress}. Si no puede asistir, por favor notifíquenos con antelación.`;
+    return `Estimado/a cliente, tiene una cita en ${businessName} el ${formattedDate} a las ${formattedTime}, ubicado en ${businessAddress}. Si no puede asistir, por favor notifiquenos con antelacion.`;
   },
   language: 'es'
 };
@@ -21,7 +21,7 @@ const neutralEs01: Template = {
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DateTime) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Hola, recuerda tu cita en ${businessName} el ${formattedDate} a las ${formattedTime}, en ${businessAddress}. Avísanos si no puedes asistir.`;
+    return `Hola, recuerda tu cita en ${businessName} el ${formattedDate} a las ${formattedTime}, en ${businessAddress}. Avisanos si no puedes asistir.`;
   },
   language: 'es'
 };
@@ -30,7 +30,7 @@ const informalEs01: Template = {
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DateTime) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
-    return `¡No olvides tu cita en ${businessName}! ${formattedDate} a las ${formattedTime} en ${businessAddress}. Si no puedes venir, avísanos.`;
+    return `¡No olvides tu cita en ${businessName}! ${formattedDate} a las ${formattedTime} en ${businessAddress}. Si no puedes venir, avisanos.`;
   },
   language: 'es'
 };
