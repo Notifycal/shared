@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.1.0](https://github.com/Notifycal/shared/compare/v4.0.1...v4.1.0) (2025-05-12)
+
+
+### Features
+
+* add schema for SMS (body or field) ([#128](https://github.com/Notifycal/shared/issues/128)) ([148485d](https://github.com/Notifycal/shared/commit/148485d5253b6203dba7ecec0ca8d9fb4c59b70b))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v3.24.4 ([#125](https://github.com/Notifycal/shared/issues/125)) ([3bffeed](https://github.com/Notifycal/shared/commit/3bffeedd7e804f415fde107cab07007b4973d1ff))
+* make templates sms-proof. Also remove `senderDetails` from `demoReminderPayloadSchema` ([#127](https://github.com/Notifycal/shared/issues/127)) ([0b329a1](https://github.com/Notifycal/shared/commit/0b329a13c8a8d04c36f96942666a120b4c7c1c6e))
+
 ## [4.0.1](https://github.com/Notifycal/shared/compare/v4.0.0...v4.0.1) (2025-05-02)
 
 
