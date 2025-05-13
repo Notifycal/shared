@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/Notifycal/shared/compare/v4.1.0...v4.1.1) (2025-05-13)
+
+
+### Bug Fixes
+
+* export sms schema stuff ([#133](https://github.com/Notifycal/shared/issues/133)) ([1a02c71](https://github.com/Notifycal/shared/commit/1a02c7120e8773be5ad0c463414e98e9a1262b64))
+
 ## [4.1.0](https://github.com/Notifycal/shared/compare/v4.0.1...v4.1.0) (2025-05-12)
 
 
