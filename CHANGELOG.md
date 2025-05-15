@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/Notifycal/shared/compare/v4.1.1...v4.2.0) (2025-05-15)
+
+
+### Features
+
+* more info reminder config ([#136](https://github.com/Notifycal/shared/issues/136)) ([5db3112](https://github.com/Notifycal/shared/commit/5db311213c2e17de91221444b4c217abc44d3d8e))
+
 ## [4.1.1](https://github.com/Notifycal/shared/compare/v4.1.0...v4.1.1) (2025-05-13)
 
 
