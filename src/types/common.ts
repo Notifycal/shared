@@ -22,3 +22,4 @@ export type CorrelationId = Brand<string, 'CorrelationId'>;
 export type DateTime = Brand<string, 'DateTime'>;
 export type TimeZone = Brand<string, 'TimeZone'>;
 export type TemplateId = Brand<string, 'TemplateId'>;
+export type InterpolatedTemplate = Brand<string, 'InterpolatedTemplate'>;
