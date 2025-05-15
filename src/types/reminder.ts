@@ -1,3 +1,4 @@
+import { dateTimeSchema, languageCodeSchema } from '@schemas';
 import { calendarSchema } from '@schemas/calendar';
 import { senderSchema } from '@schemas/contact';
 import type { demoReminderPayloadSchema } from '@schemas/reminder';
@@ -96,7 +97,19 @@ export const reminderConfigSchema = z.object({
   business: z.object({
     name: z.string().min(1).brand('BusinessName'),
     address: z.string().min(1).brand('BusinessAddress'),
-    senderContact: senderSchema
+    senderContact: senderSchema,
+    language: languageCodeSchema,
+    companyIndustry: z.object({
+      category: z.string().max(256),
+      subcategory: z.string().max(256),
+      customIndustry: z.string().max(256).optional()
+    }),
+    companySize: z.string().max(128)
+  }),
+  confirmation: z.object({
+    termsAccepted: dateTimeSchema,
+    privacyAccepted: dateTimeSchema,
+    marketingOptInAccepted: dateTimeSchema.optional()
   })
 });
 
