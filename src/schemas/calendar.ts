@@ -1,9 +1,10 @@
+import type { CalendarId, CalendarName } from '@types';
 import { z } from 'zod';
 import { dateTimeSchema, timeZoneSchema } from './common';
 
 export const calendarSchema = z.object({
-  id: z.string().brand('CalendarId'),
-  name: z.string().brand('CalendarName')
+  id: z.string().transform((data) => data as CalendarId),
+  name: z.string().transform((data) => data as CalendarName)
 });
 
 const attendeeSchema = z.object({
