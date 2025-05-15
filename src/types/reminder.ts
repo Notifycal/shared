@@ -1,4 +1,4 @@
-import { dateTimeSchema, languageCodeSchema, timeZoneSchema } from '@schemas';
+import { dateTimeSchema, languageCodeSchema } from '@schemas';
 import { calendarSchema } from '@schemas/calendar';
 import { senderSchema } from '@schemas/contact';
 import type { demoReminderPayloadSchema } from '@schemas/reminder';
@@ -99,7 +99,6 @@ export const reminderConfigSchema = z.object({
     address: z.string().min(1).brand('BusinessAddress'),
     senderContact: senderSchema,
     language: languageCodeSchema,
-    timezone: timeZoneSchema,
     companyIndustry: z.object({
       category: z.string().max(256),
       subcategory: z.string().max(256),
