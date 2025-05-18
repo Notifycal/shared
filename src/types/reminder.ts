@@ -1,4 +1,4 @@
-import { dateTimeSchema, languageCodeSchema } from '@schemas';
+import { createSmsContentSchema, languageCodeSchema } from '@schemas';
 import { calendarSchema } from '@schemas/calendar';
 import { senderSchema } from '@schemas/contact';
 import type { demoReminderPayloadSchema } from '@schemas/reminder';
@@ -90,35 +90,34 @@ const templateList = Object.values(templateMap).map((t) =>
 
 export const templateSelectionSchema = z.union([templateList[0]!, templateList[1]!, ...templateList.slice(2)]);
 
-export const templateSchema = z
-  .string()
+export const templateSchema = createSmsContentSchema()
   .max(160)
   .transform((data) => data as InterpolatedTemplate);
 
 export const reminderConfigSchema = z.object({
   calendars: z.array(calendarSchema.extend({ template: templateSelectionSchema })).min(1),
   business: z.object({
-    name: z
-      .string()
+    name: createSmsContentSchema()
       .min(1)
+      .max(128)
       .transform((data) => data as BusinessName),
-    address: z
-      .string()
+    address: createSmsContentSchema()
       .min(1)
+      .max(128)
       .transform((data) => data as BusinessAddress),
     senderContact: senderSchema,
     language: languageCodeSchema,
     companyIndustry: z.object({
-      category: z.string().max(256),
-      subcategory: z.string().max(256),
-      customIndustry: z.string().max(256).optional()
+      category: z.string().max(128),
+      subcategory: z.string().max(128),
+      customIndustry: z.string().max(128).optional()
     }),
-    companySize: z.string().max(128)
+    companySize: z.string().max(10)
   }),
   confirmation: z.object({
-    termsAccepted: dateTimeSchema,
-    privacyAccepted: dateTimeSchema,
-    marketingOptInAccepted: dateTimeSchema.optional()
+    termsAccepted: z.literal(true),
+    privacyAccepted: z.literal(true),
+    marketingOptInAccepted: z.boolean()
   })
 });
 
