@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.2.1](https://github.com/Notifycal/shared/compare/v4.2.0...v4.2.1) (2025-05-19)
+
+
+### Bug Fixes
+
+* align type from library to the type of the payload shared between frontend and backend ([a6f37bd](https://github.com/Notifycal/shared/commit/a6f37bd3b581c3e4b78ef52bf446a577ead180c7))
+* **deps:** Update dependency zod to v3.25.6 ([#141](https://github.com/Notifycal/shared/issues/141)) ([37cd740](https://github.com/Notifycal/shared/commit/37cd74001d1bd13fb8448082191197bc325c78e8))
+
 ## [4.2.0](https://github.com/Notifycal/shared/compare/v4.1.1...v4.2.0) (2025-05-15)
 
 
