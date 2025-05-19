@@ -18,11 +18,12 @@ export interface Identity<IdpName> extends BaseIdentity {
 export type UserStatus = 'banned' | 'onboarding' | 'live';
 
 // This should really be defined in @schemas but this is an exception to resolve a circular dependency between @schemas, @templates and @types
-export type ReminderConfig = z.infer<typeof reminderConfigSchema>;
+export type ReminderConfig = z.input<typeof reminderConfigSchema>;
+export type ReminderConfigTransformed = z.output<typeof reminderConfigSchema>;
 
 export interface User<TIdpName extends IdpName> extends Identity<TIdpName> {
   lastSignInAt: UnixTimestamp;
   signedUpAt: UnixTimestamp;
   userStatus: UserStatus;
-  config?: ReminderConfig;
+  config?: ReminderConfigTransformed;
 }
