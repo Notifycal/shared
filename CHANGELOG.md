@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.5](https://github.com/Notifycal/shared/compare/v4.2.4...v4.2.5) (2025-06-17)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v3.25.67 ([#152](https://github.com/Notifycal/shared/issues/152)) ([87d8b0d](https://github.com/Notifycal/shared/commit/87d8b0d64385bd12ad6de067692ca3a560a8826c))
+
 ## [4.2.4](https://github.com/Notifycal/shared/compare/v4.2.3...v4.2.4) (2025-06-06)
 
 
