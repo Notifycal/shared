@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/Notifycal/shared/compare/v4.2.5...v4.3.0) (2025-06-19)
+
+
+### Features
+
+* user statuses ([#156](https://github.com/Notifycal/shared/issues/156)) ([73a681e](https://github.com/Notifycal/shared/commit/73a681eea7318756f0a5cd2624ef42546b509ebf))
+
 ## [4.2.5](https://github.com/Notifycal/shared/compare/v4.2.4...v4.2.5) (2025-06-17)
 
 
