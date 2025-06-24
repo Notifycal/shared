@@ -1,5 +1,5 @@
 import type { z } from 'zod';
-import type { Email, IdpId, UnixTimestamp, UserId } from './common';
+import type { Email, IdpId, StripeCustomerId, UnixTimestamp, UserId } from './common';
 import type { reminderConfigSchema } from './reminder';
 
 // When time comes, append IdpName with | 'idpName2'
@@ -25,5 +25,6 @@ export interface User<TIdpName extends IdpName> extends Identity<TIdpName> {
   lastSignInAt: UnixTimestamp;
   signedUpAt: UnixTimestamp;
   userStatus: UserStatus;
+  stripeCustomerId?: StripeCustomerId;
   config?: ReminderConfigTransformed;
 }
