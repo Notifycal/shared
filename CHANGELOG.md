@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.0](https://github.com/Notifycal/shared/compare/v4.3.0...v4.4.0) (2025-06-24)
+
+
+### Features
+
+* stripe customer id ([#158](https://github.com/Notifycal/shared/issues/158)) ([a7e196c](https://github.com/Notifycal/shared/commit/a7e196c28bc29bdaee68cffd6285ca7d8b55b0e2))
+
 ## [4.3.0](https://github.com/Notifycal/shared/compare/v4.2.5...v4.3.0) (2025-06-19)
 
 
