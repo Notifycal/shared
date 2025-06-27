@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.5.0](https://github.com/Notifycal/shared/compare/v4.4.0...v4.5.0) (2025-06-27)
+
+
+### Features
+
+* 2 new user statuses. percentage schema and type ([#166](https://github.com/Notifycal/shared/issues/166)) ([2fa5ee6](https://github.com/Notifycal/shared/commit/2fa5ee6198cafaf8f46757f2e298bf75bb601424))
+
 ## [4.4.0](https://github.com/Notifycal/shared/compare/v4.3.0...v4.4.0) (2025-06-24)
 
 
