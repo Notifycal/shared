@@ -1,3 +1,4 @@
+import type { percentageSchema } from '@schemas';
 import type { z } from 'zod';
 
 // This is useful to make the type typesafe, funnily enough.
@@ -25,3 +26,4 @@ export type TemplateId = Brand<string, 'TemplateId'>;
 export type InterpolatedTemplate = Brand<string, 'InterpolatedTemplate'>;
 
 export type StripeCustomerId = Brand<string, 'StripeCustomerId'>;
+export type Percentage = z.infer<typeof percentageSchema>;

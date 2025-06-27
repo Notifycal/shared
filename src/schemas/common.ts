@@ -24,3 +24,4 @@ export const timeZoneSchema = z
   .string()
   .max(128)
   .transform((data) => data as TimeZone);
+export const percentageSchema = z.number().min(0, 'Percentage cannot be negative');

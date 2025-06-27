@@ -15,7 +15,7 @@ export interface Identity<IdpName> extends BaseIdentity {
   idpId: IdpId;
 }
 
-export type UserStatus = 'banned' | 'onboarding' | 'demo' | 'live' | 'out-of-credits';
+export type UserStatus = 'banned' | 'onboarding' | 'demo' | 'live' | 'out-of-credits' | 'unpaid' | 'cancelled';
 
 // This should really be defined in @schemas but this is an exception to resolve a circular dependency between @schemas, @templates and @types
 export type ReminderConfig = z.input<typeof reminderConfigSchema>;
