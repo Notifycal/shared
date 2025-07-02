@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.7.0](https://github.com/Notifycal/shared/compare/v4.6.0...v4.7.0) (2025-07-02)
+
+
+### Features
+
+* extract topup model from backend ([#175](https://github.com/Notifycal/shared/issues/175)) ([46e5ce5](https://github.com/Notifycal/shared/commit/46e5ce579bcd03b09ed80b7c02063143b45d9622))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v3.25.68 ([#176](https://github.com/Notifycal/shared/issues/176)) ([85165d1](https://github.com/Notifycal/shared/commit/85165d1fc2c7bfa12b93737985e8bef5ab64b0ec))
+
 ## [4.6.0](https://github.com/Notifycal/shared/compare/v4.5.0...v4.6.0) (2025-07-02)
 
 
