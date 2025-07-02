@@ -12,9 +12,16 @@ export const tierDetailsRawSchema = z
     /* eslint-enable camelcase */
   })
   .transform(objectKeysToCamelCaseDeep);
+export const productRawSchema = tierDetailsRawSchema;
 
 export const tierMapSchema = z.object({
   good: tierDetailsRawSchema,
   better: tierDetailsRawSchema,
   best: tierDetailsRawSchema
 });
+export const tierIds = Object.keys(tierMapSchema.shape) as Array<keyof z.infer<typeof tierMapSchema>>;
+
+export const topupMapSchema = z.object({
+  single: productRawSchema
+});
+export const topupIds = Object.keys(topupMapSchema.shape) as Array<keyof z.infer<typeof topupMapSchema>>;
