@@ -13,7 +13,7 @@ export const tierDetailsRawSchema = z
   })
   .transform(objectKeysToCamelCaseDeep);
 
-export const tierInfoInnerSchema = z.object({
+export const tierMapSchema = z.object({
   good: tierDetailsRawSchema,
   better: tierDetailsRawSchema,
   best: tierDetailsRawSchema
