@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.0](https://github.com/Notifycal/shared/compare/v4.5.0...v4.6.0) (2025-07-02)
+
+
+### Features
+
+* Pricing and case stuff ([#173](https://github.com/Notifycal/shared/issues/173)) ([e61402c](https://github.com/Notifycal/shared/commit/e61402c3dd6d4958f04e634979f0011f9bac9e0f))
+
 ## [4.5.0](https://github.com/Notifycal/shared/compare/v4.4.0...v4.5.0) (2025-06-27)
 
 
