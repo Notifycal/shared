@@ -5,6 +5,7 @@ import type { z } from 'zod';
 // So that one cannot mistakenly pass in an Email instead of a UserId when both are of type string
 export type Brand<T, BRAND extends string | number | symbol> = T & z.BRAND<BRAND>;
 
+export type Url = Brand<string, 'Url'>;
 export type Jwt = Brand<string, 'Jwt'>;
 export type Email = Brand<string, 'Email'>;
 export type PhoneNumber = Brand<string, 'PhoneNumber'>;
