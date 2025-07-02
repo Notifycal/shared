@@ -61,5 +61,8 @@
     "luxon": "^3.5.0",
     "typescript": "^5.7.3",
     "zod": "3.25.67"
+  },
+  "dependencies": {
+    "radashi": "^12.6.0"
   }
 }

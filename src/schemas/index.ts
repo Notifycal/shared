@@ -3,3 +3,4 @@ export * from './common';
 export * from './contact';
 export * from './i18n';
 export * from './sms';
+export * from './pricing';
