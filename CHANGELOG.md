@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.8.0](https://github.com/Notifycal/shared/compare/v4.7.0...v4.8.0) (2025-07-03)
+
+
+### Features
+
+* update user model with credits and demo reminder count ([#182](https://github.com/Notifycal/shared/issues/182)) ([61b28b3](https://github.com/Notifycal/shared/commit/61b28b319f4f95739abb8f6ddb991659c0be7352))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v3.25.69 ([#178](https://github.com/Notifycal/shared/issues/178)) ([85e7fde](https://github.com/Notifycal/shared/commit/85e7fde4b6b7fc330e5eb0fe9c99116551302b11))
+* **deps:** Update dependency zod to v3.25.70 ([#180](https://github.com/Notifycal/shared/issues/180)) ([76b2caa](https://github.com/Notifycal/shared/commit/76b2caa7185fd18cd1a0cb035b69ae293538cbe9))
+* **deps:** Update dependency zod to v3.25.71 ([#181](https://github.com/Notifycal/shared/issues/181)) ([04fb7b3](https://github.com/Notifycal/shared/commit/04fb7b32f548f8ae064a7bc8aebe1e1cad656ac5))
+
 ## [4.7.0](https://github.com/Notifycal/shared/compare/v4.6.0...v4.7.0) (2025-07-02)
 
 
