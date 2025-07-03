@@ -1,5 +1,6 @@
 import type { z } from 'zod';
 import type { Email, IdpId, StripeCustomerId, UnixTimestamp, UserId } from './common';
+import type { TierId } from './pricing';
 import type { reminderConfigSchema } from './reminder';
 
 // When time comes, append IdpName with | 'idpName2'
@@ -21,10 +22,18 @@ export type UserStatus = 'banned' | 'onboarding' | 'demo' | 'live' | 'out-of-cre
 export type ReminderConfig = z.input<typeof reminderConfigSchema>;
 export type ReminderConfigTransformed = z.output<typeof reminderConfigSchema>;
 
+export interface UserCredits {
+  subscriptionCreditBalance: number;
+  tier: TierId;
+  topupCreditBalance: number;
+}
+
 export interface User<TIdpName extends IdpName> extends Identity<TIdpName> {
   lastSignInAt: UnixTimestamp;
   signedUpAt: UnixTimestamp;
   userStatus: UserStatus;
   stripeCustomerId?: StripeCustomerId;
   config?: ReminderConfigTransformed;
+  credits?: UserCredits;
+  demoReminderCount?: number;
 }
