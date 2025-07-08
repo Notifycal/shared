@@ -8,4 +8,4 @@ export interface Template {
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DateTime) => string;
 }
 
-export type TemplateMap = { [key: string]: Template };
+export type TemplateMap = Record<TemplateId, Template>;

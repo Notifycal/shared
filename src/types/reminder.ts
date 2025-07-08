@@ -4,12 +4,19 @@ import { senderSchema } from '@schemas/contact';
 import type { demoReminderPayloadSchema } from '@schemas/reminder';
 import { DateTime as DT } from 'luxon';
 import { z } from 'zod';
-import type { BusinessAddress, BusinessName, InterpolatedTemplate, TemplateId, DateTime } from './common';
+import type {
+  BusinessAddress,
+  BusinessName,
+  DateTime,
+  InterpolatedTemplate,
+  TemplateEnId,
+  TemplateEsId
+} from './common';
 import type { Template, TemplateMap } from './template';
 
 // Spanish
 const formalEs01: Template = {
-  id: 'formal-es-01' as TemplateId,
+  id: 'formal-es-01',
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
@@ -18,7 +25,7 @@ const formalEs01: Template = {
   language: 'es'
 };
 const neutralEs01: Template = {
-  id: 'neutral-es-01' as TemplateId,
+  id: 'neutral-es-01',
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
@@ -27,7 +34,7 @@ const neutralEs01: Template = {
   language: 'es'
 };
 const informalEs01: Template = {
-  id: 'informal-es-01' as TemplateId,
+  id: 'informal-es-01',
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
@@ -38,7 +45,7 @@ const informalEs01: Template = {
 
 // English
 const formalEn01: Template = {
-  id: 'formal-en-01' as TemplateId,
+  id: 'formal-en-01',
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
@@ -47,7 +54,7 @@ const formalEn01: Template = {
   language: 'en'
 };
 const neutralEn01: Template = {
-  id: 'neutral-en-01' as TemplateId,
+  id: 'neutral-en-01',
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
@@ -56,7 +63,7 @@ const neutralEn01: Template = {
   language: 'en'
 };
 const informalEn01: Template = {
-  id: 'informal-en-01' as TemplateId,
+  id: 'informal-en-01',
   interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
     const formattedTime = localDateTime.toFormat('HH:mm');
@@ -64,15 +71,15 @@ const informalEn01: Template = {
   },
   language: 'en'
 };
-export const templateEsMap = {
-  [formalEs01.id]: formalEs01,
-  [neutralEs01.id]: neutralEs01,
-  [informalEs01.id]: informalEs01
+export const templateEsMap: Record<TemplateEsId, Template> = {
+  'formal-es-01': formalEs01,
+  'neutral-es-01': neutralEs01,
+  'informal-es-01': informalEs01
 };
-export const templateEnMap = {
-  [formalEn01.id]: formalEn01,
-  [neutralEn01.id]: neutralEn01,
-  [informalEn01.id]: informalEn01
+export const templateEnMap: Record<TemplateEnId, Template> = {
+  'formal-en-01': formalEn01,
+  'neutral-en-01': neutralEn01,
+  'informal-en-01': informalEn01
 };
 export const templateMap: TemplateMap = {
   // Spanish
