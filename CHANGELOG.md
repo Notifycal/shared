@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.8.1](https://github.com/Notifycal/shared/compare/v4.8.0...v4.8.1) (2025-07-08)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v3.25.72 ([#183](https://github.com/Notifycal/shared/issues/183)) ([f260833](https://github.com/Notifycal/shared/commit/f2608333a1aa6e1e0fda7a927cfde92648e6fad4))
+* **deps:** Update dependency zod to v3.25.73 ([#185](https://github.com/Notifycal/shared/issues/185)) ([137a861](https://github.com/Notifycal/shared/commit/137a861f2440f7cab80dbf724564d5fa7f237ddf))
+* **deps:** Update dependency zod to v3.25.74 ([#186](https://github.com/Notifycal/shared/issues/186)) ([37794bd](https://github.com/Notifycal/shared/commit/37794bd85af33547ac43e657ad71e4ea27849d2d))
+* **deps:** Update dependency zod to v3.25.75 ([#187](https://github.com/Notifycal/shared/issues/187)) ([2199a1b](https://github.com/Notifycal/shared/commit/2199a1be66158d636f4de17c1c033113e435f91d))
+* harden tsconfig.json ([#189](https://github.com/Notifycal/shared/issues/189)) ([6126cb8](https://github.com/Notifycal/shared/commit/6126cb8154226052f69d3b2f13cafe6b9cfb3582))
+* refine types ([#188](https://github.com/Notifycal/shared/issues/188)) ([8d1d3d3](https://github.com/Notifycal/shared/commit/8d1d3d3a5286cc05a96bd7d709161d10b7c5a994))
+
 ## [4.8.0](https://github.com/Notifycal/shared/compare/v4.7.0...v4.8.0) (2025-07-03)
 
 
