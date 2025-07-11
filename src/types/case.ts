@@ -1,3 +1,7 @@
+export type CapitalizeKeys<T> = {
+  [K in keyof T as Capitalize<K & string>]: T[K];
+};
+
 export type CapitalizeFirst<T extends string> = T extends `${infer First}${infer Rest}`
   ? `${Uppercase<First>}${Rest}`
   : T;
