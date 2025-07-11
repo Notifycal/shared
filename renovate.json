@@ -1,3 +1,10 @@
 {
-  "extends": ["github>Notifycal/.github-private:renovate.json"]
+  "extends": ["github>Notifycal/.github-private:renovate.json"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["zod"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
 }
