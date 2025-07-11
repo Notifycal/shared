@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/Notifycal/shared/compare/v4.9.0...v5.0.0) (2025-07-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename user identity ([#205](https://github.com/Notifycal/shared/issues/205))
+
+### Bug Fixes
+
+* rename user identity ([#205](https://github.com/Notifycal/shared/issues/205)) ([d615758](https://github.com/Notifycal/shared/commit/d61575803ce16ebf8bb3371e8520572734d62418))
+
 ## [4.9.0](https://github.com/Notifycal/shared/compare/v4.8.3...v4.9.0) (2025-07-11)
 
 
