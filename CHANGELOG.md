@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.0](https://github.com/Notifycal/shared/compare/v4.8.3...v4.9.0) (2025-07-11)
+
+
+### Features
+
+* capitalize keys ([#203](https://github.com/Notifycal/shared/issues/203)) ([133777c](https://github.com/Notifycal/shared/commit/133777c77e3328599fe4bb5146fea6be950878c7))
+
 ## [4.8.3](https://github.com/Notifycal/shared/compare/v4.8.2...v4.8.3) (2025-07-11)
 
 
