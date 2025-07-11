@@ -60,7 +60,7 @@
   "peerDependencies": {
     "luxon": "^3.5.0",
     "typescript": "^5.7.3",
-    "zod": "4.0.5"
+    "zod": "3.25.76"
   },
   "dependencies": {
     "radashi": "^12.6.0"
