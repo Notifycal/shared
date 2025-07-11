@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.8.3](https://github.com/Notifycal/shared/compare/v4.8.2...v4.8.3) (2025-07-11)
+
+
+### Bug Fixes
+
+* block zod major upgrades. Downgrade it after renovate's upgrade ([#202](https://github.com/Notifycal/shared/issues/202)) ([a576e37](https://github.com/Notifycal/shared/commit/a576e3706e15bddc9f9ad73ec92efaffd0a41128))
+* **deps:** Update dependency zod to v4 ([#195](https://github.com/Notifycal/shared/issues/195)) ([79f0b84](https://github.com/Notifycal/shared/commit/79f0b84afb88f9bf5936d8dcf9f630182d9a76a0))
+* **deps:** Update dependency zod to v4.0.2 ([#197](https://github.com/Notifycal/shared/issues/197)) ([50b9688](https://github.com/Notifycal/shared/commit/50b9688cab719a1a5ff6af3f7c0223969f035585))
+* **deps:** Update dependency zod to v4.0.3 ([#200](https://github.com/Notifycal/shared/issues/200)) ([4302a35](https://github.com/Notifycal/shared/commit/4302a359291d363b77b41d919836a02f8ef7e8bf))
+* **deps:** Update dependency zod to v4.0.5 ([#201](https://github.com/Notifycal/shared/issues/201)) ([9aeef11](https://github.com/Notifycal/shared/commit/9aeef119fdc1ea61e662e96efe2d6d73881bf6d1))
+
 ## [4.8.2](https://github.com/Notifycal/shared/compare/v4.8.1...v4.8.2) (2025-07-08)
 
 
