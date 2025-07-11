@@ -6,12 +6,12 @@ import type { reminderConfigSchema } from './reminder';
 // When time comes, append IdpName with | 'idpName2'
 export type IdpName = 'google.com';
 
-export interface BaseIdentity {
+export interface BaseUserIdentity {
   userId: UserId;
   email: Email;
 }
 
-export interface Identity<IdpName> extends BaseIdentity {
+export interface UserIdentity<IdpName> extends BaseUserIdentity {
   idp: IdpName;
   idpId: IdpId;
 }
@@ -28,7 +28,7 @@ export interface UserCredits {
   topupCreditBalance: number;
 }
 
-export interface User<TIdpName extends IdpName> extends Identity<TIdpName> {
+export interface User<TIdpName extends IdpName> extends UserIdentity<TIdpName> {
   lastSignInAt: UnixTimestamp;
   signedUpAt: UnixTimestamp;
   userStatus: UserStatus;
