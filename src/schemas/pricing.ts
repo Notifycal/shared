@@ -25,3 +25,9 @@ export const topupMapSchema = z.object({
   single: productRawSchema
 });
 export const topupIds = Object.keys(topupMapSchema.shape) as Array<keyof z.infer<typeof topupMapSchema>>;
+
+export const customerPortalFlowTypeSchema = z.enum([
+  'subscription_cancel',
+  'subscription_update',
+  'payment_method_update'
+]);

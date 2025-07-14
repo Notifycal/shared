@@ -1,4 +1,10 @@
-import type { productRawSchema, tierDetailsRawSchema, tierMapSchema, topupMapSchema } from '@schemas';
+import type {
+  customerPortalFlowTypeSchema,
+  productRawSchema,
+  tierDetailsRawSchema,
+  tierMapSchema,
+  topupMapSchema
+} from '@schemas';
 import type z from 'zod';
 
 export type TierId = keyof z.input<typeof tierMapSchema>;
@@ -13,4 +19,4 @@ export type TopupMap = {
   [K in TopupId]: Topup;
 };
 
-export type CustomerPortalFlowType = 'subscription_cancel' | 'subscription_update' | 'payment_method_update';
+export type CustomerPortalFlowType = z.infer<typeof customerPortalFlowTypeSchema>;
