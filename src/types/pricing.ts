@@ -12,3 +12,5 @@ export type Topup = z.infer<typeof productRawSchema>;
 export type TopupMap = {
   [K in TopupId]: Topup;
 };
+
+export type CustomerPortalFlowType = 'subscription_cancel' | 'subscription_update' | 'payment_method_update';
