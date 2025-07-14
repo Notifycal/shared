@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.1](https://github.com/Notifycal/shared/compare/v5.0.0...v5.0.1) (2025-07-14)
+
+
+### Bug Fixes
+
+* add flowType type for GET Customer Portal URL ([#208](https://github.com/Notifycal/shared/issues/208)) ([13fef82](https://github.com/Notifycal/shared/commit/13fef8247a40f90e6e92a517737039c11829ebe1))
+
 ## [5.0.0](https://github.com/Notifycal/shared/compare/v4.9.0...v5.0.0) (2025-07-11)
 
 
