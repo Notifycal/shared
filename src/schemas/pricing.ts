@@ -4,6 +4,7 @@ import z from 'zod';
 export const tierDetailsRawSchema = z
   .object({
     name: z.string(),
+    credits: z.number(),
     /* eslint-disable camelcase */
     price_eur: z.number(),
     price_id: z.string(),
