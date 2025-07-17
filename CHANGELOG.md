@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.2](https://github.com/Notifycal/shared/compare/v5.0.1...v5.0.2) (2025-07-16)
+
+
+### Bug Fixes
+
+* add credits property to tier details schema ([#212](https://github.com/Notifycal/shared/issues/212)) ([df28d5d](https://github.com/Notifycal/shared/commit/df28d5da1c12512b8b1dbac31f4f8ed159c72b1f))
+
 ## [5.0.1](https://github.com/Notifycal/shared/compare/v5.0.0...v5.0.1) (2025-07-14)
 
 
