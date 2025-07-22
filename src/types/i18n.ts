@@ -1,7 +1,7 @@
 import type { countryCodeSchema, languageCodeSchema } from '@schemas/i18n';
 import type { z } from 'zod';
 
-export type LanguageName = 'English' | 'Spanish';
+export type LanguageName = 'English' | 'Spanish' | 'Catalan';
 export type LanguageCode = z.infer<typeof languageCodeSchema>;
 export type CountryName = 'Spain' | 'United Kingdom';
 export type CountryCode = z.infer<typeof countryCodeSchema>;

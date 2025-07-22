@@ -9,6 +9,7 @@ import type {
   BusinessName,
   DateTime,
   InterpolatedTemplate,
+  TemplateCaId,
   TemplateEnId,
   TemplateEsId
 } from './common';
@@ -71,6 +72,35 @@ const informalEn01: Template = {
   },
   language: 'en'
 };
+
+// Catalan
+const formalCa01: Template = {
+  id: 'formal-ca-01',
+  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+    const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
+    const formattedTime = localDateTime.toFormat('HH:mm');
+    return `Benvolgut/da client/a, té una cita a ${businessName} el ${formattedDate} a les ${formattedTime}, situat a ${businessAddress}. Si no pot assistir, si us plau notifiqui'ns amb antelació.`;
+  },
+  language: 'ca'
+};
+const neutralCa01: Template = {
+  id: 'neutral-ca-01',
+  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+    const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
+    const formattedTime = localDateTime.toFormat('HH:mm');
+    return `Hola, recordi la seva cita a ${businessName} el ${formattedDate} a les ${formattedTime}, a ${businessAddress}. Avisi'ns si no pot venir.`;
+  },
+  language: 'ca'
+};
+const informalCa01: Template = {
+  id: 'informal-ca-01',
+  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+    const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
+    const formattedTime = localDateTime.toFormat('HH:mm');
+    return `No oblidis la teva cita a ${businessName}! El ${formattedDate} a les ${formattedTime} a ${businessAddress}. Si no pots venir, avisa'ns.`;
+  },
+  language: 'ca'
+};
 export const templateEsMap: Record<TemplateEsId, Template> = {
   'formal-es-01': formalEs01,
   'neutral-es-01': neutralEs01,
@@ -81,11 +111,18 @@ export const templateEnMap: Record<TemplateEnId, Template> = {
   'neutral-en-01': neutralEn01,
   'informal-en-01': informalEn01
 };
+export const templateCaMap: Record<TemplateCaId, Template> = {
+  'formal-ca-01': formalCa01,
+  'neutral-ca-01': neutralCa01,
+  'informal-ca-01': informalCa01
+};
 export const templateMap: TemplateMap = {
   // Spanish
   ...templateEsMap,
   //English
-  ...templateEnMap
+  ...templateEnMap,
+  //Catalan
+  ...templateCaMap
 };
 
 const templateList = Object.values(templateMap).map((t) =>
