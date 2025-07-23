@@ -17,5 +17,6 @@ export const phoneByCountry: Record<CountryCode, Omit<PhoneData, 'image'>> = {
 
 export const languageByLanguageCode: Record<LanguageCode, Omit<LanguageData, 'image'>> = {
   es: { label: 'Spanish', code: 'es' },
-  en: { label: 'English', code: 'en' }
+  en: { label: 'English', code: 'en' },
+  ca: { label: 'Catalan', code: 'ca' }
 };

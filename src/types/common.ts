@@ -25,7 +25,8 @@ export type DateTime = Brand<string, 'DateTime'>;
 export type TimeZone = Brand<string, 'TimeZone'>;
 export type TemplateEsId = 'formal-es-01' | 'neutral-es-01' | 'informal-es-01';
 export type TemplateEnId = 'formal-en-01' | 'neutral-en-01' | 'informal-en-01';
-export type TemplateId = TemplateEsId | TemplateEnId;
+export type TemplateCaId = 'formal-ca-01' | 'neutral-ca-01' | 'informal-ca-01';
+export type TemplateId = TemplateEsId | TemplateEnId | TemplateCaId;
 export type InterpolatedTemplate = Brand<string, 'InterpolatedTemplate'>;
 
 export type StripeCustomerId = Brand<string, 'StripeCustomerId'>;
