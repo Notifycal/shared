@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/Notifycal/shared/compare/v5.0.4...v5.1.0) (2025-07-23)
+
+
+### Features
+
+* i18n catalan ([#219](https://github.com/Notifycal/shared/issues/219)) ([d310054](https://github.com/Notifycal/shared/commit/d3100549ea5b05cce0deca75646c0a96fed3a8b9))
+
 ## [5.0.4](https://github.com/Notifycal/shared/compare/v5.0.3...v5.0.4) (2025-07-23)
 
 
