@@ -1,5 +1,90 @@
 # Changelog
 
+## [0.0.1](https://github.com/Notifycal/shared/compare/v5.0.3...v0.0.1) (2025-07-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename user identity ([#205](https://github.com/Notifycal/shared/issues/205))
+* add config to user model/type. Add types for contacts. ([#111](https://github.com/Notifycal/shared/issues/111))
+* changes that should have commited earlier
+* move back assets to its original location cause they are time c… ([#74](https://github.com/Notifycal/shared/issues/74))
+* make schemas top level export, rather than within types/ ([#41](https://github.com/Notifycal/shared/issues/41))
+
+### Features
+
+* 2 new user statuses. percentage schema and type ([#166](https://github.com/Notifycal/shared/issues/166)) ([2fa5ee6](https://github.com/Notifycal/shared/commit/2fa5ee6198cafaf8f46757f2e298bf75bb601424))
+* accept sender number to reminder config. Add linting. Fix linting issues. Tool to resolve circular deps ([6700f6c](https://github.com/Notifycal/shared/commit/6700f6c7c7a5227fa8247ceedf417a4b97ed5b80))
+* add config to user model/type. Add types for contacts. ([#111](https://github.com/Notifycal/shared/issues/111)) ([4beb054](https://github.com/Notifycal/shared/commit/4beb05449a8dc7873bce91bd46aedfcaf81e17b0))
+* add schema for SMS (body or field) ([#128](https://github.com/Notifycal/shared/issues/128)) ([148485d](https://github.com/Notifycal/shared/commit/148485d5253b6203dba7ecec0ca8d9fb4c59b70b))
+* add type for RCSSenderId ([#57](https://github.com/Notifycal/shared/issues/57)) ([29352ed](https://github.com/Notifycal/shared/commit/29352ed913a62ec3134194b7583c940c79e08e3f))
+* calendar event types ([#40](https://github.com/Notifycal/shared/issues/40)) ([1a13f17](https://github.com/Notifycal/shared/commit/1a13f17ffa0500adc725b3bc1969122fea638dbb))
+* capitalize keys ([#203](https://github.com/Notifycal/shared/issues/203)) ([133777c](https://github.com/Notifycal/shared/commit/133777c77e3328599fe4bb5146fea6be950878c7))
+* configurable reminder template ([#52](https://github.com/Notifycal/shared/issues/52)) ([e254be7](https://github.com/Notifycal/shared/commit/e254be79c6d1a0bba3b7509d0a71b32591fd7b6e))
+* country dial code matrix ([#72](https://github.com/Notifycal/shared/issues/72)) ([ff540c7](https://github.com/Notifycal/shared/commit/ff540c7f817ccec6920cdfc1c3afadad2ce7b69c))
+* extend calendar event to contain attendees ([#44](https://github.com/Notifycal/shared/issues/44)) ([5cf01fa](https://github.com/Notifycal/shared/commit/5cf01fa490bd32f58c53bd139f4418e00a4189a3))
+* extract more stuff for reuse ([#33](https://github.com/Notifycal/shared/issues/33)) ([8a8a425](https://github.com/Notifycal/shared/commit/8a8a4250e655753d4612070e0a40750083a264e1))
+* extract phone stuff. Second stab at i18n ([#68](https://github.com/Notifycal/shared/issues/68)) ([06d8be3](https://github.com/Notifycal/shared/commit/06d8be31918212227014ef227a7165e9e88fe119))
+* extract topup model from backend ([#175](https://github.com/Notifycal/shared/issues/175)) ([46e5ce5](https://github.com/Notifycal/shared/commit/46e5ce579bcd03b09ed80b7c02063143b45d9622))
+* include description in our calendar event ([#94](https://github.com/Notifycal/shared/issues/94)) ([5adb534](https://github.com/Notifycal/shared/commit/5adb5347fe575c478ec81b9d63ac432d79ec3c1b))
+* init package with some type and util ([f6c28dd](https://github.com/Notifycal/shared/commit/f6c28ddfff369f887071b393a654377ce37b0410))
+* make schemas top level export, rather than within types/ ([#41](https://github.com/Notifycal/shared/issues/41)) ([b0eed71](https://github.com/Notifycal/shared/commit/b0eed71a1fdaa02c3f04288ad74d1fe43dab7721))
+* more info reminder config ([#136](https://github.com/Notifycal/shared/issues/136)) ([5db3112](https://github.com/Notifycal/shared/commit/5db311213c2e17de91221444b4c217abc44d3d8e))
+* more schmas and types ([#46](https://github.com/Notifycal/shared/issues/46)) ([f15c02f](https://github.com/Notifycal/shared/commit/f15c02f3fc3dce425f26ac41e5c531336872971c))
+* phone number type ([#35](https://github.com/Notifycal/shared/issues/35)) ([fe78ec3](https://github.com/Notifycal/shared/commit/fe78ec32ab3bb4d0721f909d55d036983dc917eb))
+* Pricing and case stuff ([#173](https://github.com/Notifycal/shared/issues/173)) ([e61402c](https://github.com/Notifycal/shared/commit/e61402c3dd6d4958f04e634979f0011f9bac9e0f))
+* receive models from backend repo ([#17](https://github.com/Notifycal/shared/issues/17)) ([126c96c](https://github.com/Notifycal/shared/commit/126c96cf6d9192e3abe76465ee8903290ac1bcb1))
+* stripe customer id ([#158](https://github.com/Notifycal/shared/issues/158)) ([a7e196c](https://github.com/Notifycal/shared/commit/a7e196c28bc29bdaee68cffd6285ca7d8b55b0e2))
+* update user model with credits and demo reminder count ([#182](https://github.com/Notifycal/shared/issues/182)) ([61b28b3](https://github.com/Notifycal/shared/commit/61b28b319f4f95739abb8f6ddb991659c0be7352))
+* user statuses ([#156](https://github.com/Notifycal/shared/issues/156)) ([73a681e](https://github.com/Notifycal/shared/commit/73a681eea7318756f0a5cd2624ef42546b509ebf))
+
+
+### Bug Fixes
+
+* add credits property to tier details schema ([#212](https://github.com/Notifycal/shared/issues/212)) ([df28d5d](https://github.com/Notifycal/shared/commit/df28d5da1c12512b8b1dbac31f4f8ed159c72b1f))
+* add flowType type for GET Customer Portal URL ([#208](https://github.com/Notifycal/shared/issues/208)) ([13fef82](https://github.com/Notifycal/shared/commit/13fef8247a40f90e6e92a517737039c11829ebe1))
+* align type from library to the type of the payload shared between frontend and backend ([a6f37bd](https://github.com/Notifycal/shared/commit/a6f37bd3b581c3e4b78ef52bf446a577ead180c7))
+* block zod major upgrades. Downgrade it after renovate's upgrade ([#202](https://github.com/Notifycal/shared/issues/202)) ([a576e37](https://github.com/Notifycal/shared/commit/a576e3706e15bddc9f9ad73ec92efaffd0a41128))
+* **breaking:** gb country code. Add language to template schema to be able to e… ([#81](https://github.com/Notifycal/shared/issues/81)) ([901617e](https://github.com/Notifycal/shared/commit/901617ebb872ad4d9a654df8dd824a95fd320d3d))
+* changes that should have commited earlier ([e6266e7](https://github.com/Notifycal/shared/commit/e6266e720fb9e3846994e557c899a307eea7108b))
+* **deps:** Update dependency zod to v3.24.2 ([#106](https://github.com/Notifycal/shared/issues/106)) ([ce1648c](https://github.com/Notifycal/shared/commit/ce1648c202aa5ee80b96646d7fc6ffce7669f4b4))
+* **deps:** Update dependency zod to v3.24.3 ([#122](https://github.com/Notifycal/shared/issues/122)) ([8f03d08](https://github.com/Notifycal/shared/commit/8f03d08452ccd3e70d21119c8b58e8fc7e77813c))
+* **deps:** Update dependency zod to v3.24.4 ([#125](https://github.com/Notifycal/shared/issues/125)) ([3bffeed](https://github.com/Notifycal/shared/commit/3bffeedd7e804f415fde107cab07007b4973d1ff))
+* **deps:** Update dependency zod to v3.25.49 ([#143](https://github.com/Notifycal/shared/issues/143)) ([cd1c215](https://github.com/Notifycal/shared/commit/cd1c215ecbe8b2d3e271c691df06f4f5f663576f))
+* **deps:** Update dependency zod to v3.25.49 ([#146](https://github.com/Notifycal/shared/issues/146)) ([12a5f5f](https://github.com/Notifycal/shared/commit/12a5f5f8d3a27d2bb48dc323b5912e40b9215f42))
+* **deps:** Update dependency zod to v3.25.51 ([#148](https://github.com/Notifycal/shared/issues/148)) ([a97931c](https://github.com/Notifycal/shared/commit/a97931c673c02445ffd73dac2832e48ef8314881))
+* **deps:** Update dependency zod to v3.25.55 ([#150](https://github.com/Notifycal/shared/issues/150)) ([f5d320d](https://github.com/Notifycal/shared/commit/f5d320d8d2a9ea38e428a06cbe1b77c8a39f2ea0))
+* **deps:** Update dependency zod to v3.25.6 ([#141](https://github.com/Notifycal/shared/issues/141)) ([37cd740](https://github.com/Notifycal/shared/commit/37cd74001d1bd13fb8448082191197bc325c78e8))
+* **deps:** Update dependency zod to v3.25.67 ([#152](https://github.com/Notifycal/shared/issues/152)) ([87d8b0d](https://github.com/Notifycal/shared/commit/87d8b0d64385bd12ad6de067692ca3a560a8826c))
+* **deps:** Update dependency zod to v3.25.68 ([#176](https://github.com/Notifycal/shared/issues/176)) ([85165d1](https://github.com/Notifycal/shared/commit/85165d1fc2c7bfa12b93737985e8bef5ab64b0ec))
+* **deps:** Update dependency zod to v3.25.69 ([#178](https://github.com/Notifycal/shared/issues/178)) ([85e7fde](https://github.com/Notifycal/shared/commit/85e7fde4b6b7fc330e5eb0fe9c99116551302b11))
+* **deps:** Update dependency zod to v3.25.70 ([#180](https://github.com/Notifycal/shared/issues/180)) ([76b2caa](https://github.com/Notifycal/shared/commit/76b2caa7185fd18cd1a0cb035b69ae293538cbe9))
+* **deps:** Update dependency zod to v3.25.71 ([#181](https://github.com/Notifycal/shared/issues/181)) ([04fb7b3](https://github.com/Notifycal/shared/commit/04fb7b32f548f8ae064a7bc8aebe1e1cad656ac5))
+* **deps:** Update dependency zod to v3.25.72 ([#183](https://github.com/Notifycal/shared/issues/183)) ([f260833](https://github.com/Notifycal/shared/commit/f2608333a1aa6e1e0fda7a927cfde92648e6fad4))
+* **deps:** Update dependency zod to v3.25.73 ([#185](https://github.com/Notifycal/shared/issues/185)) ([137a861](https://github.com/Notifycal/shared/commit/137a861f2440f7cab80dbf724564d5fa7f237ddf))
+* **deps:** Update dependency zod to v3.25.74 ([#186](https://github.com/Notifycal/shared/issues/186)) ([37794bd](https://github.com/Notifycal/shared/commit/37794bd85af33547ac43e657ad71e4ea27849d2d))
+* **deps:** Update dependency zod to v3.25.75 ([#187](https://github.com/Notifycal/shared/issues/187)) ([2199a1b](https://github.com/Notifycal/shared/commit/2199a1be66158d636f4de17c1c033113e435f91d))
+* **deps:** Update dependency zod to v3.25.76 ([#191](https://github.com/Notifycal/shared/issues/191)) ([2361f69](https://github.com/Notifycal/shared/commit/2361f698ee2cdffcfdfac8217bd5ecd773d26686))
+* **deps:** Update dependency zod to v4 ([#195](https://github.com/Notifycal/shared/issues/195)) ([79f0b84](https://github.com/Notifycal/shared/commit/79f0b84afb88f9bf5936d8dcf9f630182d9a76a0))
+* **deps:** Update dependency zod to v4.0.2 ([#197](https://github.com/Notifycal/shared/issues/197)) ([50b9688](https://github.com/Notifycal/shared/commit/50b9688cab719a1a5ff6af3f7c0223969f035585))
+* **deps:** Update dependency zod to v4.0.3 ([#200](https://github.com/Notifycal/shared/issues/200)) ([4302a35](https://github.com/Notifycal/shared/commit/4302a359291d363b77b41d919836a02f8ef7e8bf))
+* **deps:** Update dependency zod to v4.0.5 ([#201](https://github.com/Notifycal/shared/issues/201)) ([9aeef11](https://github.com/Notifycal/shared/commit/9aeef119fdc1ea61e662e96efe2d6d73881bf6d1))
+* export brand type ([#31](https://github.com/Notifycal/shared/issues/31)) ([b88f6d1](https://github.com/Notifycal/shared/commit/b88f6d138c2380927ef8be55cc5055e87a9b270d))
+* export sms schema stuff ([#133](https://github.com/Notifycal/shared/issues/133)) ([1a02c71](https://github.com/Notifycal/shared/commit/1a02c7120e8773be5ad0c463414e98e9a1262b64))
+* harden tsconfig.json ([#189](https://github.com/Notifycal/shared/issues/189)) ([6126cb8](https://github.com/Notifycal/shared/commit/6126cb8154226052f69d3b2f13cafe6b9cfb3582))
+* import issue where stuff in api can't be found ([3b6a1b4](https://github.com/Notifycal/shared/commit/3b6a1b4ef62c36cf0eff427f9315cdf8738232c1))
+* import issue where stuff in api can't be found. Attempt 2 ([44e8f88](https://github.com/Notifycal/shared/commit/44e8f880d332202a7cec0315f98e4f53d63ad751))
+* lift restriction on createSmsContentSchema ([#218](https://github.com/Notifycal/shared/issues/218)) ([b68f0bb](https://github.com/Notifycal/shared/commit/b68f0bbe41bda025552f819b2d05c9e8d24c0f26))
+* make templates sms-proof. Also remove `senderDetails` from `demoReminderPayloadSchema` ([#127](https://github.com/Notifycal/shared/issues/127)) ([0b329a1](https://github.com/Notifycal/shared/commit/0b329a13c8a8d04c36f96942666a120b4c7c1c6e))
+* more renaming and file organization ([#20](https://github.com/Notifycal/shared/issues/20)) ([f45f8ac](https://github.com/Notifycal/shared/commit/f45f8ac8add3c4e4e973b1f97566f2e823a3b1a3))
+* move back assets to its original location cause they are time c… ([#74](https://github.com/Notifycal/shared/issues/74)) ([2420096](https://github.com/Notifycal/shared/commit/2420096c3a5374dc3904186703579cecff831faa))
+* move packages to peerDependencies to force the main package (backend, frontend) to use that version ([#70](https://github.com/Notifycal/shared/issues/70)) ([8b51dc1](https://github.com/Notifycal/shared/commit/8b51dc1e5564af914ff7edac43687ef7f6563d65))
+* refine types ([#188](https://github.com/Notifycal/shared/issues/188)) ([8d1d3d3](https://github.com/Notifycal/shared/commit/8d1d3d3a5286cc05a96bd7d709161d10b7c5a994))
+* remove registered symbol - it makes messages cost twice as much ([#92](https://github.com/Notifycal/shared/issues/92)) ([c0e90ff](https://github.com/Notifycal/shared/commit/c0e90ff597670c951aeb677c76e36408c44c51cc))
+* rename user identity ([#205](https://github.com/Notifycal/shared/issues/205)) ([d615758](https://github.com/Notifycal/shared/commit/d61575803ce16ebf8bb3371e8520572734d62418))
+* ts extension madness with relative imports ([#24](https://github.com/Notifycal/shared/issues/24)) ([61d69db](https://github.com/Notifycal/shared/commit/61d69dbd4058783ba9c6a3abb73a425af3d532e9))
+* ts extension madness with relative imports v2 ([#26](https://github.com/Notifycal/shared/issues/26)) ([6cc5062](https://github.com/Notifycal/shared/commit/6cc50628a4b7841f574aa42ffdbf35e037e4e8e6))
+
 ## [5.0.3](https://github.com/Notifycal/shared/compare/v5.0.2...v5.0.3) (2025-07-23)
 
 
