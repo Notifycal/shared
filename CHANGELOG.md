@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.4](https://github.com/Notifycal/shared/compare/v5.0.3...v5.0.4) (2025-07-23)
+
+
+### Bug Fixes
+
+* what is going on with package publishing ([#226](https://github.com/Notifycal/shared/issues/226)) ([3ef26d4](https://github.com/Notifycal/shared/commit/3ef26d45755dd2c07bd2d9f49d9d1887ac610e4e))
+
 ## [5.0.3](https://github.com/Notifycal/shared/compare/v5.0.2...v5.0.3) (2025-07-23)
 
 
