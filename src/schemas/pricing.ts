@@ -20,12 +20,12 @@ export const tierMapSchema = z.object({
   better: tierDetailsRawSchema,
   best: tierDetailsRawSchema
 });
-export const tierIds = Object.keys(tierMapSchema.shape) as Array<keyof z.infer<typeof tierMapSchema>>;
+export const tierIds = Object.keys(tierMapSchema.shape) as ReadonlyArray<keyof z.infer<typeof tierMapSchema>>;
 
 export const topupMapSchema = z.object({
   single: productRawSchema
 });
-export const topupIds = Object.keys(topupMapSchema.shape) as Array<keyof z.infer<typeof topupMapSchema>>;
+export const topupIds = Object.keys(topupMapSchema.shape) as ReadonlyArray<keyof z.infer<typeof topupMapSchema>>;
 
 export const customerPortalFlowTypeSchema = z.enum([
   'subscription_cancel',
