@@ -1,5 +1,16 @@
 # Changelog
 
+## [6.0.0](https://github.com/Notifycal/shared/compare/v5.1.0...v6.0.0) (2025-08-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* zod 4 support ([#232](https://github.com/Notifycal/shared/issues/232))
+
+### Bug Fixes
+
+* zod 4 support ([#232](https://github.com/Notifycal/shared/issues/232)) ([cc16b4f](https://github.com/Notifycal/shared/commit/cc16b4fc402245629c85faa851b185558c8e92d2))
+
 ## [5.1.0](https://github.com/Notifycal/shared/compare/v5.0.4...v5.1.0) (2025-07-23)
 
 
