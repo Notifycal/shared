@@ -1,6 +1,6 @@
 {
   "name": "@notifycal/shared",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc && tsc-alias",
@@ -33,6 +33,10 @@
     "./i18n": {
       "import": "./dist/i18n/index.js",
       "types": "./dist/i18n/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
     }
   },
   "keywords": [],
@@ -45,8 +49,10 @@
   "description": "",
   "devDependencies": {
     "@eslint/compat": "^1.2.7",
+    "@mantine/core": "^8.2.2",
     "@types/luxon": "^3.4.2",
     "@types/node": "^22.10.10",
+    "@types/react": "^19.1.9",
     "@vitest/eslint-plugin": "^1.1.36",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
@@ -58,9 +64,19 @@
     "typescript-eslint": "^8.25.0"
   },
   "peerDependencies": {
+    "@mantine/core": "^8.2.2",
     "luxon": "^3.5.0",
+    "react": "^19.1.1",
     "typescript": "^5.7.3",
     "zod": "4.0.14"
+  },
+  "peerDependenciesMeta": {
+    "luxon": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
   },
   "dependencies": {
     "radashi": "^12.6.0"
