@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.0](https://github.com/Notifycal/shared/compare/v6.2.0...v6.3.0) (2025-08-04)
+
+
+### Features
+
+* usable-tier-credits ([#241](https://github.com/Notifycal/shared/issues/241)) ([34f2166](https://github.com/Notifycal/shared/commit/34f2166e8411ee0911c9e407121cb1041c1352a9))
+
 ## [6.2.0](https://github.com/Notifycal/shared/compare/v6.1.0...v6.2.0) (2025-08-04)
 
 
