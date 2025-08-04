@@ -33,6 +33,14 @@
     "./i18n": {
       "import": "./dist/i18n/index.js",
       "types": "./dist/i18n/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./pricing": {
+      "import": "./dist/pricing/index.js",
+      "types": "./dist/pricing/index.d.ts"
     }
   },
   "keywords": [],
@@ -47,6 +55,7 @@
     "@eslint/compat": "^1.2.7",
     "@types/luxon": "^3.4.2",
     "@types/node": "^22.10.10",
+    "@types/react": "^19.1.9",
     "@vitest/eslint-plugin": "^1.1.36",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
@@ -59,7 +68,12 @@
     "vite": "^7.0.6"
   },
   "peerDependencies": {
+    "@mantine/core": "^8.2.2",
+    "@tabler/icons-react": "^3.29.0",
+    "clsx": "^2.1.1",
     "luxon": "^3.5.0",
+    "react": "^19.1.1",
+    "tailwindcss": "^4.1.2",
     "typescript": "^5.7.3",
     "zod": "4.0.14"
   },
