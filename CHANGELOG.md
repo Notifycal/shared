@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.0](https://github.com/Notifycal/shared/compare/v6.1.0...v6.2.0) (2025-08-04)
+
+
+### Features
+
+* bring over react components. ([#237](https://github.com/Notifycal/shared/issues/237)) ([a76bafb](https://github.com/Notifycal/shared/commit/a76bafb1f2543f64ffd0706f0c622a1c13714eef))
+
 ## [6.1.0](https://github.com/Notifycal/shared/compare/v6.0.0...v6.1.0) (2025-08-04)
 
 
