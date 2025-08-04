@@ -24,6 +24,7 @@ export type ReminderConfigTransformed = z.output<typeof reminderConfigSchema>;
 
 export interface UserCredits {
   subscriptionCreditBalance: number;
+  usableTierCredits: number;
   tier: TierId;
   topupCreditBalance: number;
 }
