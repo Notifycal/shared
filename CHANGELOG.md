@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.0](https://github.com/Notifycal/shared/compare/v6.0.0...v6.1.0) (2025-08-04)
+
+
+### Features
+
+* vite plugin ([#235](https://github.com/Notifycal/shared/issues/235)) ([f3e0e6a](https://github.com/Notifycal/shared/commit/f3e0e6aca4824796a6339a67ecdf90dfc50aaf42))
+
 ## [6.0.0](https://github.com/Notifycal/shared/compare/v5.1.0...v6.0.0) (2025-08-02)
 
 
