@@ -1,6 +1,6 @@
 {
   "name": "@notifycal/shared",
-  "version": "6.3.1",
+  "version": "6.3.0",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc && tsc-alias",
