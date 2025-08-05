@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.1](https://github.com/Notifycal/shared/compare/v6.3.0...v6.3.1) (2025-08-05)
+
+
+### Bug Fixes
+
+* do not force react deps on users of this lib ([#243](https://github.com/Notifycal/shared/issues/243)) ([bb73d0c](https://github.com/Notifycal/shared/commit/bb73d0cc74725c82565cc26b2798f9ea65b77a8e))
+
 ## [6.3.0](https://github.com/Notifycal/shared/compare/v6.2.0...v6.3.0) (2025-08-04)
 
 
