@@ -65,12 +65,12 @@
     "prettier": "^3.4.2",
     "tsc-alias": "^1.8.10",
     "typescript-eslint": "^8.25.0",
-    "vite": "^7.0.6"
-  },
-  "peerDependencies": {
+    "vite": "^7.0.6",
     "@mantine/core": "^8.2.2",
     "@tabler/icons-react": "^3.29.0",
-    "clsx": "^2.1.1",
+    "clsx": "^2.1.1"
+  },
+  "peerDependencies": {
     "luxon": "^3.5.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
