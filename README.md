@@ -76,3 +76,7 @@ steps:
   # [...]
   - run: npm install # or npm ci
 ```
+
+### Gotcha
+
+Some peerDependencies can't be peerDependencies but devDependencies cause NPM does not install peerDependencies with npm install, therefore, npm run build fails. For example, we need to make mantine/core, clsx and @tabler/icons-react because we require the types to be able to build the project.
