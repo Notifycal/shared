@@ -10,6 +10,7 @@ export type Jwt = Brand<string, 'Jwt'>;
 export type Email = Brand<string, 'Email'>;
 export type PhoneNumber = Brand<string, 'PhoneNumber'>;
 export type RCSSenderId = Brand<string, 'RCSSenderId'>;
+export type SMSSenderId = Brand<string, 'SMSSenderId'>;
 export type Uuid = Brand<string, 'Uuid'>;
 export type UserId = Brand<string, 'UserId'> | Uuid;
 export type IdpId = Brand<string, 'IdpId'>;
