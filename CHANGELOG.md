@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.0.0](https://github.com/Notifycal/shared/compare/v6.3.1...v7.0.0) (2025-08-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* previous commit was breaking
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v4.0.15 ([#245](https://github.com/Notifycal/shared/issues/245)) ([32f75ed](https://github.com/Notifycal/shared/commit/32f75edba11fb26d25980a9bbb71c8a3805c6e3f))
+* previous commit was breaking ([0e748c2](https://github.com/Notifycal/shared/commit/0e748c223d9a080f145e9557a83f9a541d465f20))
+* update sender schema as per fucking regulations ([#248](https://github.com/Notifycal/shared/issues/248)) ([28f215d](https://github.com/Notifycal/shared/commit/28f215da0933e11921a87adb04651b70ef0e4de7))
+
 ## [6.3.1](https://github.com/Notifycal/shared/compare/v6.3.0...v6.3.1) (2025-08-05)
 
 
