@@ -7,7 +7,7 @@ function round(n, d = 8) {
   return Math.round(n * p) / p;
 }
 
-export function calculateFontSizes(basePx, scale) {
+function calculateFontSizes(basePx, scale) {
   const sizes = {};
   let current = scale; // h6
   for (let i = 6; i >= 1; i--) {
@@ -30,13 +30,18 @@ export function buildTextTokens(textJson) {
   return tokens;
 }
 
+const baseTextVariable = (segments) => `--text-${segments.join('-')}`;
+
 export function registerTextFormat(StyleDictionary) {
   StyleDictionary.registerFormat({
     name: 'css/variables-theme-text',
     format: ({ dictionary }) => {
       const out = dictionary.allTokens
         .filter(isTextToken)
-        .map((t) => `  --text-${t.path.slice(1).join('-')}: ${t.value};`)
+        .map((token) => {
+          const cssVariable = baseTextVariable(token.path.slice(1));
+          return `  ${cssVariable}: ${token.value};`;
+        })
         .join('\n');
       return `${generatedFileHeader}\n@theme {\n${out}\n}\n`;
     }
