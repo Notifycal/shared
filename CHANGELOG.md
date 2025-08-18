@@ -1,5 +1,19 @@
 # Changelog
 
+## [7.1.0](https://github.com/Notifycal/shared/compare/v7.0.0...v7.1.0) (2025-08-18)
+
+
+### Features
+
+* use style-dictionary for common styling across all webs ([#263](https://github.com/Notifycal/shared/issues/263)) ([eff4634](https://github.com/Notifycal/shared/commit/eff4634f5ac754446379a864f6961f0331332df1))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency radashi to v12.6.1 ([#256](https://github.com/Notifycal/shared/issues/256)) ([4f57177](https://github.com/Notifycal/shared/commit/4f5717706802b572752f9ee0aef834ecef7add71))
+* **deps:** Update dependency zod to v4.0.16 ([#253](https://github.com/Notifycal/shared/issues/253)) ([72581a2](https://github.com/Notifycal/shared/commit/72581a2ef16c165e095f5fb55bfb99a444a2d559))
+* **deps:** Update dependency zod to v4.0.17 ([#257](https://github.com/Notifycal/shared/issues/257)) ([8bbb7a1](https://github.com/Notifycal/shared/commit/8bbb7a1e4e0f4628fdc1fa3853e56ceb04b8eabd))
+
 ## [7.0.0](https://github.com/Notifycal/shared/compare/v6.3.1...v7.0.0) (2025-08-07)
 
 
