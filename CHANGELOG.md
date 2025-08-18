@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.3.0](https://github.com/Notifycal/shared/compare/v7.2.1...v7.3.0) (2025-08-18)
+
+
+### Features
+
+* service config plugin ([#270](https://github.com/Notifycal/shared/issues/270)) ([9d558ae](https://github.com/Notifycal/shared/commit/9d558aeac0bd0c1a91bfdb962b7c5f7b7d6d95bf))
+
 ## [7.2.1](https://github.com/Notifycal/shared/compare/v7.2.0...v7.2.1) (2025-08-18)
 
 
