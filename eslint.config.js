@@ -15,7 +15,7 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 const patchedImportPlugin = fixupPluginRules(eslintPluginImport);
 
-const lintableFiles = ['src/**/*.ts', 'src/**/*.js'];
+const lintableFiles = ['src/**/*.ts', 'src/**/*.js', 'style-dictionary/**/*.js'];
 
 const baseESLintConfig = {
   name: 'eslint',

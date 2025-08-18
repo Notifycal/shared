@@ -1,0 +1,16 @@
+{
+  "font": {
+    "primary": {
+      "value": "Poppins, sans-serif"
+    },
+    "primary-type": {
+      "value": "sans-serif"
+    },
+    "secondary": {
+      "value": "Merriweather, sans-serif"
+    },
+    "secondary-type": {
+      "value": "sans-serif"
+    }
+  }
+}
