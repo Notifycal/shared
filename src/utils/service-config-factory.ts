@@ -11,7 +11,7 @@ interface ServiceConfigFactory<T> {
   getServiceConfig: () => T;
 }
 
-export function createServiceConfig<T>(schema: ZodType<T>): ServiceConfigFactory<T> {
+export function serviceConfigFactory<T>(schema: ZodType<T>): ServiceConfigFactory<T> {
   let config: T | null = null;
 
   const loadServiceConfig = (): void => {
