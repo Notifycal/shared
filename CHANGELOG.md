@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.2.1](https://github.com/Notifycal/shared/compare/v7.2.0...v7.2.1) (2025-08-18)
+
+
+### Bug Fixes
+
+* service config factory ([#267](https://github.com/Notifycal/shared/issues/267)) ([81586bd](https://github.com/Notifycal/shared/commit/81586bd2222d81d8ee39d13cf779c9e554d825c3))
+
 ## [7.2.0](https://github.com/Notifycal/shared/compare/v7.1.0...v7.2.0) (2025-08-18)
 
 
