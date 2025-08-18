@@ -1,15 +1,15 @@
 /* This file was generated automatically, do not edit it */
 @theme {
-  --color-primary-50: hsl(271, 76%, 95%);
-  --color-primary-100: hsl(271, 76%, 91%);
-  --color-primary-200: hsl(271, 76%, 81%);
-  --color-primary-300: hsl(271, 76%, 72%);
-  --color-primary-400: hsl(271, 76%, 62%);
-  --color-primary-500: hsl(271, 76%, 53%);
-  --color-primary-600: hsl(271, 68%, 42%);
-  --color-primary-700: hsl(271, 68%, 32%);
-  --color-primary-800: hsl(271, 68%, 21%);
-  --color-primary-900: hsl(271, 68%, 11%);
+  --color-primary-50: hsl(175, 43%, 96%);
+  --color-primary-100: hsl(175, 43%, 91%);
+  --color-primary-200: hsl(175, 43%, 83%);
+  --color-primary-300: hsl(175, 43%, 74%);
+  --color-primary-400: hsl(175, 43%, 65%);
+  --color-primary-500: hsl(175, 43%, 57%);
+  --color-primary-600: hsl(175, 32%, 45%);
+  --color-primary-700: hsl(175, 32%, 34%);
+  --color-primary-800: hsl(175, 32%, 23%);
+  --color-primary-900: hsl(175, 32%, 11%);
   --color-secondary-50: hsl(51, 100%, 95%);
   --color-secondary-100: hsl(51, 100%, 90%);
   --color-secondary-200: hsl(51, 100%, 80%);

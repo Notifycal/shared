@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc && tsc-alias && npm run build:styles",
-    "build:styles": "node style-dictionary/build-tokens.mjs && cp -R src/styles dist/ && cp -R src/theme dist/",
+    "build:styles": "node style-dictionary/build-tokens.mjs && cp -R src/styles dist/",
     "lint": "eslint -c ./eslint.config.js",
     "lint:fix": "$npm_execpath run lint -- --fix",
     "prettier": "prettier . --check",
@@ -43,6 +43,11 @@
       "import": "./dist/pricing/index.js",
       "types": "./dist/pricing/index.d.ts"
     },
+    "./theme": {
+      "import": "./dist/theme/index.js",
+      "types": "./dist/theme/index.d.ts"
+    },
+    "./styles": "./dist/styles/index.css",
     "./styles/*.css": "./dist/styles/*.css"
   },
   "keywords": [],

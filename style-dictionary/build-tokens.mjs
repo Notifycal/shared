@@ -91,7 +91,7 @@ StyleDictionary.registerFormat({
       const values = colorsObject[colorName].map((s) => `'var(${s.cssVariableName})'`).join(',\n    ');
       output += `  ${colorName}: [\n    ${values}\n  ],\n`;
     }
-    output += '};\n\n';
+    output += '};\n';
 
     return output;
   }

@@ -62,5 +62,5 @@ export const colors: Record<string, MantineColorsTuple> = {
     'var(--color-neutral-700)',
     'var(--color-neutral-800)',
     'var(--color-neutral-900)'
-  ]
+  ],
 };
