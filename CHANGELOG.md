@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.4.0](https://github.com/Notifycal/shared/compare/v7.3.0...v7.4.0) (2025-08-19)
+
+
+### Features
+
+* add typography and sizes to style-dictionary ([#272](https://github.com/Notifycal/shared/issues/272)) ([5fe5ed6](https://github.com/Notifycal/shared/commit/5fe5ed6ae9f28b7d33c8d3276d37e48df1cb308f))
+
 ## [7.3.0](https://github.com/Notifycal/shared/compare/v7.2.1...v7.3.0) (2025-08-18)
 
 
