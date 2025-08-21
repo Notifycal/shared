@@ -532,7 +532,7 @@ export function cookieConsentConfig(languageCode: string): CookieConsentConfig {
               },
               {
                 title: 'Publicitat',
-                description: `Google utilitza cookies per a la publicitat, incloent servir i renderitzar anuncis, personalitzar anuncis (depenent de la teva configuració d\'anuncis a <a href="https://g.co/adsettings">g.co/adsettings</a>), limitar el nombre de vegades que es mostra un anunci a un usuari, silenciar anuncis que has triat deixar de veure, i mesurar l\'efectivitat dels anuncis.`,
+                description: `Google utilitza cookies per a la publicitat, incloent servir i renderitzar anuncis, personalitzar anuncis (depenent de la teva configuració d'anuncis a <a href="https://g.co/adsettings">g.co/adsettings</a>), limitar el nombre de vegades que es mostra un anunci a un usuari, silenciar anuncis que has triat deixar de veure, i mesurar l'efectivitat dels anuncis.`,
                 linkedCategory: CAT_ADVERTISEMENT
               },
               {
