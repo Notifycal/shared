@@ -1,7 +1,11 @@
 /* This file was generated automatically, do not edit it */
 @theme {
   --font-primary: Poppins, sans-serif;
-  --font-primary-type: sans-serif;
-  --font-secondary: Merriweather, sans-serif;
-  --font-secondary-type: sans-serif;
+  --font-secondary: Zain, sans-serif;
+  --font-weight-primary-regular: 400;
+  --font-weight-primary-medium: 500;
+  --font-weight-primary-semibold: 600;
+  --font-weight-primary-bold: 700;
+  --font-weight-secondary-bold: 700;
+  --font-weight-secondary-extrabold: 900;
 }

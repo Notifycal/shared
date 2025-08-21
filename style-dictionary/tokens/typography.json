@@ -1,16 +1,44 @@
 {
   "font": {
     "primary": {
-      "value": "Poppins, sans-serif"
-    },
-    "primary-type": {
-      "value": "sans-serif"
+      "name": {
+        "value": "Poppins"
+      },
+      "type": {
+        "value": "sans-serif"
+      },
+      "weight": {
+        "regular": {
+          "value": 400
+        },
+        "medium": {
+          "value": 500
+        },
+        "semibold": {
+          "value": 600
+        },
+        "bold": {
+          "value": 700
+        }
+      }
     },
     "secondary": {
-      "value": "Merriweather, sans-serif"
-    },
-    "secondary-type": {
-      "value": "sans-serif"
+      "primary": {
+        "name": {
+          "value": "Zain"
+        },
+        "type": {
+          "value": "sans-serif"
+        },
+        "weight": {
+          "bold": {
+            "value": 700
+          },
+          "extrabold": {
+            "value": 900
+          }
+        }
+      }
     }
   }
 }
