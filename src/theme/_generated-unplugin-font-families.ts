@@ -1,5 +1,5 @@
 /* This file was generated automatically, do not edit it */
-export const unstyleFonts = [
+export const unpluginFonts = [
   {
     "name": "Poppins",
     "styles": "wght@400;500;600;700",

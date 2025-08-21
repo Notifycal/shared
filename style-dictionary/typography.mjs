@@ -56,7 +56,7 @@ export function registerFontFormat(StyleDictionary) {
   });
 
   StyleDictionary.registerFormat({
-    name: 'unstyle/font-families-array',
+    name: 'unplugin/font-families-array',
     format: ({ dictionary }) => {
       const families = collectFontFamilies(dictionary.allTokens);
 
@@ -71,7 +71,7 @@ export function registerFontFormat(StyleDictionary) {
           };
         });
 
-      return `${generatedFileHeader}\nexport const unstyleFonts = ${JSON.stringify(out, null, 2)};\n`;
+      return `${generatedFileHeader}\nexport const unpluginFonts = ${JSON.stringify(out, null, 2)};\n`;
     }
   });
 }

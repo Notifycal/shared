@@ -55,8 +55,8 @@ const sd = new StyleDictionary({
       files: [
         { destination: '_generated-colors-mantine.ts', format: 'mantine/color-palette', filter: isColorToken },
         {
-          destination: '_generated-unstyle-font-families.ts',
-          format: 'unstyle/font-families-array',
+          destination: '_generated-unplugin-font-families.ts',
+          format: 'unplugin/font-families-array',
           filter: isFontToken
         }
       ]

@@ -3,7 +3,7 @@
   "version": "7.4.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && tsc-alias && npm run build:styles",
+    "build": "rm -rf dist && npm run build:styles && tsc && tsc-alias",
     "build:styles": "node style-dictionary/build-tokens.mjs && cp -R src/styles dist/",
     "lint": "eslint -c ./eslint.config.js",
     "lint:fix": "$npm_execpath run lint -- --fix",
