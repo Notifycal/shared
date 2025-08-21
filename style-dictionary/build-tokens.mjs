@@ -52,7 +52,14 @@ const sd = new StyleDictionary({
     js: {
       transformGroup: 'js',
       buildPath: path.join(projectDirectory, 'src', 'theme'),
-      files: [{ destination: '_generated-colors-mantine.ts', format: 'mantine/color-palette', filter: isColorToken }]
+      files: [
+        { destination: '_generated-colors-mantine.ts', format: 'mantine/color-palette', filter: isColorToken },
+        {
+          destination: '_generated-unplugin-font-families.ts',
+          format: 'unplugin/font-families-array',
+          filter: isFontToken
+        }
+      ]
     }
   }
 });

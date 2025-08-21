@@ -15,12 +15,14 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 const patchedImportPlugin = fixupPluginRules(eslintPluginImport);
 
-const lintableFiles = ['src/**/*.ts', 'src/**/*.js', 'style-dictionary/**/*.js'];
+const jsLintableFiles = ['src/**/*.js', 'style-dictionary/**/*.mjs'];
+const tsLintableFiles = ['src/**/*.ts'];
+const allLintableFiles = jsLintableFiles.concat(tsLintableFiles);
 
 const baseESLintConfig = {
   name: 'eslint',
   extends: [eslintJS.configs.recommended],
-  files: lintableFiles,
+  files: allLintableFiles,
   rules: {
     'no-await-in-loop': 'error',
     'no-constant-binary-expression': 'error',
@@ -41,7 +43,7 @@ const baseESLintConfig = {
 const typescriptConfig = {
   name: 'typescript',
   extends: [...typescriptEslint.configs.recommendedTypeChecked],
-  files: lintableFiles,
+  files: tsLintableFiles,
   languageOptions: {
     parser: tsParser,
     parserOptions: {
@@ -102,7 +104,7 @@ const unicornConfig = {
   plugins: {
     unicorn: eslintPluginUnicorn
   },
-  files: lintableFiles,
+  files: allLintableFiles,
   rules: {
     'unicorn/custom-error-definition': 'error',
     'unicorn/empty-brace-spaces': 'error',
