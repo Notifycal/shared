@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.5.0](https://github.com/Notifycal/shared/compare/v7.4.0...v7.5.0) (2025-08-21)
+
+
+### Features
+
+* cookie consent config ([#275](https://github.com/Notifycal/shared/issues/275)) ([91b6b98](https://github.com/Notifycal/shared/commit/91b6b983922e31bde971c6f2a311595215c7b509))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency radashi to v12.6.2 ([#277](https://github.com/Notifycal/shared/issues/277)) ([61d8231](https://github.com/Notifycal/shared/commit/61d82316874eb97e892b38f0f603315ca37c3924))
+* increase font size for new secondary font ([#279](https://github.com/Notifycal/shared/issues/279)) ([0dc9c06](https://github.com/Notifycal/shared/commit/0dc9c06fe10fee4857229fa3ab5385ba74ddae6b))
+
 ## [7.4.0](https://github.com/Notifycal/shared/compare/v7.3.0...v7.4.0) (2025-08-19)
 
 
