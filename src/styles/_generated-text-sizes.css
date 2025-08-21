@@ -1,17 +1,17 @@
 /* This file was generated automatically, do not edit it */
 @theme {
-  --text-h6: 1.2rem;
-  --text-h6-sm: 1.08rem;
-  --text-h5: 1.44rem;
-  --text-h5-sm: 1.296rem;
-  --text-h4: 1.728rem;
-  --text-h4-sm: 1.5552rem;
-  --text-h3: 2.0736rem;
-  --text-h3-sm: 1.86624rem;
-  --text-h2: 2.48832rem;
-  --text-h2-sm: 2.239488rem;
-  --text-h1: 2.985984rem;
-  --text-h1-sm: 2.6873856rem;
+  --text-h6: 1.25rem;
+  --text-h6-sm: 1.125rem;
+  --text-h5: 1.5625rem;
+  --text-h5-sm: 1.40625rem;
+  --text-h4: 1.953125rem;
+  --text-h4-sm: 1.7578125rem;
+  --text-h3: 2.44140625rem;
+  --text-h3-sm: 2.19726563rem;
+  --text-h2: 3.05175781rem;
+  --text-h2-sm: 2.74658203rem;
+  --text-h1: 3.81469727rem;
+  --text-h1-sm: 3.43322754rem;
   --text-base: 16px;
   --text-base-sm: 12.8px;
 }
