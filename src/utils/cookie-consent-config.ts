@@ -68,7 +68,7 @@ function updateGtagConsent(): void {
 
 // See: https://cookieconsent.orestbida.com/advanced/google-consent-mode.html
 // and https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
-export function cookieConsentConfig(): CookieConsentConfig {
+export function cookieConsentConfig(languageCode: string): CookieConsentConfig {
   return {
     onFirstConsent: (): void => {
       updateGtagConsent();
@@ -161,7 +161,7 @@ export function cookieConsentConfig(): CookieConsentConfig {
     },
 
     language: {
-      default: 'en',
+      default: languageCode,
       translations: {
         en: {
           // See: https://support.google.com/tagmanager/answer/10718549?hl=en
@@ -278,7 +278,7 @@ export function cookieConsentConfig(): CookieConsentConfig {
               {
                 title: 'Functionality',
                 description:
-                  'Cookies used for functionality allow users to interact with a service or site to access features that are fundamental to that service. Things considered fundamental to the service include preferences like the user’s choice of language, product optimizations that help maintain and improve a service, and maintaining information relating to a user’s session, such as the content of a shopping cart.',
+                  "Cookies used for functionality allow users to interact with a service or site to access features that are fundamental to that service. Things considered fundamental to the service include preferences like the user's choice of language, product optimizations that help maintain and improve a service, and maintaining information relating to a user's session, such as the content of a shopping cart.",
                 linkedCategory: CAT_FUNCTIONALITY
               },
               {
@@ -290,6 +290,266 @@ export function cookieConsentConfig(): CookieConsentConfig {
               {
                 title: 'Further information',
                 description: `For any queries in relation to the policy on cookies and your choices, please refer to <a href="https://notifycal.com/privacy-policy">privacy policy</a>.`
+              }
+            ]
+          }
+        },
+        es: {
+          consentModal: {
+            title: 'Usamos cookies',
+            description:
+              'Este sitio web utiliza cookies esenciales para garantizar su correcto funcionamiento y cookies de seguimiento para entender cómo interactúas con él. Estas últimas solo se establecerán tras el consentimiento.',
+            acceptAllBtn: 'Aceptar todo',
+            acceptNecessaryBtn: 'Rechazar todo',
+            showPreferencesBtn: 'Gestionar preferencias individuales'
+          },
+          preferencesModal: {
+            title: 'Gestionar preferencias de cookies',
+            acceptAllBtn: 'Aceptar todo',
+            acceptNecessaryBtn: 'Rechazar todo',
+            savePreferencesBtn: 'Aceptar selección actual',
+            closeIconLabel: 'Cerrar modal',
+            sections: [
+              {
+                title: 'Uso de cookies',
+                description:
+                  'Utilizamos cookies para garantizar las funcionalidades básicas del sitio web y mejorar tu experiencia en línea.'
+              },
+              {
+                title: 'Cookies estrictamente necesarias',
+                description:
+                  'Estas cookies son esenciales para el correcto funcionamiento del sitio web, por ejemplo para la autenticación de usuarios.',
+                linkedCategory: CAT_NECESSARY
+              },
+              {
+                title: 'Analytics',
+                description:
+                  'Utilizamos cookies de análisis para entender cómo los usuarios interactúan con nuestro sitio web a través de servicios como Google Analytics y Microsoft Clarity. Estas herramientas nos ayudan a mejorar nuestro contenido y experiencia de usuario. Microsoft Clarity puede grabar sesiones anónimas de usuarios para ayudarnos a identificar problemas de usabilidad.',
+                linkedCategory: CAT_ANALYTICS,
+                cookieTable: {
+                  headers: {
+                    name: 'Nombre',
+                    domain: 'Servicio',
+                    description: 'Descripción',
+                    expiration: 'Expiración'
+                  },
+                  body: [
+                    {
+                      name: '_ga',
+                      domain: 'Google Analytics',
+                      description:
+                        'Cookie establecida por <a href="https://business.safety.google/adscookies/">Google Analytics</a>',
+                      expiration: 'Expira después de 12 días'
+                    },
+                    {
+                      name: '_gid',
+                      domain: 'Google Analytics',
+                      description:
+                        'Cookie establecida por <a href="https://business.safety.google/adscookies/">Google Analytics</a>',
+                      expiration: 'Sesión'
+                    },
+                    {
+                      name: '_clck',
+                      domain: 'Microsoft Clarity',
+                      description:
+                        'Cookie establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft Clarity</a>. Mantiene el ID de usuario y las preferencias para la grabación de sesiones.',
+                      expiration: 'Expira después de 1 año'
+                    },
+                    {
+                      name: '_clsk',
+                      domain: 'Microsoft Clarity',
+                      description:
+                        'Cookie establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft Clarity</a>. Conecta múltiples vistas de página en una sola sesión.',
+                      expiration: 'Sesión'
+                    },
+                    {
+                      name: 'CLID',
+                      domain: 'Microsoft Clarity',
+                      description:
+                        'Cookie de terceros establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft Clarity</a>. Identifica la primera vez que Clarity vio a este usuario en cualquier sitio.',
+                      expiration: 'Expira después de 1 año'
+                    },
+                    {
+                      name: 'MUID',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de terceros establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Identifica navegadores web únicos que visitan sitios de Microsoft.',
+                      expiration: 'Expira después de 1 año'
+                    },
+                    {
+                      name: 'ANONCHK',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de terceros establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Indica si MUID se transfiere a ANID.',
+                      expiration: 'Sesión'
+                    },
+                    {
+                      name: 'MR',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de terceros establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Indica si se debe actualizar MUID.',
+                      expiration: 'Expira después de 7 días'
+                    },
+                    {
+                      name: 'SM',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de terceros establecida por <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Se utiliza para sincronizar MUID entre dominios de Microsoft.',
+                      expiration: 'Sesión'
+                    }
+                  ]
+                }
+              },
+              {
+                title: 'Publicidad',
+                description: `Google utiliza cookies para la publicidad, incluyendo servir y renderizar anuncios, personalizar anuncios (dependiendo de tu configuración de anuncios en <a href="https://g.co/adsettings">g.co/adsettings</a>), limitar el número de veces que se muestra un anuncio a un usuario, silenciar anuncios que has elegido dejar de ver, y medir la efectividad de los anuncios.`,
+                linkedCategory: CAT_ADVERTISEMENT
+              },
+              {
+                title: 'Funcionalidad',
+                description:
+                  'Las cookies utilizadas para la funcionalidad permiten a los usuarios interactuar con un servicio o sitio para acceder a características que son fundamentales para ese servicio. Las cosas consideradas fundamentales para el servicio incluyen preferencias como la elección de idioma del usuario, optimizaciones del producto que ayudan a mantener y mejorar un servicio, y mantener información relacionada con la sesión del usuario, como el contenido de un carrito de compras.',
+                linkedCategory: CAT_FUNCTIONALITY
+              },
+              {
+                title: 'Seguridad',
+                description:
+                  'Las cookies utilizadas para la seguridad autentican usuarios, previenen fraude y protegen a los usuarios mientras interactúan con un servicio.',
+                linkedCategory: CAT_SECURITY
+              },
+              {
+                title: 'Más información',
+                description: `Para cualquier consulta en relación con la política de cookies y tus opciones, por favor consulta la <a href="https://notifycal.com/privacy-policy">política de privacidad</a>.`
+              }
+            ]
+          }
+        },
+        ca: {
+          consentModal: {
+            title: 'Utilitzem cookies',
+            description:
+              'Aquest lloc web utilitza cookies essencials per garantir el seu correcte funcionament i cookies de seguiment per entendre com hi interactues. Aquestes últimes només es configuraran després del consentiment.',
+            acceptAllBtn: 'Acceptar tot',
+            acceptNecessaryBtn: 'Rebutjar tot',
+            showPreferencesBtn: 'Gestionar preferències individuals'
+          },
+          preferencesModal: {
+            title: 'Gestionar preferències de cookies',
+            acceptAllBtn: 'Acceptar tot',
+            acceptNecessaryBtn: 'Rebutjar tot',
+            savePreferencesBtn: 'Acceptar selecció actual',
+            closeIconLabel: 'Tancar modal',
+            sections: [
+              {
+                title: 'Ús de cookies',
+                description:
+                  'Utilitzem cookies per garantir les funcionalitats bàsiques del lloc web i millorar la vostra experiència en línia.'
+              },
+              {
+                title: 'Cookies estrictament necessàries',
+                description:
+                  "Aquestes cookies són essencials per al correcte funcionament del lloc web, per exemple per a l'autenticació d'usuaris.",
+                linkedCategory: CAT_NECESSARY
+              },
+              {
+                title: 'Analítiques',
+                description:
+                  "Utilitzem cookies d'anàlisi per entendre com els usuaris interactuen amb el nostre lloc web a través de serveis com Google Analytics i Microsoft Clarity. Aquestes eines ens ajuden a millorar el nostre contingut i experiència d'usuari. Microsoft Clarity pot gravar sessions anònimes d'usuaris per ajudar-nos a identificar problemes d'usabilitat.",
+                linkedCategory: CAT_ANALYTICS,
+                cookieTable: {
+                  headers: {
+                    name: 'Nom',
+                    domain: 'Servei',
+                    description: 'Descripció',
+                    expiration: 'Expiració'
+                  },
+                  body: [
+                    {
+                      name: '_ga',
+                      domain: 'Google Analytics',
+                      description:
+                        'Cookie establerta per <a href="https://business.safety.google/adscookies/">Google Analytics</a>',
+                      expiration: 'Expira després de 12 dies'
+                    },
+                    {
+                      name: '_gid',
+                      domain: 'Google Analytics',
+                      description:
+                        'Cookie establerta per <a href="https://business.safety.google/adscookies/">Google Analytics</a>',
+                      expiration: 'Sessió'
+                    },
+                    {
+                      name: '_clck',
+                      domain: 'Microsoft Clarity',
+                      description:
+                        'Cookie establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft Clarity</a>. Manté l\'ID d\'usuari i les preferències per al gravat de sessions.',
+                      expiration: "Expira després d'1 any"
+                    },
+                    {
+                      name: '_clsk',
+                      domain: 'Microsoft Clarity',
+                      description:
+                        'Cookie establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft Clarity</a>. Connecta múltiples vistes de pàgina en una sola sessió.',
+                      expiration: 'Sessió'
+                    },
+                    {
+                      name: 'CLID',
+                      domain: 'Microsoft Clarity',
+                      description:
+                        'Cookie de tercers establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft Clarity</a>. Identifica la primera vegada que Clarity va veure aquest usuari en qualsevol lloc.',
+                      expiration: "Expira després d'1 any"
+                    },
+                    {
+                      name: 'MUID',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de tercers establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Identifica navegadors web únics que visiten llocs de Microsoft.',
+                      expiration: "Expira després d'1 any"
+                    },
+                    {
+                      name: 'ANONCHK',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de tercers establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Indica si MUID es transfereix a ANID.',
+                      expiration: 'Sessió'
+                    },
+                    {
+                      name: 'MR',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de tercers establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. Indica si s\'ha d\'actualitzar MUID.',
+                      expiration: 'Expira després de 7 dies'
+                    },
+                    {
+                      name: 'SM',
+                      domain: 'Microsoft',
+                      description:
+                        'Cookie de tercers establerta per <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">Microsoft</a>. S\'utilitza per sincronitzar MUID entre dominis de Microsoft.',
+                      expiration: 'Sessió'
+                    }
+                  ]
+                }
+              },
+              {
+                title: 'Publicitat',
+                description: `Google utilitza cookies per a la publicitat, incloent servir i renderitzar anuncis, personalitzar anuncis (depenent de la teva configuració d\'anuncis a <a href="https://g.co/adsettings">g.co/adsettings</a>), limitar el nombre de vegades que es mostra un anunci a un usuari, silenciar anuncis que has triat deixar de veure, i mesurar l\'efectivitat dels anuncis.`,
+                linkedCategory: CAT_ADVERTISEMENT
+              },
+              {
+                title: 'Funcionalitat',
+                description:
+                  "Les cookies utilitzades per a la funcionalitat permeten als usuaris interactuar amb un servei o lloc per accedir a característiques que són fonamentals per a aquest servei. Les coses considerades fonamentals per al servei inclouen preferències com l'elecció d'idioma de l'usuari, optimitzacions del producte que ajuden a mantenir i millorar un servei, i mantenir informació relacionada amb la sessió de l'usuari, com el contingut d'una cistella de compra.",
+                linkedCategory: CAT_FUNCTIONALITY
+              },
+              {
+                title: 'Seguretat',
+                description:
+                  'Les cookies utilitzades per a la seguretat autentiquen usuaris, prevenen frau i protegeixen els usuaris mentre interactuen amb un servei.',
+                linkedCategory: CAT_SECURITY
+              },
+              {
+                title: 'Més informació',
+                description: `Per a qualsevol consulta en relació amb la política de cookies i les vostres opcions, si us plau consulteu la <a href="https://notifycal.com/privacy-policy">política de privadesa</a>.`
               }
             ]
           }
