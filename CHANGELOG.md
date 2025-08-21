@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.6.0](https://github.com/Notifycal/shared/compare/v7.5.0...v7.6.0) (2025-08-21)
+
+
+### Features
+
+* generate unplugin google fonts array and font-weights ([#280](https://github.com/Notifycal/shared/issues/280)) ([86501ae](https://github.com/Notifycal/shared/commit/86501ae2833e3257274642c693218f5185901b7d))
+
 ## [7.5.0](https://github.com/Notifycal/shared/compare/v7.4.0...v7.5.0) (2025-08-21)
 
 
