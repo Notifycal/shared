@@ -1,7 +1,4 @@
-import type { CookieConsentConfig } from 'vanilla-cookieconsent';
-import * as pkg from 'vanilla-cookieconsent';
-
-const { acceptedService } = pkg;
+import { type CookieConsentConfig, acceptedService } from 'vanilla-cookieconsent';
 
 declare global {
   interface Window {
