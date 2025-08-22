@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.6.2](https://github.com/Notifycal/shared/compare/v7.6.1...v7.6.2) (2025-08-22)
+
+
+### Bug Fixes
+
+* let cookie stuff bve alone so backend does not explode when buil… ([#284](https://github.com/Notifycal/shared/issues/284)) ([0bedbb3](https://github.com/Notifycal/shared/commit/0bedbb37aa9cf1df66eb5ab58e27188e5d68c225))
+
 ## [7.6.1](https://github.com/Notifycal/shared/compare/v7.6.0...v7.6.1) (2025-08-22)
 
 
