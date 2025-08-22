@@ -23,7 +23,6 @@ export const SERVICE_SECURITY_STORAGE = 'security_storage';
 
 export function denyAllGtag(): void {
   if (window && window.gtag) {
-    console.log('Init gtag consent mode');
     // Set default consent to 'denied' (this should happen before changing any other dataLayer)
     window.gtag('consent', 'default', {
       [SERVICE_AD_STORAGE]: 'denied',
@@ -39,7 +38,6 @@ export function denyAllGtag(): void {
 
 export function updateAllGtagConsent(): void {
   if (window && window.gtag) {
-    console.log('Updating gtag consent mode');
     window.gtag('consent', 'update', {
       [SERVICE_ANALYTICS_STORAGE]: acceptedService(SERVICE_ANALYTICS_STORAGE, CAT_ANALYTICS) ? 'granted' : 'denied',
       [SERVICE_AD_STORAGE]: acceptedService(SERVICE_AD_STORAGE, CAT_ADVERTISEMENT) ? 'granted' : 'denied',
