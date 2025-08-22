@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.6.1](https://github.com/Notifycal/shared/compare/v7.6.0...v7.6.1) (2025-08-22)
+
+
+### Bug Fixes
+
+* cookie consent close button color ([#282](https://github.com/Notifycal/shared/issues/282)) ([f912cc7](https://github.com/Notifycal/shared/commit/f912cc75e4846202f13e65690893b46e29f57f68))
+
 ## [7.6.0](https://github.com/Notifycal/shared/compare/v7.5.0...v7.6.0) (2025-08-21)
 
 
