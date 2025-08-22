@@ -3,6 +3,7 @@ import { type CookieConsentConfig, acceptedService } from 'vanilla-cookieconsent
 declare global {
   interface Window {
     dataLayer: Array<unknown>;
+    gtag: ((...args: Array<unknown>) => void) | undefined;
   }
 }
 
@@ -20,17 +21,11 @@ export const SERVICE_FUNCTIONALITY_STORAGE = 'functionality_storage';
 export const SERVICE_PERSONALIZATION_STORAGE = 'personalization_storage';
 export const SERVICE_SECURITY_STORAGE = 'security_storage';
 
-let gtag: ((...args: Array<unknown>) => void) | undefined;
-
-function initializeGtag(): void {
-  if (typeof window !== 'undefined' && !gtag) {
-    window.dataLayer = window.dataLayer || [];
-    gtag = (...args: Array<unknown>): void => {
-      window.dataLayer.push(args);
-    };
-
+export function denyAllGtag(): void {
+  if (window && window.gtag) {
+    console.log('Init gtag consent mode');
     // Set default consent to 'denied' (this should happen before changing any other dataLayer)
-    gtag('consent', 'default', {
+    window.gtag('consent', 'default', {
       [SERVICE_AD_STORAGE]: 'denied',
       [SERVICE_AD_USER_DATA]: 'denied',
       [SERVICE_AD_PERSONALIZATION]: 'denied',
@@ -42,10 +37,10 @@ function initializeGtag(): void {
   }
 }
 
-function updateGtagConsent(): void {
-  initializeGtag();
-  if (gtag) {
-    gtag('consent', 'update', {
+export function updateAllGtagConsent(): void {
+  if (window && window.gtag) {
+    console.log('Updating gtag consent mode');
+    window.gtag('consent', 'update', {
       [SERVICE_ANALYTICS_STORAGE]: acceptedService(SERVICE_ANALYTICS_STORAGE, CAT_ANALYTICS) ? 'granted' : 'denied',
       [SERVICE_AD_STORAGE]: acceptedService(SERVICE_AD_STORAGE, CAT_ADVERTISEMENT) ? 'granted' : 'denied',
       [SERVICE_AD_USER_DATA]: acceptedService(SERVICE_AD_USER_DATA, CAT_ADVERTISEMENT) ? 'granted' : 'denied',
@@ -65,17 +60,11 @@ function updateGtagConsent(): void {
 
 // See: https://cookieconsent.orestbida.com/advanced/google-consent-mode.html
 // and https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
-export function cookieConsentConfig(languageCode: string): CookieConsentConfig {
+export function gtagConsentConfig(languageCode: string, updateConsent: () => void): CookieConsentConfig {
   return {
-    onFirstConsent: (): void => {
-      updateGtagConsent();
-    },
-    onConsent: (): void => {
-      updateGtagConsent();
-    },
-    onChange: (): void => {
-      updateGtagConsent();
-    },
+    onFirstConsent: updateConsent,
+    onConsent: updateConsent,
+    onChange: updateConsent,
     categories: {
       [CAT_NECESSARY]: {
         enabled: true,
