@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.6.3](https://github.com/Notifycal/shared/compare/v7.6.2...v7.6.3) (2025-08-22)
+
+
+### Bug Fixes
+
+* cookies init ([#286](https://github.com/Notifycal/shared/issues/286)) ([8fc2df3](https://github.com/Notifycal/shared/commit/8fc2df313a43007f3f2c4254dc67fea246f7b8a5))
+* remove console logs ([96667ef](https://github.com/Notifycal/shared/commit/96667ef1870a1d2df64d2c037bc0f76fe103082f))
+
 ## [7.6.2](https://github.com/Notifycal/shared/compare/v7.6.1...v7.6.2) (2025-08-22)
 
 
