@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.6.4](https://github.com/Notifycal/shared/compare/v7.6.3...v7.6.4) (2025-08-25)
+
+
+### Bug Fixes
+
+* bump zod as renovate PR was stuck due to vanilla-cookie-consent ([#290](https://github.com/Notifycal/shared/issues/290)) ([aed02c1](https://github.com/Notifycal/shared/commit/aed02c1b5be8de7f45121580137c31ba3580415d))
+
 ## [7.6.3](https://github.com/Notifycal/shared/compare/v7.6.2...v7.6.3) (2025-08-22)
 
 
