@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.7.1](https://github.com/Notifycal/shared/compare/v7.7.0...v7.7.1) (2025-08-26)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v4.1.3 ([#293](https://github.com/Notifycal/shared/issues/293)) ([b748d91](https://github.com/Notifycal/shared/commit/b748d9101744587035e4dcc861e52912171b29cf))
+* install vanilla-cookieconsent as dev dependency, only peer is not enough ([#296](https://github.com/Notifycal/shared/issues/296)) ([ec5632c](https://github.com/Notifycal/shared/commit/ec5632c48c7c0dbb555af93368c3acb3e15f2290))
+
 ## [7.7.0](https://github.com/Notifycal/shared/compare/v7.6.4...v7.7.0) (2025-08-26)
 
 
