@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.7.0](https://github.com/Notifycal/shared/compare/v7.6.4...v7.7.0) (2025-08-26)
+
+
+### Features
+
+* logos, flag icons and color palette ([#294](https://github.com/Notifycal/shared/issues/294)) ([3deccb2](https://github.com/Notifycal/shared/commit/3deccb2c32cbcbc2f66ea8867b7de71ade639516))
+
 ## [7.6.4](https://github.com/Notifycal/shared/compare/v7.6.3...v7.6.4) (2025-08-25)
 
 
