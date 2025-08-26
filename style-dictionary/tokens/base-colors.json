@@ -1,23 +1,23 @@
 {
   "color": {
     "primary": {
-      "value": "#62c0b8",
+      "value": "#35D759",
       "generateShades": true
     },
     "secondary": {
-      "value": "#FFD700",
+      "value": "#355E5C",
       "generateShades": true
     },
     "accent1": {
-      "value": "#4682B4",
+      "value": "#FFC33F",
       "generateShades": true
     },
     "accent2": {
-      "value": "#1E90FF",
+      "value": "#9F38C8",
       "generateShades": true
     },
     "neutral": {
-      "value": "#778899",
+      "value": "#667085",
       "generateShades": true
     },
     "background": {

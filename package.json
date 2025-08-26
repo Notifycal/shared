@@ -3,8 +3,9 @@
   "version": "7.6.4",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && tsc-alias && npm run build:styles",
+    "build": "rm -rf dist && tsc && tsc-alias && $npm_execpath run build:styles && $npm_execpath run build:assets",
     "build:styles": "node style-dictionary/build-tokens.mjs && cp -R src/styles dist/",
+    "build:assets": "cp -R src/assets dist/",
     "lint": "eslint -c ./eslint.config.js",
     "lint:fix": "$npm_execpath run lint -- --fix",
     "prettier": "prettier . --check",
@@ -52,7 +53,8 @@
       "types": "./dist/theme/index.d.ts"
     },
     "./styles": "./dist/styles/index.css",
-    "./styles/*.css": "./dist/styles/*.css"
+    "./styles/*.css": "./dist/styles/*.css",
+    "./assets/*": "./dist/assets/*"
   },
   "keywords": [],
   "author": "Notifycal",
