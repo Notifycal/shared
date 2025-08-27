@@ -6,19 +6,22 @@ import caTranslations from './i18n/ca.json' with { type: 'json' };
 import enTranslations from './i18n/en.json' with { type: 'json' };
 import esTranslations from './i18n/es.json' with { type: 'json' };
 
-type CommonFeatures = 'numberOfMonthlyReminders' | 'googleCalendarIntegration';
-type ByTierFeatures = 'supportLevel' | 'responseTime' | 'integrationLimit';
-type ExclusiveBetterFeatures = 'advancedReports' | 'customBranding';
-type ExclusiveBestFeatures = 'advancedReports' | 'customBranding';
+type CommonFeatures =
+  | 'numberOfMonthlyReminders'
+  | 'lowCreditsAlert'
+  | 'insufficientCreditsAlert'
+  | 'topupsAvailable'
+  | 'unlimitedCalendarIntegration'
+  | 'reminderTypeSelection';
+type ByTierFeatures = 'supportLevel';
 
 interface TranslationKeys {
   common: Record<CommonFeatures, string>;
   byTier: Record<ByTierFeatures, Record<TierId, string>>;
   exclusive: {
-    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-    good: {};
-    better: Record<ExclusiveBetterFeatures, string>;
-    best: Record<ExclusiveBestFeatures, string>;
+    good: Record<string, never>;
+    better: Record<string, never>;
+    best: Record<string, never>;
   };
 }
 

@@ -1,36 +1,22 @@
 {
   "common": {
-    "numberOfMonthlyReminders": "recordatoris mensuals*",
-    "googleCalendarIntegration": "Integració amb Google Calendar"
+    "numberOfMonthlyReminders": "recordatoris mensuals inclosos*",
+    "lowCreditsAlert": "Alerta per email quan queden pocs crèdits",
+    "insufficientCreditsAlert": "Alerta per email si no es pot enviar recordatori",
+    "topupsAvailable": "Topups disponibles per completar el mes",
+    "unlimitedCalendarIntegration": "Integració il·limitada amb calendaris",
+    "reminderTypeSelection": "Selecció del tipus de recordatori"
   },
   "byTier": {
     "supportLevel": {
-      "good": "Suport bàsic per email",
-      "better": "Suport premium (resposta en 24h)",
-      "best": "Suport empresarial 24/7"
-    },
-    "responseTime": {
-      "good": "Resposta en 2-3 dies",
-      "better": "Resposta en 24 hores",
-      "best": "Resposta en 1 hora"
-    },
-    "integrationLimit": {
-      "good": "1 calendari",
-      "better": "3 calendaris",
-      "best": "Calendaris il·limitats"
+      "good": "Suport per email en màxim 72 hores",
+      "better": "Suport prioritari en màxim 48 hores",
+      "best": "Contacte directe en màxim 24 hores"
     }
   },
   "exclusive": {
     "good": {},
-    "better": {
-      "googleContactsIntegration": "Integració amb Google Contacts",
-      "teamManagement": "Gestió d'equips"
-    },
-    "best": {
-      "googleContactsIntegration": "Integració amb Google Contacts",
-      "teamManagement": "Gestió d'equips",
-      "advancedReports": "Informes avançats",
-      "customBranding": "Personalització de marca"
-    }
+    "better": {},
+    "best": {}
   }
 }

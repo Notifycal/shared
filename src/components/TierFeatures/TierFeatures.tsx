@@ -13,8 +13,8 @@ export const TierFeatures: FC<TierFeatures> = ({ tier, className, icon: Icon = I
   return (
     <ul className={clsx('mt-4 flex flex-col gap-2 items-start text-sm opacity-80 px-0', className)}>
       {tier.features.map((feature, index) => (
-        <li key={index} className="flex items-start gap-2">
-          <span className="text-accent2">
+        <li key={index} className="flex items-start gap-2 mt-2">
+          <span className={clsx(tier.recommended ? '' : 'text-primary')}>
             <Icon />
           </span>
           <span>{feature}</span>
