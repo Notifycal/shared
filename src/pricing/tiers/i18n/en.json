@@ -1,4 +1,36 @@
 {
-  "numberOfMonthlyReminders": "monthly reminders*",
-  "googleCalendarIntegration": "Integration with Google Calendar"
+  "common": {
+    "numberOfMonthlyReminders": "monthly reminders*",
+    "googleCalendarIntegration": "Integration with Google Calendar"
+  },
+  "byTier": {
+    "supportLevel": {
+      "good": "Basic email support",
+      "better": "Premium support (24h response)",
+      "best": "Enterprise support 24/7"
+    },
+    "responseTime": {
+      "good": "2-3 days response",
+      "better": "24 hours response",
+      "best": "1 hour response"
+    },
+    "integrationLimit": {
+      "good": "1 calendar",
+      "better": "3 calendars",
+      "best": "Unlimited calendars"
+    }
+  },
+  "exclusive": {
+    "good": {},
+    "better": {
+      "googleContactsIntegration": "Integration with Google Contacts",
+      "teamManagement": "Team management"
+    },
+    "best": {
+      "googleContactsIntegration": "Integration with Google Contacts",
+      "teamManagement": "Team management",
+      "advancedReports": "Advanced reports",
+      "customBranding": "Custom branding"
+    }
+  }
 }
