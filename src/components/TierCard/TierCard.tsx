@@ -40,7 +40,7 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
           <Badge
             fullWidth
             className="absolute left-1/2 -translate-x-1/2 -top-5 z-10"
-            color="yellow"
+            color="accent1"
             radius="sm"
             size="lg"
             variant="filled"
@@ -55,14 +55,14 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
         radius="md"
         shadow="md"
         className={clsx(
-          'transition-transform h-full flex flex-col justify-between shadow-lg',
+          'transition-transform h-full flex flex-col justify-between shadow-lg font-bold',
           tier.recommended
-            ? 'hover:scale-[1.07] scale-105 bg-indigo-700 text-white border-indigo-600 shadow-xl hover:shadow-2xl transition-shadow duration-300'
-            : 'hover:scale-[1.02] bg-white text-gray-900'
+            ? 'hover:scale-[1.07] bg-accent2-700 scale-105 text-white shadow-xl hover:shadow-2xl transition-all duration-300'
+            : 'hover:scale-[1.02] bg-white text-accent2-900'
         )}
       >
         <div className="space-y-2">
-          <div className="text-xl font-semibold">{tier.displayName}</div>
+          <div className="text-xl">{tier.displayName}</div>
           <div className="text-sm opacity-80 min-h-[3.5rem] flex items-start justify-start">
             {translation.tierDescriptions[tier.id]}
           </div>
@@ -73,11 +73,11 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
           </div>
           <Button
             fullWidth
-            color={tier.recommended ? 'dark' : 'blue'}
+            color={tier.recommended ? 'primary' : 'accent2'}
             disabled={isDisabled}
             loading={isLoading}
             mt="sm"
-            variant={tier.recommended ? 'white' : 'outline'}
+            variant={tier.recommended ? 'filled' : 'outline'}
             onClick={() => {
               onSelect(tier.id);
             }}
