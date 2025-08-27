@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.8.0](https://github.com/Notifycal/shared/compare/v7.7.1...v7.8.0) (2025-08-27)
+
+
+### Features
+
+* make tier selection shine - adapt it to colour palette. Tier features wording ([#299](https://github.com/Notifycal/shared/issues/299)) ([029f3f0](https://github.com/Notifycal/shared/commit/029f3f041a48b9d8ae8800ba2fdda5ca11b55ffb))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v4.1.4 ([#301](https://github.com/Notifycal/shared/issues/301)) ([9ad647d](https://github.com/Notifycal/shared/commit/9ad647dd1c355bd08a59326ee8d8e29d777e5aae))
+
 ## [7.7.1](https://github.com/Notifycal/shared/compare/v7.7.0...v7.7.1) (2025-08-26)
 
 
