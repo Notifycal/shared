@@ -1,4 +1,22 @@
 {
-  "numberOfMonthlyReminders": "recordatorios al mes*",
-  "googleCalendarIntegration": "Integración con Google Calendar"
+  "common": {
+    "numberOfMonthlyReminders": "recordatorios al mes incluidos*",
+    "lowCreditsAlert": "Alerta por email cuando quedan pocos créditos",
+    "insufficientCreditsAlert": "Alerta por email si no se puede enviar recordatorio",
+    "topupsAvailable": "Topups disponibles para completar el mes",
+    "unlimitedCalendarIntegration": "Integración ilimitada con calendarios",
+    "reminderTypeSelection": "Selección del tipo de recordatorio"
+  },
+  "byTier": {
+    "supportLevel": {
+      "good": "Soporte por email en máximo 72 horas",
+      "better": "Soporte prioritario en máximo 48 horas",
+      "best": "Contacto directo en máximo 24 horas"
+    }
+  },
+  "exclusive": {
+    "good": {},
+    "better": {},
+    "best": {}
+  }
 }

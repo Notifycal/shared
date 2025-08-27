@@ -1,7 +1,9 @@
 import { type TierInfoWithIcon, TierCard } from '@notifycal/shared/components';
 import { LanguageCode, TierId } from '@types';
-
 import type { FC } from 'react';
+import caTranslations from './i18n/ca.json' with { type: 'json' };
+import enTranslations from './i18n/en.json' with { type: 'json' };
+import esTranslations from './i18n/es.json' with { type: 'json' };
 
 interface TierSelectionProps {
   displayNavigationButtons?: boolean;
@@ -12,6 +14,12 @@ interface TierSelectionProps {
   lang: LanguageCode;
 }
 
+const translations = {
+  en: enTranslations,
+  es: esTranslations,
+  ca: caTranslations
+};
+
 export const TierSelection: FC<TierSelectionProps> = ({
   orderedTierInfoWithIcons,
   onTierSelection,
@@ -19,20 +27,24 @@ export const TierSelection: FC<TierSelectionProps> = ({
   isCardButtonLoading,
   lang
 }: TierSelectionProps) => {
+  const translation = translations[lang];
   return (
-    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 lg:gap-12">
-      {orderedTierInfoWithIcons.map((tier) => {
-        return (
-          <TierCard
-            key={tier.id}
-            isDisabled={isCardButtonDisabled(tier.id)}
-            isLoading={isCardButtonLoading(tier.id)}
-            lang={lang}
-            tier={tier}
-            onSelect={onTierSelection}
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 lg:gap-12">
+        {orderedTierInfoWithIcons.map((tier) => {
+          return (
+            <TierCard
+              key={tier.id}
+              isDisabled={isCardButtonDisabled(tier.id)}
+              isLoading={isCardButtonLoading(tier.id)}
+              lang={lang}
+              tier={tier}
+              onSelect={onTierSelection}
+            />
+          );
+        })}
+      </div>
+      <div className="mt-8 text-sm text-center text-gray-500 max-w-2xl mx-auto">* {translation.disclaimer}</div>
+    </>
   );
 };
