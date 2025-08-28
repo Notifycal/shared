@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.9.0](https://github.com/Notifycal/shared/compare/v7.8.0...v7.9.0) (2025-08-28)
+
+
+### Features
+
+* country to sms cost map schema. release previous commit ([ab8f6eb](https://github.com/Notifycal/shared/commit/ab8f6eb1478f981a872eac21c5dc1d1b7a20fa00))
+
 ## [7.8.0](https://github.com/Notifycal/shared/compare/v7.7.1...v7.8.0) (2025-08-27)
 
 
