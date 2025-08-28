@@ -31,7 +31,7 @@ const translations: Record<LanguageCode, TranslationKeys> = {
   ca: caTranslations
 };
 
-import { tierMapSchema, topupMapSchema } from '@notifycal/shared/schemas';
+import { countryCodeSchema, stringifiedSchema, tierMapSchema, topupMapSchema } from '@notifycal/shared/schemas';
 
 import z from 'zod';
 
@@ -40,16 +40,16 @@ const pricingConfigSchema = z.object({
   topups: topupMapSchema
 });
 
-export const productsInfoSchema = z.string().transform((data, context) => {
-  try {
-    const jsonParsed = JSON.parse(data) as object;
-    return pricingConfigSchema.parse(jsonParsed);
-  } catch {
-    context.addIssue({ code: 'custom', message: 'Invalid tier info object' });
-    return z.NEVER;
-  }
-});
+export const productsInfoSchema = stringifiedSchema(pricingConfigSchema, 'Invalid tier info object');
 export type ProductsInfo = z.infer<typeof productsInfoSchema>;
+
+export const countryToSmsCostMapSchema = z.record(countryCodeSchema.exclude(['GB']), z.number());
+export const countryToSmsCostMapStringifiedSchema = stringifiedSchema(
+  countryToSmsCostMapSchema,
+  'Invalid country to sms cost map'
+);
+
+export type CountryToSmsCostMap = z.infer<typeof countryToSmsCostMapSchema>;
 
 const tierFeatures = (lang: LanguageCode, tierId: TierId, tierNumberOfReminders: number): Array<string> => {
   const t = translations[lang];
