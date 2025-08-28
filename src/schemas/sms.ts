@@ -1,4 +1,3 @@
-
 import { z } from 'zod';
 
 export const SMS_CHARACTER_REGEX = /^[a-zA-Z0-9\s.,!?'"():;\-_]*$/;
