@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.9.2](https://github.com/Notifycal/shared/compare/v7.9.1...v7.9.2) (2025-09-01)
+
+
+### Bug Fixes
+
+* cookie-banner colors ([#309](https://github.com/Notifycal/shared/issues/309)) ([231d89b](https://github.com/Notifycal/shared/commit/231d89b70c080d196e23e3ad0f5ec796ca7f2e48))
+
 ## [7.9.1](https://github.com/Notifycal/shared/compare/v7.9.0...v7.9.1) (2025-08-31)
 
 
