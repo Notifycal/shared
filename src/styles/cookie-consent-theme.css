@@ -37,10 +37,10 @@
   --cc-footer-bg: var(--color-primary-500);
 }
 
-.cc--theme [data-role="necessary"] {
+.cc--theme [data-role='necessary'] {
   background: var(--color-accent1-600) !important;
 }
 
-.cc--theme [data-role="necessary"]:hover {
+.cc--theme [data-role='necessary']:hover {
   background: var(--color-accent1-900) !important;
 }
