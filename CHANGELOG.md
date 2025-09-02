@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.10.0](https://github.com/Notifycal/shared/compare/v7.9.2...v7.10.0) (2025-09-02)
+
+
+### Features
+
+* icons isologos derivations ([#312](https://github.com/Notifycal/shared/issues/312)) ([de95139](https://github.com/Notifycal/shared/commit/de9513996c7ab29ab464106fe759e6af7f51af22))
+
 ## [7.9.2](https://github.com/Notifycal/shared/compare/v7.9.1...v7.9.2) (2025-09-01)
 
 
