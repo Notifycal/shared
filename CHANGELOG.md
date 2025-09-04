@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.10.1](https://github.com/Notifycal/shared/compare/v7.10.0...v7.10.1) (2025-09-03)
+
+
+### Bug Fixes
+
+* isologo png. It had 2 horizontal lines ([#317](https://github.com/Notifycal/shared/issues/317)) ([18cccbb](https://github.com/Notifycal/shared/commit/18cccbb049fbbda10eae2f13e85fc9a8181a506f))
+
 ## [7.10.0](https://github.com/Notifycal/shared/compare/v7.9.2...v7.10.0) (2025-09-02)
 
 
