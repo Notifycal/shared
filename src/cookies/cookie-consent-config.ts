@@ -38,7 +38,7 @@ export function denyAllGtag(): void {
 
 export function updateAllGtagConsent(): void {
   if (window && window.gtag) {
-    window.gtag('consent', 'update', {
+    const consentObject = {
       [SERVICE_ANALYTICS_STORAGE]: acceptedService(SERVICE_ANALYTICS_STORAGE, CAT_ANALYTICS) ? 'granted' : 'denied',
       [SERVICE_AD_STORAGE]: acceptedService(SERVICE_AD_STORAGE, CAT_ADVERTISEMENT) ? 'granted' : 'denied',
       [SERVICE_AD_USER_DATA]: acceptedService(SERVICE_AD_USER_DATA, CAT_ADVERTISEMENT) ? 'granted' : 'denied',
@@ -52,6 +52,11 @@ export function updateAllGtagConsent(): void {
         ? 'granted'
         : 'denied',
       [SERVICE_SECURITY_STORAGE]: acceptedService(SERVICE_SECURITY_STORAGE, CAT_SECURITY) ? 'granted' : 'denied'
+    };
+
+    window.gtag('consent', 'update', consentObject);
+    window.dataLayer.push({
+      event: 'cookie_consent_updated'
     });
   }
 }
@@ -60,7 +65,6 @@ export function updateAllGtagConsent(): void {
 // and https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
 export function gtagConsentConfig(languageCode: string, updateConsent: () => void): CookieConsentConfig {
   return {
-    onFirstConsent: updateConsent,
     onConsent: updateConsent,
     onChange: updateConsent,
     categories: {
