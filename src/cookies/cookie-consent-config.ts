@@ -65,12 +65,8 @@ export function updateAllGtagConsent(): void {
 // and https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
 export function gtagConsentConfig(languageCode: string, updateConsent: () => void): CookieConsentConfig {
   return {
-    onConsent: () => {
-      updateConsent();
-    },
-    onChange: () => {
-      updateConsent();
-    },
+    onConsent: updateConsent,
+    onChange: updateConsent,
     categories: {
       [CAT_NECESSARY]: {
         enabled: true,
