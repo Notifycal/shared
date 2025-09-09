@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.11.0](https://github.com/Notifycal/shared/compare/v7.10.1...v7.11.0) (2025-09-09)
+
+
+### Features
+
+* notifycal banner. Mainly for rrss ([#326](https://github.com/Notifycal/shared/issues/326)) ([9c4285e](https://github.com/Notifycal/shared/commit/9c4285e191b7e7b8b6a98d5297793b3b3a19bd24))
+
+
+### Bug Fixes
+
+* fire bespoke dataLayer event on cookie consent changed ([#332](https://github.com/Notifycal/shared/issues/332)) ([fc35484](https://github.com/Notifycal/shared/commit/fc35484bda205be9c5bde29d57245780e5412689))
+
 ## [7.10.1](https://github.com/Notifycal/shared/compare/v7.10.0...v7.10.1) (2025-09-03)
 
 
