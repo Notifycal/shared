@@ -7,7 +7,7 @@ export const unpluginFonts = [
   },
   {
     "name": "Zain",
-    "styles": "wght@700;900",
+    "styles": "wght@400;500;700;900",
     "defer": true
   }
 ];
