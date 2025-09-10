@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.12.0](https://github.com/Notifycal/shared/compare/v7.11.0...v7.12.0) (2025-09-10)
+
+
+### Features
+
+* add regular and medium weights for secondary typography (Zain) ([#334](https://github.com/Notifycal/shared/issues/334)) ([a984926](https://github.com/Notifycal/shared/commit/a98492672228fa8a920b2a3b949ac39d11751348))
+
 ## [7.11.0](https://github.com/Notifycal/shared/compare/v7.10.1...v7.11.0) (2025-09-09)
 
 
