@@ -1,4 +1,5 @@
 import { type TierInfoWithIcon, TierCard } from '@notifycal/shared/components';
+import { IconShieldCheck } from '@tabler/icons-react';
 import { LanguageCode, TierId } from '@types';
 import type { FC } from 'react';
 import caTranslations from './i18n/ca.json' with { type: 'json' };
@@ -44,7 +45,13 @@ export const TierSelection: FC<TierSelectionProps> = ({
           );
         })}
       </div>
-      <div className="mt-8 text-sm text-center text-gray-500 max-w-2xl mx-auto">* {translation.disclaimer}</div>
+      <div className="mt-12 text-center">
+        <div className="flex items-center justify-center gap-3 text-gray-600">
+          <IconShieldCheck className="text-primary-600" size={24} />
+          <span className="text-base font-medium">{translation.confidenceBooster}</span>
+        </div>
+        <div className="text-sm text-gray-500 max-w-2xl mx-auto mt-6">* {translation.disclaimer}</div>
+      </div>
     </>
   );
 };
