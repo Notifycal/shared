@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.13.0](https://github.com/Notifycal/shared/compare/v7.12.1...v7.13.0) (2025-09-17)
+
+
+### Features
+
+* confidence booster ([#343](https://github.com/Notifycal/shared/issues/343)) ([fcd67f7](https://github.com/Notifycal/shared/commit/fcd67f785d812f1bb7a960cf990460a329a65d13))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v4.1.9 ([#346](https://github.com/Notifycal/shared/issues/346)) ([e4bf050](https://github.com/Notifycal/shared/commit/e4bf0500b22b0dd2d3e0bdb0bca00da63bf4a92d))
+
 ## [7.12.1](https://github.com/Notifycal/shared/compare/v7.12.0...v7.12.1) (2025-09-16)
 
 
