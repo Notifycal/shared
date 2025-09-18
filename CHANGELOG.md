@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.13.1](https://github.com/Notifycal/shared/compare/v7.13.0...v7.13.1) (2025-09-18)
+
+
+### Bug Fixes
+
+* tier feature tooltips ([#349](https://github.com/Notifycal/shared/issues/349)) ([7e9ba12](https://github.com/Notifycal/shared/commit/7e9ba129562b407019c3c1c88e36845ff6d9429d))
+
 ## [7.13.0](https://github.com/Notifycal/shared/compare/v7.12.1...v7.13.0) (2025-09-17)
 
 
