@@ -1,17 +1,36 @@
 {
   "common": {
-    "numberOfMonthlyReminders": "recordatorios al mes incluidos*",
-    "lowCreditsAlert": "Alerta por email cuando quedan pocos créditos",
-    "insufficientCreditsAlert": "Alerta por email si no se puede enviar recordatorio",
-    "topupsAvailable": "Topups disponibles para completar el mes",
-    "unlimitedCalendarIntegration": "Integración ilimitada con calendarios",
-    "reminderTypeSelection": "Selección del tipo de recordatorio"
+    "numberOfMonthlyReminders": {
+      "text": "recordatorios al mes incluidos",
+      "moreInfo": "El número de recordatorios indicados puede variar en función del prefijo internacional del número de teléfono del destinatario. Y se basa en el coste por recordatorio a números españoles."
+    },
+    "lowCreditsAlert": {
+      "text": "Alerta por email cuando quedan pocos créditos"
+    },
+    "insufficientCreditsAlert": {
+      "text": "Alerta por email si no se puede enviar recordatorio"
+    },
+    "topupsAvailable": {
+      "text": "Topups disponibles para completar el mes"
+    },
+    "unlimitedCalendarIntegration": {
+      "text": "Integración ilimitada con calendarios"
+    },
+    "reminderTypeSelection": {
+      "text": "Selección del tipo de recordatorio"
+    }
   },
   "byTier": {
     "supportLevel": {
-      "good": "Soporte por email en máximo 72 horas",
-      "better": "Soporte prioritario en máximo 48 horas",
-      "best": "Contacto directo en máximo 24 horas"
+      "good": {
+        "text": "Soporte por email en máximo 72 horas"
+      },
+      "better": {
+        "text": "Soporte prioritario en máximo 48 horas"
+      },
+      "best": {
+        "text": "Contacto directo en máximo 24 horas"
+      }
     }
   },
   "exclusive": {

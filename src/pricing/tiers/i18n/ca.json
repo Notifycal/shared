@@ -1,17 +1,36 @@
 {
   "common": {
-    "numberOfMonthlyReminders": "recordatoris mensuals inclosos*",
-    "lowCreditsAlert": "Alerta per email quan queden pocs crèdits",
-    "insufficientCreditsAlert": "Alerta per email si no es pot enviar recordatori",
-    "topupsAvailable": "Topups disponibles per completar el mes",
-    "unlimitedCalendarIntegration": "Integració il·limitada amb calendaris",
-    "reminderTypeSelection": "Selecció del tipus de recordatori"
+    "numberOfMonthlyReminders": {
+      "text": "recordatoris mensuals inclosos",
+      "moreInfo": "El nombre de recordatoris indicats pot variar en funció del prefix internacional del número de telèfon del destinatari. El nombre de recordatoris mostrat es basa en el cost per recordatori a números espanyols."
+    },
+    "lowCreditsAlert": {
+      "text": "Alerta per email quan queden pocs crèdits"
+    },
+    "insufficientCreditsAlert": {
+      "text": "Alerta per email si no es pot enviar recordatori"
+    },
+    "topupsAvailable": {
+      "text": "Topups disponibles per completar el mes"
+    },
+    "unlimitedCalendarIntegration": {
+      "text": "Integració il·limitada amb calendaris"
+    },
+    "reminderTypeSelection": {
+      "text": "Selecció del tipus de recordatori"
+    }
   },
   "byTier": {
     "supportLevel": {
-      "good": "Suport per email en màxim 72 hores",
-      "better": "Suport prioritari en màxim 48 hores",
-      "best": "Contacte directe en màxim 24 hores"
+      "good": {
+        "text": "Suport per email en màxim 72 hores"
+      },
+      "better": {
+        "text": "Suport prioritari en màxim 48 hores"
+      },
+      "best": {
+        "text": "Contacte directe en màxim 24 hores"
+      }
     }
   },
   "exclusive": {
