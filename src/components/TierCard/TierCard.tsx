@@ -1,5 +1,6 @@
 import TierFeatures from '@components/TierFeatures/TierFeatures';
 import { Badge, Button, Card } from '@mantine/core';
+import { FeatureInfo } from '@pricing';
 import type { TablerIcon } from '@tabler/icons-react';
 import { LanguageCode, Tier, TierId } from '@types';
 import clsx from 'clsx';
@@ -12,7 +13,7 @@ export interface TierInfo extends Tier {
   id: TierId;
   displayName: string;
   recommended?: boolean;
-  features: Array<string>;
+  features: Array<FeatureInfo>;
 }
 
 export type TierInfoWithIcon = TierInfo & { icon: TablerIcon };

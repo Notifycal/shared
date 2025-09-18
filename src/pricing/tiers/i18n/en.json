@@ -1,17 +1,36 @@
 {
   "common": {
-    "numberOfMonthlyReminders": "monthly reminders included*",
-    "lowCreditsAlert": "Email alert when credits are running low",
-    "insufficientCreditsAlert": "Email alert if reminder cannot be sent",
-    "topupsAvailable": "Top-ups available to complete the month",
-    "unlimitedCalendarIntegration": "Unlimited calendar integration",
-    "reminderTypeSelection": "Reminder type selection"
+    "numberOfMonthlyReminders": {
+      "text": "monthly reminders included",
+      "moreInfo": "The number of reminders shown may vary depending on the international prefix of the recipient's phone number. The number of reminders displayed is based on the cost per reminder to Spanish numbers."
+    },
+    "lowCreditsAlert": {
+      "text": "Email alert when credits are running low"
+    },
+    "insufficientCreditsAlert": {
+      "text": "Email alert if reminder cannot be sent"
+    },
+    "topupsAvailable": {
+      "text": "Top-ups available to complete the month"
+    },
+    "unlimitedCalendarIntegration": {
+      "text": "Unlimited calendar integration"
+    },
+    "reminderTypeSelection": {
+      "text": "Reminder type selection"
+    }
   },
   "byTier": {
     "supportLevel": {
-      "good": "Email support within 72 hours maximum",
-      "better": "Priority support within 48 hours maximum",
-      "best": "Direct contact within 24 hours maximum"
+      "good": {
+        "text": "Email support within 72 hours maximum"
+      },
+      "better": {
+        "text": "Priority support within 48 hours maximum"
+      },
+      "best": {
+        "text": "Direct contact within 24 hours maximum"
+      }
     }
   },
   "exclusive": {

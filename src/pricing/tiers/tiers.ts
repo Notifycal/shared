@@ -15,9 +15,14 @@ type CommonFeatures =
   | 'reminderTypeSelection';
 type ByTierFeatures = 'supportLevel';
 
+export interface FeatureInfo {
+  text: string;
+  moreInfo?: string | undefined;
+}
+
 interface TranslationKeys {
-  common: Record<CommonFeatures, string>;
-  byTier: Record<ByTierFeatures, Record<TierId, string>>;
+  common: Record<CommonFeatures, FeatureInfo>;
+  byTier: Record<ByTierFeatures, Record<TierId, FeatureInfo>>;
   exclusive: {
     good: Record<string, never>;
     better: Record<string, never>;
@@ -51,11 +56,18 @@ export const countryToSmsCostMapStringifiedSchema = stringifiedSchema(
 
 export type CountryToSmsCostMap = z.infer<typeof countryToSmsCostMapSchema>;
 
-const tierFeatures = (lang: LanguageCode, tierId: TierId, tierNumberOfReminders: number): Array<string> => {
+const tierFeatures = (lang: LanguageCode, tierId: TierId, tierNumberOfReminders: number): Array<FeatureInfo> => {
   const t = translations[lang];
-  const _common: Record<CommonFeatures, string> = {
+  const numberOfRemindersFeature = t.common.numberOfMonthlyReminders;
+
+  const processedNumberOfReminders: FeatureInfo = {
+    text: `${tierNumberOfReminders.toLocaleString(lang)} ${numberOfRemindersFeature.text}`,
+    moreInfo: numberOfRemindersFeature.moreInfo
+  };
+
+  const _common: Record<CommonFeatures, FeatureInfo> = {
     ...t.common,
-    numberOfMonthlyReminders: `${tierNumberOfReminders.toLocaleString(lang)} ${t.common.numberOfMonthlyReminders}`
+    numberOfMonthlyReminders: processedNumberOfReminders
   };
   const common = Object.values(_common);
   const byTier = Object.values(t.byTier).map((featureByTier) => featureByTier[tierId]);
