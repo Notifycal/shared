@@ -30,7 +30,7 @@ interface TierCardProps {
   animationTrigger: number;
 }
 
-const translations = {
+const translations: Record<LanguageCode, typeof esTranslations> = {
   en: enTranslations,
   es: esTranslations,
   ca: caTranslations

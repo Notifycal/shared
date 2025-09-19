@@ -7,38 +7,37 @@ export interface CalculationResult {
   savedHours: number;
 }
 
-export const timeOptions = [
-  { value: '10', label: '10 min' },
-  { value: '15', label: '15 min' },
-  { value: '20', label: '20 min' },
-  { value: '30', label: '30 min' },
-  { value: '45', label: '45 min' },
-  { value: '60', label: '1 hora' },
-  { value: '75', label: '1.25 horas' },
-  { value: '90', label: '1.5 horas' },
-  { value: '105', label: '1.75 horas' },
-  { value: '120', label: '2 horas' },
-  { value: '150', label: '2.5 horas' },
-  { value: '180', label: '3 horas' },
-  { value: '240', label: '4 horas' },
-  { value: '300', label: '5 horas' },
-  { value: '360', label: '6 horas' },
-  { value: '480', label: '8 horas' }
-];
+interface TimeOption {
+  value: string;
+  label: string;
+}
 
-export const workingHoursOptions = [
-  { value: '4', label: '4 horas' },
-  { value: '5', label: '5 horas' },
-  { value: '6', label: '6 horas' },
-  { value: '6.5', label: '6.5 horas' },
-  { value: '7', label: '7 horas' },
-  { value: '7.5', label: '7.5 horas' },
-  { value: '8', label: '8 horas' },
-  { value: '8.5', label: '8.5 horas' },
-  { value: '9', label: '9 horas' },
-  { value: '10', label: '10 horas' },
-  { value: '12', label: '12 horas' }
-];
+const formatTimeLabel = (minutes: number, translations: { min: string; hour: string; hours: string }): string => {
+  if (minutes < 60) {
+    return `${minutes} ${translations.min}`;
+  }
+  const hours = minutes / 60;
+  const unitKey = hours === 1 ? 'hour' : 'hours';
+  return hours % 1 === 0 ? `${hours} ${translations[unitKey]}` : `${hours} ${translations[unitKey]}`;
+};
+
+export const getTimeOptions = (translations: { min: string; hour: string; hours: string }): Array<TimeOption> => {
+  const timeValues = [10, 15, 20, 30, 45, 60, 75, 90, 105, 120, 150, 180, 240, 300, 360, 480];
+
+  return timeValues.map((minutes) => ({
+    value: minutes.toString(),
+    label: formatTimeLabel(minutes, translations)
+  }));
+};
+
+export const getWorkingHoursOptions = (translations: { hour: string; hours: string }): Array<TimeOption> => {
+  const hourValues = [4, 5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 10, 12];
+
+  return hourValues.map((hours) => ({
+    value: hours.toString(),
+    label: `${hours} ${hours === 1 ? translations.hour : translations.hours}`
+  }));
+};
 
 interface CalculationParameters {
   employees: number;

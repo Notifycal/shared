@@ -1,0 +1,26 @@
+{
+  "title": "Calculadora de pla",
+  "employees": "Empleats",
+  "timeWithClient": "Temps amb client",
+  "workingHours": "Jornada",
+  "workingDays": "Dies laborables",
+  "calculate": "Calcular",
+  "standbyMessage": "Calcula per veure la teva recomanació",
+  "monthlyEstimate": "cites / mes",
+  "monthlyEstimateSubtext": "La teva estimació mensual",
+  "timesSaved": "missatges × {{minutes}} minuts =",
+  "hoursSaved": "{{hours}} h estalviades",
+  "timesSavedSubtext": "Basat en {{minutes}} minuts per missatge manual",
+  "contact": "Contactar",
+  "contactSubtext": "No et preocupis, posa't en contacte amb nosaltres i trobarem una solució",
+  "selectPlan": "Seleccionar Pla {{planName}}",
+  "selectPlanMobile": "Pla {{planName}}",
+  "showCalculator": "Necessites ajuda per escollir pla?",
+  "showCalculatorSubtext": "Utilitza la nostra calculadora per trobar el pla perfecte",
+  "hideCalculator": "Amagar calculadora",
+  "units": {
+    "min": "min",
+    "hour": "hora",
+    "hours": "hores"
+  }
+}

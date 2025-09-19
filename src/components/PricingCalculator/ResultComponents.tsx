@@ -1,14 +1,28 @@
 import { Button, Text } from '@mantine/core';
 import type { TierInfoWithIcon } from '@notifycal/shared/components';
-import type { TierId } from '@notifycal/shared/types';
+import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconArrowRight, IconChartBar, IconClock } from '@tabler/icons-react';
 import type { ReactElement } from 'react';
+import { translations } from './PricingCalculator';
+
+type Translation = {
+  monthlyEstimate: string;
+  monthlyEstimateSubtext: string;
+  timesSaved: string;
+  hoursSaved: string;
+  timesSavedSubtext: string;
+  contact: string;
+  contactSubtext: string;
+  selectPlan: string;
+  selectPlanMobile: string;
+};
 
 export const MonthlyEstimateAndMetrics = (
   monthlyMessages: number,
   savedHours: number,
   minutesPerMessage: number,
-  isContactUs = false
+  isContactUs = false,
+  translation: Translation
 ): ReactElement => (
   <div className="space-y-1 md:col-span-6">
     <div className="p-1 px-4 flex items-center gap-3">
@@ -16,21 +30,21 @@ export const MonthlyEstimateAndMetrics = (
       <div>
         <div className="text-lg font-semibold text-gray-800">
           {monthlyMessages}
-          {isContactUs ? '+' : ''} citas / mes
+          {isContactUs ? '+' : ''} {translation.monthlyEstimate}
         </div>
-        <div className="text-xs text-gray-400">Tu estimación mensual</div>
+        <div className="text-xs text-gray-400">{translation.monthlyEstimateSubtext}</div>
       </div>
     </div>
     <div className="p-1 px-4 flex items-center gap-3">
       <IconClock className="ml-2 hidden xs:inline-block" size={16} />
       <div>
         <div className="text-sm text-gray-700">
-          <span>
-            {monthlyMessages} mensajes × {minutesPerMessage} minutos =
-          </span>
-          <span className="font-semibold"> {savedHours} h ahorradas</span>
+          <span>{translation.timesSaved.replace('{{minutes}}', minutesPerMessage.toString())}</span>
+          <span className="font-semibold"> {translation.hoursSaved.replace('{{hours}}', savedHours.toString())}</span>
         </div>
-        <div className="text-xs text-gray-400">Basado en {minutesPerMessage} minutos por mensaje manual</div>
+        <div className="text-xs text-gray-400">
+          {translation.timesSavedSubtext.replace('{{minutes}}', minutesPerMessage.toString())}
+        </div>
       </div>
     </div>
   </div>
@@ -56,10 +70,19 @@ interface ActionProps {
   tier: TierInfoWithIcon;
   isSelectButtonLoading: boolean;
   contactUrl: string;
+  lang: LanguageCode;
   onTierSelect: (tierId: TierId) => void;
 }
 
-export const Action = ({ type, tier, isSelectButtonLoading, contactUrl, onTierSelect }: ActionProps): ReactElement => {
+export const Action = ({
+  type,
+  tier,
+  isSelectButtonLoading,
+  contactUrl,
+  lang,
+  onTierSelect
+}: ActionProps): ReactElement => {
+  const translation = translations[lang];
   const baseProps = {
     className: 'w-full md:w-auto md:min-w-62 text-sm md:text-xl py-4 font-bold',
     size: 'xl' as const,
@@ -87,17 +110,19 @@ export const Action = ({ type, tier, isSelectButtonLoading, contactUrl, onTierSe
     <div className="mx-auto text-center md:col-span-5">
       <Button {...(type === 'contact' ? contactProps : tierProps)}>
         {type === 'contact' ? (
-          <span>Contactar</span>
+          <span>{translation.contact}</span>
         ) : (
           <>
-            <span className="md:hidden">Plan {tier?.displayName}</span>
-            <span className="hidden md:inline">Seleccionar Plan {tier?.displayName}</span>
+            <span className="md:hidden">{translation.selectPlanMobile.replace('{{planName}}', tier?.displayName)}</span>
+            <span className="hidden md:inline">
+              {translation.selectPlan.replace('{{planName}}', tier?.displayName)}
+            </span>
           </>
         )}
       </Button>
       {type === 'contact' && (
         <Text className="text-gray-600 mt-2" size="xs">
-          No te preocupes, ponte en contacto con nosotros y encontraremos una solución
+          {translation.contactSubtext}
         </Text>
       )}
     </div>

@@ -1,12 +1,15 @@
 import { Card, Group } from '@mantine/core';
 import type { TierInfoWithIcon } from '@notifycal/shared/components';
-import type { TierId } from '@notifycal/shared/types';
+import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconCalculator } from '@tabler/icons-react';
 import { useState, type FC } from 'react';
+import { calculateTierRecommendation, type CalculationResult } from './calculator';
 import { CalculatorInputSection } from './CalculatorInputSection';
 import { CalculatorResultArea } from './CalculatorResultArea';
-import { calculateTierRecommendation, type CalculationResult } from './calculatorUtils';
 import { HideCalculatorButton } from './HideCalculatorButton';
+import caTranslations from './i18n/ca.json' with { type: 'json' };
+import enTranslations from './i18n/en.json' with { type: 'json' };
+import esTranslations from './i18n/es.json' with { type: 'json' };
 import { ShowCalculatorButton } from './ShowCalculatorButton';
 
 interface PricingCalculatorProps {
@@ -17,7 +20,14 @@ interface PricingCalculatorProps {
   contactUrl: string;
   collapsible?: boolean;
   defaultExpanded?: boolean;
+  lang: LanguageCode;
 }
+
+export const translations: Record<LanguageCode, typeof esTranslations> = {
+  en: enTranslations,
+  es: esTranslations,
+  ca: caTranslations
+};
 
 export const PricingCalculator: FC<PricingCalculatorProps> = ({
   orderedTierInfoWithIcons,
@@ -26,8 +36,10 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
   isSelectButtonLoading,
   contactUrl,
   collapsible = false,
-  defaultExpanded = false
+  defaultExpanded = false,
+  lang
 }) => {
+  const translation = translations[lang];
   const [employees, setEmployees] = useState<number>(1);
   const [avgTimeWithClient, setAvgTimeWithClient] = useState<string>('60');
   const [workingHoursPerDay, setWorkingHoursPerDay] = useState<string>('8');
@@ -55,6 +67,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
   if (collapsible && !isExpanded) {
     return (
       <ShowCalculatorButton
+        lang={lang}
         onExpand={() => {
           setIsExpanded(true);
         }}
@@ -66,7 +79,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
     <Card withBorder className="bg-white max-w-4xl mx-auto" padding="lg" radius="md" shadow="md">
       <Group gap="xs" justify="center" mb="md">
         <IconCalculator className="text-accent2-600 mb-2" size={30} />
-        <h4 className="font-semibold">Calculadora de plan</h4>
+        <h4 className="font-semibold">{translation.title}</h4>
       </Group>
 
       <CalculatorInputSection
@@ -74,6 +87,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
         employees={employees}
         workingDaysPerMonth={workingDaysPerMonth}
         workingHoursPerDay={workingHoursPerDay}
+        lang={lang}
         onAvgTimeWithClientChange={setAvgTimeWithClient}
         onCalculate={handleCalculate}
         onEmployeesChange={setEmployees}
@@ -85,12 +99,14 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
         calculationResult={calculationResult}
         contactUrl={contactUrl}
         isSelectButtonLoading={isSelectButtonLoading}
+        lang={lang}
         minutesPerMessage={minutesPerMessage}
         onTierSelect={onTierSelect}
       />
 
       {collapsible && (
         <HideCalculatorButton
+          lang={lang}
           onCollapse={() => {
             setIsExpanded(false);
           }}
