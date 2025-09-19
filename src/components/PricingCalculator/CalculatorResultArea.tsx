@@ -1,6 +1,6 @@
 import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import type { ReactElement } from 'react';
-import { CalculatorResultDisplay, CalculatorStandbyDisplayContent } from './CalculatorResultDisplay';
+import { ResultDisplay, StandbyDisplayContent } from './ResultDisplay';
 import type { CalculationResult } from './calculator';
 
 interface CalculatorResultAreaProps {
@@ -22,10 +22,10 @@ export const CalculatorResultArea = ({
 }: CalculatorResultAreaProps): ReactElement => (
   <div className="mt-6 p-4 border border-gray-400 rounded-lg min-h-[200px] flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 shadow-inner">
     {!calculationResult ? (
-      <CalculatorStandbyDisplayContent lang={lang} />
+      <StandbyDisplayContent lang={lang} />
     ) : (
       <div className="w-full">
-        <CalculatorResultDisplay
+        <ResultDisplay
           contactUrl={contactUrl}
           data={calculationResult}
           isSelectButtonLoading={isSelectButtonLoading}
@@ -34,7 +34,7 @@ export const CalculatorResultArea = ({
           minutesPerMessage={minutesPerMessage}
           onTierSelect={onTierSelect}
         />
-        <CalculatorResultDisplay
+        <ResultDisplay
           contactUrl={contactUrl}
           data={calculationResult}
           isSelectButtonLoading={isSelectButtonLoading}

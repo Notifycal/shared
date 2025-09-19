@@ -4,7 +4,7 @@ import type { ReactElement } from 'react';
 import { getTimeOptions, getWorkingHoursOptions } from './calculator';
 import { translations } from './PricingCalculator';
 
-interface CalculatorInputSectionProps {
+interface InputSectionProps {
   employees: number;
   avgTimeWithClient: string;
   workingHoursPerDay: string;
@@ -17,7 +17,7 @@ interface CalculatorInputSectionProps {
   onCalculate: () => void;
 }
 
-export const CalculatorInputSection = ({
+export const InputSection = ({
   employees,
   avgTimeWithClient,
   workingHoursPerDay,
@@ -28,7 +28,7 @@ export const CalculatorInputSection = ({
   onWorkingHoursPerDayChange,
   onWorkingDaysPerMonthChange,
   onCalculate
-}: CalculatorInputSectionProps): ReactElement => {
+}: InputSectionProps): ReactElement => {
   const translation = translations[lang];
   const timeOptions = getTimeOptions(translation.units);
   const workingHoursOptions = getWorkingHoursOptions(translation.units);

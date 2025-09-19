@@ -4,7 +4,7 @@ import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconCalculator } from '@tabler/icons-react';
 import { useState, type FC } from 'react';
 import { calculateTierRecommendation, type CalculationResult } from './calculator';
-import { CalculatorInputSection } from './CalculatorInputSection';
+import { InputSection } from './CalculatorInputSection';
 import { CalculatorResultArea } from './CalculatorResultArea';
 import { HideCalculatorButton } from './HideCalculatorButton';
 import caTranslations from './i18n/ca.json' with { type: 'json' };
@@ -82,7 +82,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
         <h4 className="font-semibold">{translation.title}</h4>
       </Group>
 
-      <CalculatorInputSection
+      <InputSection
         avgTimeWithClient={avgTimeWithClient}
         employees={employees}
         workingDaysPerMonth={workingDaysPerMonth}

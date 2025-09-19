@@ -4,13 +4,13 @@ import { IconCalculator } from '@tabler/icons-react';
 import type { ReactElement } from 'react';
 import type { CalculationResult } from './calculator';
 import { translations } from './PricingCalculator';
-import { Action, Arrow, MonthlyEstimateAndMetrics } from './ResultComponents';
+import { Action, Arrow, MonthlyEstimateAndMetrics } from './ResultDisplayComponents';
 
-interface CalculatorStandbyDisplayContentProps {
+interface StandbyDisplayContentProps {
   lang: LanguageCode;
 }
 
-export const CalculatorStandbyDisplayContent = ({ lang }: CalculatorStandbyDisplayContentProps): ReactElement => {
+export const StandbyDisplayContent = ({ lang }: StandbyDisplayContentProps): ReactElement => {
   const translation = translations[lang];
 
   return (
@@ -21,7 +21,7 @@ export const CalculatorStandbyDisplayContent = ({ lang }: CalculatorStandbyDispl
   );
 };
 
-interface CalculatorResultDisplayProps {
+interface ResultDisplayProps {
   layoutType: 'desktop' | 'mobile';
   data: CalculationResult;
   minutesPerMessage: number;
@@ -31,7 +31,7 @@ interface CalculatorResultDisplayProps {
   onTierSelect: (tierId: TierId) => void;
 }
 
-export const CalculatorResultDisplay = ({
+export const ResultDisplay = ({
   layoutType,
   data,
   minutesPerMessage,
@@ -39,7 +39,7 @@ export const CalculatorResultDisplay = ({
   contactUrl,
   lang,
   onTierSelect
-}: CalculatorResultDisplayProps): ReactElement => {
+}: ResultDisplayProps): ReactElement => {
   const translation = translations[lang];
   const layoutConfigs = {
     desktop: {
