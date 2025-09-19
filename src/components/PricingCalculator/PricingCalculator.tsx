@@ -4,12 +4,12 @@ import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconCalculator } from '@tabler/icons-react';
 import { useState, type FC } from 'react';
 import { calculateTierRecommendation, type CalculationResult } from './calculator';
-import { InputSection } from './CalculatorInputSection';
-import { CalculatorResultArea } from './CalculatorResultArea';
+import { Form } from './Form';
 import { HideCalculatorButton } from './HideCalculatorButton';
 import caTranslations from './i18n/ca.json' with { type: 'json' };
 import enTranslations from './i18n/en.json' with { type: 'json' };
 import esTranslations from './i18n/es.json' with { type: 'json' };
+import { CalculatorResultContainer } from './ResultContainer';
 import { ShowCalculatorButton } from './ShowCalculatorButton';
 
 interface PricingCalculatorProps {
@@ -82,7 +82,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
         <h4 className="font-semibold">{translation.title}</h4>
       </Group>
 
-      <InputSection
+      <Form
         avgTimeWithClient={avgTimeWithClient}
         employees={employees}
         workingDaysPerMonth={workingDaysPerMonth}
@@ -95,7 +95,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
         onWorkingHoursPerDayChange={setWorkingHoursPerDay}
       />
 
-      <CalculatorResultArea
+      <CalculatorResultContainer
         calculationResult={calculationResult}
         contactUrl={contactUrl}
         isSelectButtonLoading={isSelectButtonLoading}

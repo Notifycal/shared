@@ -4,7 +4,7 @@ import type { ReactElement } from 'react';
 import { getTimeOptions, getWorkingHoursOptions } from './calculator';
 import { translations } from './PricingCalculator';
 
-interface InputSectionProps {
+interface FormProps {
   employees: number;
   avgTimeWithClient: string;
   workingHoursPerDay: string;
@@ -17,7 +17,7 @@ interface InputSectionProps {
   onCalculate: () => void;
 }
 
-export const InputSection = ({
+export const Form = ({
   employees,
   avgTimeWithClient,
   workingHoursPerDay,
@@ -28,13 +28,13 @@ export const InputSection = ({
   onWorkingHoursPerDayChange,
   onWorkingDaysPerMonthChange,
   onCalculate
-}: InputSectionProps): ReactElement => {
+}: FormProps): ReactElement => {
   const translation = translations[lang];
   const timeOptions = getTimeOptions(translation.units);
   const workingHoursOptions = getWorkingHoursOptions(translation.units);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+    <form className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       <NumberInput
         className="w-full md:order-1"
         label={translation.employees}
@@ -84,6 +84,6 @@ export const InputSection = ({
           {translation.calculate}
         </Button>
       </div>
-    </div>
+    </form>
   );
 };

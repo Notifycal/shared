@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 import { ResultDisplay, StandbyDisplayContent } from './ResultDisplay';
 import type { CalculationResult } from './calculator';
 
-interface CalculatorResultAreaProps {
+interface CalculatorResultContainerProps {
   calculationResult: CalculationResult | undefined;
   contactUrl: string;
   isSelectButtonLoading: boolean;
@@ -12,14 +12,14 @@ interface CalculatorResultAreaProps {
   onTierSelect: (tierId: TierId) => void;
 }
 
-export const CalculatorResultArea = ({
+export const CalculatorResultContainer = ({
   calculationResult,
   contactUrl,
   isSelectButtonLoading,
   minutesPerMessage,
   lang,
   onTierSelect
-}: CalculatorResultAreaProps): ReactElement => (
+}: CalculatorResultContainerProps): ReactElement => (
   <div className="mt-6 p-4 border border-gray-400 rounded-lg min-h-[200px] flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 shadow-inner">
     {!calculationResult ? (
       <StandbyDisplayContent lang={lang} />
