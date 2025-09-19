@@ -8,12 +8,7 @@ interface HideCalculatorButtonProps {
 
 export const HideCalculatorButton = ({ onCollapse }: HideCalculatorButtonProps): ReactElement => (
   <div className="mt-4 text-center">
-    <Button
-      className="text-gray-600 hover:underline"
-      size="sm"
-      variant="transparent"
-      onClick={onCollapse}
-    >
+    <Button className="text-gray-600 hover:underline" size="sm" variant="transparent" onClick={onCollapse}>
       <IconChevronUp className="mr-2" size={20} />
       <span>Ocultar calculadora</span>
       <IconChevronUp className="ml-2" size={20} />
