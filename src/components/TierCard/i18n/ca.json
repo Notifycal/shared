@@ -5,6 +5,8 @@
     "best": "Perfecte per a empreses amb més de 5 empleats."
   },
   "popularBadge": "Popular",
+  "calculatedRecommendedBadge": "Recomanat per a tu",
   "month": "mes",
-  "selectButton": "Seleccionar"
+  "selectButton": "Seleccionar",
+  "cancelAnytime": "Sense permanència"
 }

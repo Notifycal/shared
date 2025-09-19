@@ -5,6 +5,8 @@
     "best": "Perfect for companies with more than 5 employees."
   },
   "popularBadge": "Popular",
-  "month": "mes",
-  "selectButton": "Select"
+  "calculatedRecommendedBadge": "Recommended for you",
+  "month": "month",
+  "selectButton": "Select",
+  "cancelAnytime": "No commitment"
 }
