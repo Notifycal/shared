@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.13.2](https://github.com/Notifycal/shared/compare/v7.13.1...v7.13.2) (2025-09-22)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v4.1.10 ([#353](https://github.com/Notifycal/shared/issues/353)) ([d222388](https://github.com/Notifycal/shared/commit/d222388e5c0f2b64a043d21d8f4783e2a092c5d1))
+* **deps:** Update dependency zod to v4.1.11 ([#355](https://github.com/Notifycal/shared/issues/355)) ([d934c67](https://github.com/Notifycal/shared/commit/d934c674ca6f8ccce0401f1805eb21ceca7a5fe5))
+
 ## [7.13.1](https://github.com/Notifycal/shared/compare/v7.13.0...v7.13.1) (2025-09-18)
 
 
