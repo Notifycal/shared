@@ -57,9 +57,7 @@ export const MonthlyEstimateAndMetrics = (
 export const Arrow = (orientation: 'horizontal' | 'vertical' = 'horizontal'): ReactElement => (
   <div
     className={
-      orientation === 'horizontal'
-        ? 'text-center flex flex-col items-center justify-center h-full'
-        : 'text-center'
+      orientation === 'horizontal' ? 'text-center flex flex-col items-center justify-center h-full' : 'text-center'
     }
   >
     {orientation === 'horizontal' ? (
