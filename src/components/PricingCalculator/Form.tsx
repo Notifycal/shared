@@ -33,6 +33,8 @@ export const Form = ({
   const timeOptions = getTimeOptions(translation.units);
   const workingHoursOptions = getWorkingHoursOptions(translation.units);
 
+  const isFormValid = employees > 0 && workingDaysPerMonth > 0;
+
   return (
     <form className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       <NumberInput
@@ -42,7 +44,7 @@ export const Form = ({
         min={1}
         value={employees}
         onChange={(value) => {
-          onEmployeesChange(Number(value) || 1);
+          onEmployeesChange(Number(value) || 0);
         }}
       />
       <Select
@@ -70,7 +72,7 @@ export const Form = ({
         min={1}
         value={workingDaysPerMonth}
         onChange={(value) => {
-          onWorkingDaysPerMonthChange(Number(value) || 22);
+          onWorkingDaysPerMonthChange(Number(value) || 0);
         }}
       />
       <div className="md:order-3 md:row-span-2 flex items-center md:py-1 md:pt-6 md:pl-4">
@@ -79,6 +81,7 @@ export const Form = ({
           color="accent2"
           size="lg"
           variant="outline"
+          disabled={!isFormValid}
           onClick={onCalculate}
         >
           {translation.calculate}
