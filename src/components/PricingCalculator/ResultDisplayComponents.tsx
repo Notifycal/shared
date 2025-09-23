@@ -26,7 +26,7 @@ export const MonthlyEstimateAndMetrics = (
 ): ReactElement => (
   <div className="space-y-1 text-center md:text-left">
     <div className="p-1 px-4 flex items-center gap-3 justify-center md:justify-start">
-      <IconChartBar className="ml-1 text-accent2-600 hidden xs:inline-block" size={20} />
+      <IconChartBar className="ml-1 text-accent2-600 hidden xs:inline-block sm:inline-block" size={20} />
       <div>
         <div className="text-lg font-semibold text-gray-800">
           {monthlyMessages}
@@ -36,7 +36,7 @@ export const MonthlyEstimateAndMetrics = (
       </div>
     </div>
     <div className="p-1 px-4 flex items-center gap-3 justify-center md:justify-start">
-      <IconClock className="ml-2 hidden xs:inline-block" size={16} />
+      <IconClock className="ml-2 hidden xs:inline-block sm:inline-block" size={16} />
       <div>
         <div className="text-sm text-gray-700">
           <span>
