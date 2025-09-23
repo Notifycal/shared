@@ -43,7 +43,7 @@ export const ResultDisplay = ({
   const translation = translations[lang];
   const layoutConfigs = {
     desktop: {
-      container: 'hidden md:grid md:grid-cols-12 items-center',
+      container: 'hidden md:flex md:items-center md:justify-center md:gap-6',
       arrow: 'horizontal' as const
     },
     mobile: {

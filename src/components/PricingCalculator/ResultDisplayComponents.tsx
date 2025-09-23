@@ -1,7 +1,7 @@
 import { Button, Text } from '@mantine/core';
 import type { TierInfoWithIcon } from '@notifycal/shared/components';
 import type { LanguageCode, TierId } from '@notifycal/shared/types';
-import { IconArrowRight, IconChartBar, IconClock } from '@tabler/icons-react';
+import { IconArrowDown, IconArrowRight, IconChartBar, IconClock } from '@tabler/icons-react';
 import type { ReactElement } from 'react';
 import { translations } from './PricingCalculator';
 
@@ -24,8 +24,8 @@ export const MonthlyEstimateAndMetrics = (
   isContactUs = false,
   translation: Translation
 ): ReactElement => (
-  <div className="space-y-1 md:col-span-6">
-    <div className="p-1 px-4 flex items-center gap-3">
+  <div className="space-y-1 text-center md:text-left">
+    <div className="p-1 px-4 flex items-center gap-3 justify-center md:justify-start">
       <IconChartBar className="ml-1 text-accent2-600 hidden xs:inline-block" size={20} />
       <div>
         <div className="text-lg font-semibold text-gray-800">
@@ -35,7 +35,7 @@ export const MonthlyEstimateAndMetrics = (
         <div className="text-xs text-gray-400">{translation.monthlyEstimateSubtext}</div>
       </div>
     </div>
-    <div className="p-1 px-4 flex items-center gap-3">
+    <div className="p-1 px-4 flex items-center gap-3 justify-center md:justify-start">
       <IconClock className="ml-2 hidden xs:inline-block" size={16} />
       <div>
         <div className="text-sm text-gray-700">
@@ -58,14 +58,15 @@ export const Arrow = (orientation: 'horizontal' | 'vertical' = 'horizontal'): Re
   <div
     className={
       orientation === 'horizontal'
-        ? 'col-span-1 text-center flex flex-col items-center justify-center h-full'
+        ? 'text-center flex flex-col items-center justify-center h-full'
         : 'text-center'
     }
   >
-    <IconArrowRight
-      className={`text-accent2-300 ${orientation === 'vertical' ? 'mx-auto rotate-90' : ''}`}
-      size={orientation === 'horizontal' ? 58 : 32}
-    />
+    {orientation === 'horizontal' ? (
+      <IconArrowRight className="text-accent2-300" size={58} />
+    ) : (
+      <IconArrowDown className="text-accent2-300 mx-auto" size={32} />
+    )}
   </div>
 );
 
@@ -111,7 +112,7 @@ export const Action = ({
   };
 
   return (
-    <div className="mx-auto text-center md:col-span-5">
+    <div className="mx-auto text-center">
       <Button {...(type === 'contact' ? contactProps : tierProps)}>
         {type === 'contact' ? (
           <span>{translation.contact}</span>
