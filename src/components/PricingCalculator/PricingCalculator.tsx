@@ -79,7 +79,7 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
     <Card withBorder className="bg-white max-w-4xl mx-auto" padding="lg" radius="md" shadow="md">
       <Group gap="xs" justify="center" mb="md">
         <IconCalculator className="text-accent2-600 mb-2" size={30} />
-        <h4 className="font-semibold">{translation.title}</h4>
+        <h4 className="font-semibold text-center">{translation.title}</h4>
       </Group>
 
       <Form
