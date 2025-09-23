@@ -88,7 +88,7 @@ export const Action = ({
 }: ActionProps): ReactElement => {
   const translation = translations[lang];
   const baseProps = {
-    className: 'w-full md:w-auto md:min-w-62 text-sm md:text-xl py-4 font-bold',
+    className: 'w-full md:w-auto md:min-w-62 text-sm py-4 font-bold',
     size: 'xl' as const,
     variant: 'filled' as const
   };

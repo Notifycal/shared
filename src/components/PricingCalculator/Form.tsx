@@ -75,7 +75,7 @@ export const Form = ({
       />
       <div className="md:order-3 md:row-span-2 flex items-center md:py-1 md:pt-6 md:pl-4">
         <Button
-          className="w-full h-full md:min-h-[90px] text-lg md:text-xl font-bold py-4 md:py-0"
+          className="w-full h-full md:min-h-[90px] text-sm font-bold py-4 md:py-0"
           color="accent2"
           size="lg"
           variant="outline"
