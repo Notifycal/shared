@@ -17,7 +17,7 @@
   "selectPlanMobile": "Pla {{planName}}",
   "showCalculator": "Necessites ajuda per escollir pla?",
   "showCalculatorSubtext": "Utilitza la nostra calculadora per trobar el pla perfecte",
-  "hideCalculator": "Amagar calculadora",
+  "hideCalculator": "Amagar",
   "units": {
     "min": "min",
     "hour": "hora",

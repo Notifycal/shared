@@ -17,7 +17,7 @@
   "selectPlanMobile": "Plan {{planName}}",
   "showCalculator": "¿Necesitas ayuda para elegir plan?",
   "showCalculatorSubtext": "Usa nuestra calculadora para encontrar el plan perfecto",
-  "hideCalculator": "Ocultar calculadora",
+  "hideCalculator": "Ocultar",
   "units": {
     "min": "min",
     "hour": "hora",
