@@ -8,7 +8,7 @@
   "standbyMessage": "Calcula per veure la teva recomanació",
   "monthlyEstimate": "cites / mes",
   "monthlyEstimateSubtext": "La teva estimació mensual",
-  "timesSaved": "missatges × {{minutes}} minuts =",
+  "timesSaved": "{{messages}} missatges × {{minutes}} minuts =",
   "hoursSaved": "{{hours}} h estalviades",
   "timesSavedSubtext": "Basat en {{minutes}} minuts per missatge manual",
   "contact": "Contactar",

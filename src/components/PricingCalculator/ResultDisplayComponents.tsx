@@ -39,7 +39,11 @@ export const MonthlyEstimateAndMetrics = (
       <IconClock className="ml-2 hidden xs:inline-block" size={16} />
       <div>
         <div className="text-sm text-gray-700">
-          <span>{translation.timesSaved.replace('{{minutes}}', minutesPerMessage.toString())}</span>
+          <span>
+            {translation.timesSaved
+              .replace('{{messages}}', monthlyMessages.toString())
+              .replace('{{minutes}}', minutesPerMessage.toString())}
+          </span>
           <span className="font-semibold"> {translation.hoursSaved.replace('{{hours}}', savedHours.toString())}</span>
         </div>
         <div className="text-xs text-gray-400">
