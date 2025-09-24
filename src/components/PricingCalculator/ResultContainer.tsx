@@ -30,16 +30,6 @@ export const CalculatorResultContainer = ({
           data={calculationResult}
           isSelectButtonLoading={isSelectButtonLoading}
           lang={lang}
-          layoutType="desktop"
-          minutesPerMessage={minutesPerMessage}
-          onTierSelect={onTierSelect}
-        />
-        <ResultDisplay
-          contactUrl={contactUrl}
-          data={calculationResult}
-          isSelectButtonLoading={isSelectButtonLoading}
-          lang={lang}
-          layoutType="mobile"
           minutesPerMessage={minutesPerMessage}
           onTierSelect={onTierSelect}
         />

@@ -21,7 +21,6 @@ export const StandbyDisplayContent = ({ lang }: StandbyDisplayContentProps): Rea
 };
 
 interface ResultDisplayProps {
-  layoutType: 'desktop' | 'mobile';
   data: CalculationResult;
   minutesPerMessage: number;
   isSelectButtonLoading: boolean;
@@ -31,7 +30,6 @@ interface ResultDisplayProps {
 }
 
 export const ResultDisplay = ({
-  layoutType,
   data,
   minutesPerMessage,
   isSelectButtonLoading,
@@ -40,17 +38,6 @@ export const ResultDisplay = ({
   onTierSelect
 }: ResultDisplayProps): ReactElement => {
   const translation = translations[lang];
-  const layoutConfigs = {
-    desktop: {
-      container: 'hidden md:flex md:items-center md:justify-center md:gap-6',
-      arrow: 'horizontal' as const
-    },
-    mobile: {
-      container: 'md:hidden space-y-4',
-      arrow: 'vertical' as const
-    }
-  };
-  const config = layoutConfigs[layoutType];
 
   const { monthlyMessages, recommendedTier, exceedsTopTier, savedHours } = data;
   const estimateAndMetrics = MonthlyEstimateAndMetrics(
@@ -72,9 +59,10 @@ export const ResultDisplay = ({
   );
 
   return (
-    <div className={config.container}>
+    <div className="flex flex-col items-center justify-center space-y-4 md:flex-row md:space-y-0 md:gap-6">
       {estimateAndMetrics}
-      {Arrow(config.arrow)}
+      <div className="md:hidden">{Arrow('vertical')}</div>
+      <div className="hidden md:block">{Arrow('horizontal')}</div>
       {actionButton}
     </div>
   );
