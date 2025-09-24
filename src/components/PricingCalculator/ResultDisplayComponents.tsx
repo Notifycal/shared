@@ -123,11 +123,7 @@ export const Action = ({
           </>
         )}
       </Button>
-      {type === 'contact' && (
-        <p className="text-xs text-gray-600 mt-2">
-          {translation.contactSubtext}
-        </p>
-      )}
+      {type === 'contact' && <p className="text-xs text-gray-600 mt-2">{translation.contactSubtext}</p>}
     </div>
   );
 };
