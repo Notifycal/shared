@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.14.0](https://github.com/Notifycal/shared/compare/v7.13.2...v7.14.0) (2025-09-24)
+
+
+### Features
+
+* confidence boost as a floating stamp. Enhance TierCard recommendation. Pricing calculator ([#351](https://github.com/Notifycal/shared/issues/351)) ([d215c86](https://github.com/Notifycal/shared/commit/d215c866697ab094a13c74f71089ad7172dc49e8))
+
 ## [7.13.2](https://github.com/Notifycal/shared/compare/v7.13.1...v7.13.2) (2025-09-22)
 
 
