@@ -1,4 +1,4 @@
-import { Card, Group } from '@mantine/core';
+import { Card } from '@mantine/core';
 import type { TierInfoWithIcon } from '@notifycal/shared/components';
 import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconCalculator } from '@tabler/icons-react';
@@ -82,10 +82,10 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
 
   return (
     <Card withBorder className="bg-white max-w-4xl mx-auto" padding="lg" radius="md" shadow="md">
-      <Group gap="xs" justify="center" mb="md">
-        <IconCalculator className="text-accent2-600 mb-2" size={30} />
-        <h4 className="font-semibold text-center">{translation.title}</h4>
-      </Group>
+      <div className="text-center mb-4 sm:flex sm:items-center sm:justify-center sm:gap-1">
+        <IconCalculator className="text-accent2-600 mx-auto mb-2 sm:mx-0 sm:mb-0" size={30} />
+        <h4 className="font-semibold">{translation.title}</h4>
+      </div>
 
       <Form
         avgTimeWithClient={avgTimeWithClient}

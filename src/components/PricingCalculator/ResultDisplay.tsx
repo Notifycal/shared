@@ -1,4 +1,3 @@
-import { Text } from '@mantine/core';
 import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconCalculator } from '@tabler/icons-react';
 import type { ReactElement } from 'react';
@@ -16,7 +15,7 @@ export const StandbyDisplayContent = ({ lang }: StandbyDisplayContentProps): Rea
   return (
     <div className="text-gray-500 py-2 text-center">
       <IconCalculator className="mx-auto mb-1 opacity-50" size={24} />
-      <Text size="xs">{translation.standbyMessage}</Text>
+      <p className="text-xs">{translation.standbyMessage}</p>
     </div>
   );
 };

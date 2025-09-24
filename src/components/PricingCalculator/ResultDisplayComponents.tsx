@@ -1,4 +1,4 @@
-import { Button, Text } from '@mantine/core';
+import { Button } from '@mantine/core';
 import type { TierInfoWithIcon } from '@notifycal/shared/components';
 import type { LanguageCode, TierId } from '@notifycal/shared/types';
 import { IconArrowDown, IconArrowRight, IconChartBar, IconClock } from '@tabler/icons-react';
@@ -124,9 +124,9 @@ export const Action = ({
         )}
       </Button>
       {type === 'contact' && (
-        <Text className="text-gray-600 mt-2" size="xs">
+        <p className="text-xs text-gray-600 mt-2">
           {translation.contactSubtext}
-        </Text>
+        </p>
       )}
     </div>
   );
