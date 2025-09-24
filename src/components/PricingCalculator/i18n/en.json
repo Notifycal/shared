@@ -1,0 +1,26 @@
+{
+  "title": "Pricing Calculator",
+  "employees": "Employees",
+  "timeWithClient": "Time with client",
+  "workingHours": "Working hours",
+  "workingDays": "Working days",
+  "calculate": "Calculate",
+  "standbyMessage": "Calculate to see your recommendation",
+  "monthlyEstimate": "appointments / month",
+  "monthlyEstimateSubtext": "Your monthly estimate",
+  "timesSaved": "{{messages}} messages × {{minutes}} minutes =",
+  "hoursSaved": "{{hours}} h saved",
+  "timesSavedSubtext": "Based on {{minutes}} minutes per manual message",
+  "contact": "Contact",
+  "contactSubtext": "Don't worry, get in touch with us and we'll find a solution",
+  "selectPlan": "Select Plan {{planName}}",
+  "selectPlanMobile": "Plan {{planName}}",
+  "showCalculator": "Need help choosing a plan?",
+  "showCalculatorSubtext": "Use our calculator to find the perfect plan",
+  "hideCalculator": "Hide",
+  "units": {
+    "min": "min",
+    "hour": "hour",
+    "hours": "hours"
+  }
+}

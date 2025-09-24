@@ -1,0 +1,26 @@
+{
+  "title": "Calculadora de plan",
+  "employees": "Empleados",
+  "timeWithClient": "Tiempo con cliente",
+  "workingHours": "Jornada",
+  "workingDays": "Días laborables",
+  "calculate": "Calcular",
+  "standbyMessage": "Calcula para ver tu recomendación",
+  "monthlyEstimate": "citas / mes",
+  "monthlyEstimateSubtext": "Tu estimación mensual",
+  "timesSaved": "{{messages}} mensajes × {{minutes}} minutos =",
+  "hoursSaved": "{{hours}} h ahorradas",
+  "timesSavedSubtext": "Basado en {{minutes}} minutos por mensaje manual",
+  "contact": "Contactar",
+  "contactSubtext": "No te preocupes, ponte en contacto con nosotros y encontraremos una solución",
+  "selectPlan": "Seleccionar Plan {{planName}}",
+  "selectPlanMobile": "Plan {{planName}}",
+  "showCalculator": "¿Necesitas ayuda para elegir plan?",
+  "showCalculatorSubtext": "Usa nuestra calculadora para encontrar el plan perfecto",
+  "hideCalculator": "Ocultar",
+  "units": {
+    "min": "min",
+    "hour": "hora",
+    "hours": "horas"
+  }
+}

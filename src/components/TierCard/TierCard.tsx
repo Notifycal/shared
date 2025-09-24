@@ -1,3 +1,5 @@
+import { ShieldCheckStamp } from '@components/ShieldCheckStamp/ShieldCheckStamp';
+import { useTierCardAnimation } from '@components/TierCard/useTierCardAnimation';
 import TierFeatures from '@components/TierFeatures/TierFeatures';
 import { Badge, Button, Card } from '@mantine/core';
 import { FeatureInfo } from '@pricing';
@@ -12,7 +14,8 @@ import esTranslations from './i18n/es.json' with { type: 'json' };
 export interface TierInfo extends Tier {
   id: TierId;
   displayName: string;
-  recommended?: boolean;
+  defaultRecommended?: boolean;
+  calculatedRecommended?: boolean;
   features: Array<FeatureInfo>;
 }
 
@@ -24,19 +27,29 @@ interface TierCardProps {
   isDisabled: boolean;
   onSelect: (tierId: TierId) => void;
   lang: LanguageCode;
+  animationTrigger: number;
 }
 
-const translations = {
+const translations: Record<LanguageCode, typeof esTranslations> = {
   en: enTranslations,
   es: esTranslations,
   ca: caTranslations
 };
 
-export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSelect, lang }) => {
+export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSelect, lang, animationTrigger }) => {
   const translation = translations[lang];
+  const hasRecommendation = tier.calculatedRecommended || tier.defaultRecommended || false;
+  const badgeText = tier.calculatedRecommended ? translation.calculatedRecommendedBadge : translation.popularBadge;
+
+  const { animationClasses } = useTierCardAnimation(
+    tier.calculatedRecommended || false,
+    animationTrigger,
+    hasRecommendation
+  );
+
   return (
     <div key={tier.displayName}>
-      {tier.recommended && (
+      {hasRecommendation && (
         <div className="relative sm:mx-5 lg:mx-15">
           <Badge
             fullWidth
@@ -46,7 +59,7 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
             size="lg"
             variant="filled"
           >
-            {translation.popularBadge}
+            {badgeText}
           </Badge>
         </div>
       )}
@@ -56,10 +69,11 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
         radius="md"
         shadow="md"
         className={clsx(
-          'transition-transform h-full flex flex-col justify-between shadow-lg font-bold',
-          tier.recommended
-            ? 'hover:scale-[1.07] bg-accent2-700 scale-105 text-white shadow-xl hover:shadow-2xl transition-all duration-300'
-            : 'hover:scale-[1.02] bg-white text-accent2-900'
+          'h-full flex flex-col justify-between shadow-lg font-bold',
+          hasRecommendation
+            ? 'hover:scale-[1.07] bg-accent2-700 text-white shadow-xl hover:shadow-2xl'
+            : 'hover:scale-[1.02] bg-white text-accent2-900',
+          animationClasses
         )}
       >
         <div className="space-y-2">
@@ -74,20 +88,21 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
           </div>
           <Button
             fullWidth
-            color={tier.recommended ? 'primary' : 'accent2'}
+            color={hasRecommendation ? 'primary' : 'accent2'}
             disabled={isDisabled}
             loading={isLoading}
             mt="sm"
-            variant={tier.recommended ? 'filled' : 'outline'}
+            variant={hasRecommendation ? 'filled' : 'outline'}
             onClick={() => {
               onSelect(tier.id);
             }}
           >
             {translation.selectButton}
           </Button>
-          <TierFeatures className="min-h-[8rem]" tier={tier} />
+          <TierFeatures className="min-h-[8rem] mb-4" tier={tier} />
         </div>
       </Card>
+      <ShieldCheckStamp text={translation.cancelAnytime} recommended={hasRecommendation || false} />
     </div>
   );
 };

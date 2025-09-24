@@ -20,7 +20,7 @@ export const TierFeatures: FC<TierFeatures> = ({ tier, className, icon: Icon = I
         const moreInfo = feature.moreInfo;
         return (
           <li key={index} className="flex items-start gap-2 mt-2">
-            <span className={clsx(tier.recommended ? '' : 'text-primary')}>
+            <span className={clsx(tier.defaultRecommended || tier.calculatedRecommended ? '' : 'text-primary')}>
               <Icon />
             </span>
             <span className="flex items-center gap-1">
