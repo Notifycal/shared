@@ -1,6 +1,7 @@
 import { Button, NumberInput, Select } from '@mantine/core';
 import type { LanguageCode } from '@notifycal/shared/types';
 import type { ReactElement } from 'react';
+import { useEffect, useRef } from 'react';
 import { getTimeOptions, getWorkingHoursOptions } from './calculator';
 import { translations } from './PricingCalculator';
 
@@ -14,7 +15,7 @@ interface FormProps {
   onAvgTimeWithClientChange: (value: string) => void;
   onWorkingHoursPerDayChange: (value: string) => void;
   onWorkingDaysPerMonthChange: (value: number) => void;
-  onCalculate: () => void;
+  onCalculate: (shouldClear?: boolean) => void;
 }
 
 export const Form = ({
@@ -34,6 +35,14 @@ export const Form = ({
   const workingHoursOptions = getWorkingHoursOptions(translation.units);
 
   const isFormValid = employees > 0 && workingDaysPerMonth > 0;
+  const wasValidRef = useRef(isFormValid);
+
+  useEffect(() => {
+    if (wasValidRef.current && !isFormValid) {
+      onCalculate(true);
+    }
+    wasValidRef.current = isFormValid;
+  }, [isFormValid, onCalculate]);
 
   return (
     <form className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -41,7 +50,7 @@ export const Form = ({
         className="w-full md:order-1"
         label={translation.employees}
         max={100}
-        min={1}
+        min={0}
         value={employees}
         onChange={(value) => {
           onEmployeesChange(Number(value) || 0);
@@ -69,7 +78,7 @@ export const Form = ({
         className="w-full md:order-5"
         label={translation.workingDays}
         max={31}
-        min={1}
+        min={0}
         value={workingDaysPerMonth}
         onChange={(value) => {
           onWorkingDaysPerMonthChange(Number(value) || 0);
@@ -82,7 +91,7 @@ export const Form = ({
           size="lg"
           variant="outline"
           disabled={!isFormValid}
-          onClick={onCalculate}
+          onClick={() => onCalculate()}
         >
           {translation.calculate}
         </Button>

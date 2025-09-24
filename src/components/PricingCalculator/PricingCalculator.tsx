@@ -48,7 +48,12 @@ export const PricingCalculator: FC<PricingCalculatorProps> = ({
   const [isExpanded, setIsExpanded] = useState<boolean>(collapsible ? defaultExpanded : true);
 
   const minutesPerMessage = 5;
-  const handleCalculate = (): void => {
+  const handleCalculate = (shouldClear?: boolean): void => {
+    if (shouldClear) {
+      setCalculationResult(undefined);
+      return;
+    }
+
     const result = calculateTierRecommendation({
       employees,
       avgTimeWithClient,
