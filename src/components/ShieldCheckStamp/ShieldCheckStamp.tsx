@@ -9,7 +9,7 @@ interface ShieldCheckStampProps {
 export const ShieldCheckStamp: FC<ShieldCheckStampProps> = ({ text, recommended }) => {
   return (
     <div className="relative">
-      <div className="absolute -right-2 -bottom-13 z-10 rotate-22">
+      <div className="absolute -right-2 -bottom-10 md:-bottom-13 z-10 rotate-22">
         <IconShieldCheck
           size={85}
           className={recommended ? 'text-primary-600' : 'text-primary-600'}
