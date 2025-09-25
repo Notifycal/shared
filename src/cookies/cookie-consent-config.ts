@@ -277,7 +277,7 @@ export function gtagConsentConfig(languageCode: string, updateConsent: () => voi
               },
               {
                 title: 'Further information',
-                description: `For any queries in relation to the policy on cookies and your choices, please refer to <a href="https://notifycal.com/privacy-policy">privacy policy</a>.`
+                description: `For any queries in relation to the policy on cookies and your choices, please refer to <a href="https://private.notifycal.com/#/privacy-policy">privacy policy</a>.`
               }
             ]
           }
@@ -407,7 +407,7 @@ export function gtagConsentConfig(languageCode: string, updateConsent: () => voi
               },
               {
                 title: 'Más información',
-                description: `Para cualquier consulta en relación con la política de cookies y tus opciones, por favor consulta la <a href="https://notifycal.com/privacy-policy">política de privacidad</a>.`
+                description: `Para cualquier consulta en relación con la política de cookies y tus opciones, por favor consulta la <a href="https://private.notifycal.com/#/privacy-policy">política de privacidad</a>.`
               }
             ]
           }
@@ -537,7 +537,7 @@ export function gtagConsentConfig(languageCode: string, updateConsent: () => voi
               },
               {
                 title: 'Més informació',
-                description: `Per a qualsevol consulta en relació amb la política de cookies i les vostres opcions, si us plau consulteu la <a href="https://notifycal.com/privacy-policy">política de privadesa</a>.`
+                description: `Per a qualsevol consulta en relació amb la política de cookies i les vostres opcions, si us plau consulteu la <a href="https://private.notifycal.com/#/privacy-policy">política de privadesa</a>.`
               }
             ]
           }
