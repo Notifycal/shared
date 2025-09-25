@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.14.1](https://github.com/Notifycal/shared/compare/v7.14.0...v7.14.1) (2025-09-25)
+
+
+### Bug Fixes
+
+* privacy policy link ([#360](https://github.com/Notifycal/shared/issues/360)) ([9da5774](https://github.com/Notifycal/shared/commit/9da5774112e6652b3e1031a6736af30aa37ba440))
+
 ## [7.14.0](https://github.com/Notifycal/shared/compare/v7.13.2...v7.14.0) (2025-09-24)
 
 
