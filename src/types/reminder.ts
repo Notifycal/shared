@@ -18,28 +18,47 @@ import type { Template, TemplateMap } from './template';
 // Spanish
 const formalEs01: Template = {
   id: 'formal-es-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Estimado/a cliente, tiene una cita en ${businessName} el ${formattedDate} a las ${formattedTime}, ubicado en ${businessAddress}. Si no puede asistir, por favor notifiquenos con antelacion.`;
+    const dateTimeStr = showTime
+      ? `el ${formattedDate} a las ${localDateTime.toFormat('HH:mm')}`
+      : `el ${formattedDate}`;
+    return `Estimado/a cliente, tiene una cita en ${businessName} ${dateTimeStr}, ubicado en ${businessAddress}. Si no puede asistir, por favor notifiquenos con antelacion.`;
   },
   language: 'es'
 };
 const neutralEs01: Template = {
   id: 'neutral-es-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Hola, recuerda tu cita en ${businessName} el ${formattedDate} a las ${formattedTime}, en ${businessAddress}. Avisanos si no puedes asistir.`;
+    const dateTimeStr = showTime
+      ? `el ${formattedDate} a las ${localDateTime.toFormat('HH:mm')}`
+      : `el ${formattedDate}`;
+    return `Hola, recuerda tu cita en ${businessName} ${dateTimeStr}, en ${businessAddress}. Avisanos si no puedes asistir.`;
   },
   language: 'es'
 };
 const informalEs01: Template = {
   id: 'informal-es-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `¡No olvides tu cita en ${businessName}! ${formattedDate} a las ${formattedTime} en ${businessAddress}. Si no puedes venir, avisanos.`;
+    const dateTimeStr = showTime ? `${formattedDate} a las ${localDateTime.toFormat('HH:mm')}` : formattedDate;
+    return `¡No olvides tu cita en ${businessName}! ${dateTimeStr} en ${businessAddress}. Si no puedes venir, avisanos.`;
   },
   language: 'es'
 };
@@ -47,28 +66,43 @@ const informalEs01: Template = {
 // English
 const formalEn01: Template = {
   id: 'formal-en-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Dear customer, you have an appointment at ${businessName} on ${formattedDate} at ${formattedTime}, located at ${businessAddress}. If you cannot attend, please notify us in advance.`;
+    const dateTimeStr = showTime ? `on ${formattedDate} at ${localDateTime.toFormat('HH:mm')}` : `on ${formattedDate}`;
+    return `Dear customer, you have an appointment at ${businessName} ${dateTimeStr}, located at ${businessAddress}. If you cannot attend, please notify us in advance.`;
   },
   language: 'en'
 };
 const neutralEn01: Template = {
   id: 'neutral-en-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Hello, remember your appointment at ${businessName} on ${formattedDate} at ${formattedTime}, at ${businessAddress}. Let us know if you can't make it.`;
+    const dateTimeStr = showTime ? `on ${formattedDate} at ${localDateTime.toFormat('HH:mm')}` : `on ${formattedDate}`;
+    return `Hello, remember your appointment at ${businessName} ${dateTimeStr}, at ${businessAddress}. Let us know if you can't make it.`;
   },
   language: 'en'
 };
 const informalEn01: Template = {
   id: 'informal-en-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Don't forget your appointment at ${businessName}! On ${formattedDate} at ${formattedTime} at ${businessAddress}. If you can't make it, let us know.`;
+    const dateTimeStr = showTime ? `${formattedDate} at ${localDateTime.toFormat('HH:mm')}` : formattedDate;
+    return `Don't forget your appointment at ${businessName}! On ${dateTimeStr} at ${businessAddress}. If you can't make it, let us know.`;
   },
   language: 'en'
 };
@@ -76,28 +110,47 @@ const informalEn01: Template = {
 // Catalan
 const formalCa01: Template = {
   id: 'formal-ca-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Benvolgut/da client/a, té una cita a ${businessName} el ${formattedDate} a les ${formattedTime}, situat a ${businessAddress}. Si no pot assistir, si us plau notifiqui'ns amb antelació.`;
+    const dateTimeStr = showTime
+      ? `el ${formattedDate} a les ${localDateTime.toFormat('HH:mm')}`
+      : `el ${formattedDate}`;
+    return `Benvolgut/da client/a, té una cita a ${businessName} ${dateTimeStr}, situat a ${businessAddress}. Si no pot assistir, si us plau notifiqui'ns amb antelació.`;
   },
   language: 'ca'
 };
 const neutralCa01: Template = {
   id: 'neutral-ca-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `Hola, recordi la seva cita a ${businessName} el ${formattedDate} a les ${formattedTime}, a ${businessAddress}. Avisi'ns si no pot venir.`;
+    const dateTimeStr = showTime
+      ? `el ${formattedDate} a les ${localDateTime.toFormat('HH:mm')}`
+      : `el ${formattedDate}`;
+    return `Hola, recordi la seva cita a ${businessName} ${dateTimeStr}, a ${businessAddress}. Avisi'ns si no pot venir.`;
   },
   language: 'ca'
 };
 const informalCa01: Template = {
   id: 'informal-ca-01',
-  interpolate: (businessName: BusinessName, businessAddress: BusinessAddress, localDateTime: DT) => {
+  interpolate: (
+    businessName: BusinessName,
+    businessAddress: BusinessAddress,
+    localDateTime: DT,
+    showTime: boolean = true
+  ) => {
     const formattedDate = localDateTime.toFormat('dd/MM/yyyy');
-    const formattedTime = localDateTime.toFormat('HH:mm');
-    return `No oblidis la teva cita a ${businessName}! El ${formattedDate} a les ${formattedTime} a ${businessAddress}. Si no pots venir, avisa'ns.`;
+    const dateTimeStr = showTime ? `${formattedDate} a les ${localDateTime.toFormat('HH:mm')}` : formattedDate;
+    return `No oblidis la teva cita a ${businessName}! El ${dateTimeStr} a ${businessAddress}. Si no pots venir, avisa'ns.`;
   },
   language: 'ca'
 };
