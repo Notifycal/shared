@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.15.0](https://github.com/Notifycal/shared/compare/v7.14.1...v7.15.0) (2025-10-08)
+
+
+### Features
+
+* update templates to not show time for all day event reminders ([#380](https://github.com/Notifycal/shared/issues/380)) ([d3c72d2](https://github.com/Notifycal/shared/commit/d3c72d2545a41013a3306fd8106949a6d1dd6e0b))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency zod to v4.1.12 ([#375](https://github.com/Notifycal/shared/issues/375)) ([27f98ca](https://github.com/Notifycal/shared/commit/27f98cac3bdaae589dd4440d7fc6df7a595ac0ad))
+
 ## [7.14.1](https://github.com/Notifycal/shared/compare/v7.14.0...v7.14.1) (2025-09-25)
 
 
