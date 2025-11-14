@@ -65,7 +65,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@eslint/compat": "^1.2.7",
+    "@eslint/compat": "^2.0.0",
     "@mantine/core": "^8.2.2",
     "@tabler/icons-react": "^3.29.0",
     "@types/luxon": "^3.4.2",
