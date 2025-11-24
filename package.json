@@ -93,7 +93,7 @@
     "tailwindcss": "^4.1.2",
     "typescript": "^5.7.3",
     "vanilla-cookieconsent": "^3.1.0",
-    "zod": "4.1.12"
+    "zod": "4.1.13"
   },
   "peerDependenciesMeta": {
     "@mantine/core": {
