@@ -1,5 +1,6 @@
 import type {
   customerPortalFlowTypeSchema,
+  freeTrialTierId,
   productRawSchema,
   tierDetailsRawSchema,
   tierMapSchema,
@@ -7,6 +8,7 @@ import type {
 } from '@schemas';
 import type z from 'zod';
 
+export type FreeTrialTierId = typeof freeTrialTierId;
 export type TierId = keyof z.infer<typeof tierMapSchema>;
 export type Tier = z.infer<typeof tierDetailsRawSchema>;
 export type TierMap = {

@@ -25,9 +25,10 @@ interface TierCardProps {
   tier: TierInfoWithIcon;
   isLoading: boolean;
   isDisabled: boolean;
-  onSelect: (tierId: TierId) => void;
+  onSelect: (tierId: TierId | 'good-trial') => void;
   lang: LanguageCode;
   animationTrigger: number;
+  showFreeTrial: boolean;
 }
 
 const translations: Record<LanguageCode, typeof esTranslations> = {
@@ -36,7 +37,19 @@ const translations: Record<LanguageCode, typeof esTranslations> = {
   ca: caTranslations
 };
 
-export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSelect, lang, animationTrigger }) => {
+const calculateOriginalPrice = (discountedPrice: number): number => {
+  return Math.round(discountedPrice * 1.5);
+};
+
+export const TierCard: FC<TierCardProps> = ({
+  tier,
+  isLoading,
+  isDisabled,
+  onSelect,
+  lang,
+  animationTrigger,
+  showFreeTrial
+}) => {
   const translation = translations[lang];
   const hasRecommendation = tier.calculatedRecommended || tier.defaultRecommended || false;
   const badgeText = tier.calculatedRecommended ? translation.calculatedRecommendedBadge : translation.popularBadge;
@@ -82,23 +95,58 @@ export const TierCard: FC<TierCardProps> = ({ tier, isLoading, isDisabled, onSel
             {translation.tierDescriptions[tier.id]}
           </div>
 
-          <div className="flex justify-start items-baseline gap-1">
+          <div className="flex justify-start items-baseline gap-2">
+            <div className={clsx('text-lg line-through', hasRecommendation ? 'opacity-70' : 'opacity-60')}>
+              {calculateOriginalPrice(tier.priceEur)}€
+            </div>
             <div className="text-4xl font-bold">{tier.priceEur}€</div>
             <div className="text-sm opacity-80">/{translation.month}</div>
           </div>
-          <Button
-            fullWidth
-            color={hasRecommendation ? 'primary' : 'accent2'}
-            disabled={isDisabled}
-            loading={isLoading}
-            mt="sm"
-            variant={hasRecommendation ? 'filled' : 'outline'}
-            onClick={() => {
-              onSelect(tier.id);
-            }}
-          >
-            {translation.selectButton}
-          </Button>
+          {showFreeTrial ? (
+            <div className="space-y-2 mt-sm">
+              <Button
+                fullWidth
+                color="accent2"
+                disabled={isDisabled}
+                size="md"
+                variant="outline"
+                onClick={() => {
+                  onSelect(tier.id);
+                }}
+                className="opacity-70 hover:opacity-100 transition-opacity"
+              >
+                {translation.selectButton}
+              </Button>
+              <Button
+                fullWidth
+                color="primary"
+                disabled={isDisabled}
+                loading={isLoading}
+                size="md"
+                variant="filled"
+                onClick={() => {
+                  onSelect((tier.id + '-trial') as TierId);
+                }}
+                className="hover:shadow-lg hover:scale-[1.02] transition-all"
+              >
+                {translation.freeTrialButton}
+              </Button>
+            </div>
+          ) : (
+            <Button
+              fullWidth
+              color={hasRecommendation ? 'primary' : 'accent2'}
+              disabled={isDisabled}
+              loading={isLoading}
+              mt="sm"
+              variant={hasRecommendation ? 'filled' : 'outline'}
+              onClick={() => {
+                onSelect(tier.id);
+              }}
+            >
+              {translation.selectButton}
+            </Button>
+          )}
           <TierFeatures className="min-h-[8rem] mb-4" tier={tier} />
         </div>
       </Card>

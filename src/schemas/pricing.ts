@@ -20,6 +20,7 @@ export const tierMapSchema = z.object({
   better: tierDetailsRawSchema,
   best: tierDetailsRawSchema
 });
+export const freeTrialTierId = 'good-trial' as const;
 export const tierIds = Object.keys(tierMapSchema.shape) as ReadonlyArray<keyof z.infer<typeof tierMapSchema>>;
 
 export const topupMapSchema = z.object({
