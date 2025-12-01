@@ -9,7 +9,7 @@ interface TierRecomendation {
 
 interface TierSelectionProps {
   orderedTierInfoWithIcons: Array<TierInfoWithIcon>;
-  onTierSelection: (tierId: TierId) => Promise<void>;
+  onTierSelection: (tierId: TierId | 'good-trial') => Promise<void>;
   isCardButtonDisabled: (tierId: TierId) => boolean;
   isCardButtonLoading: (tierId: TierId) => boolean;
   lang: LanguageCode;
@@ -48,6 +48,7 @@ export const TierSelection: FC<TierSelectionProps> = ({
             tier={enhancedTier}
             onSelect={onTierSelection}
             animationTrigger={recommendedTier?.trigger ?? 0}
+            showFreeTrial={tier.id === 'good'}
           />
         );
       })}
