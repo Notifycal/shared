@@ -1,5 +1,19 @@
 # Changelog
 
+## [7.16.0](https://github.com/Notifycal/shared/compare/v7.15.0...v7.16.0) (2025-12-01)
+
+
+### Features
+
+* free trial ([#440](https://github.com/Notifycal/shared/issues/440)) ([283dcc5](https://github.com/Notifycal/shared/commit/283dcc50d22ebbf3f36c86050b225240c940e85c))
+
+
+### Bug Fixes
+
+* **deps:** Update dependency radashi to v12.7.0 ([#391](https://github.com/Notifycal/shared/issues/391)) ([0737a86](https://github.com/Notifycal/shared/commit/0737a861fa33e056fb685bdacf4b11f34886d81d))
+* **deps:** Update dependency radashi to v12.7.1 ([#426](https://github.com/Notifycal/shared/issues/426)) ([9f88ac0](https://github.com/Notifycal/shared/commit/9f88ac013a4bd306906b37b69d9864a27ef068ce))
+* **deps:** Update dependency zod to v4.1.13 ([#429](https://github.com/Notifycal/shared/issues/429)) ([4d9edd5](https://github.com/Notifycal/shared/commit/4d9edd56b525349da1e7339397f51629fe795f79))
+
 ## [7.15.0](https://github.com/Notifycal/shared/compare/v7.14.1...v7.15.0) (2025-10-08)
 
 
