@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.16.1](https://github.com/Notifycal/shared/compare/v7.16.0...v7.16.1) (2025-12-02)
+
+
+### Bug Fixes
+
+* upgrade nodejs. Vulnerabilities ([#442](https://github.com/Notifycal/shared/issues/442)) ([9d388a4](https://github.com/Notifycal/shared/commit/9d388a4f586631d12a86f63cd423d6d82f689763))
+
 ## [7.16.0](https://github.com/Notifycal/shared/compare/v7.15.0...v7.16.0) (2025-12-01)
 
 
