@@ -108,6 +108,7 @@ export const TierCard: FC<TierCardProps> = ({
                 fullWidth
                 color="accent2"
                 disabled={isDisabled}
+                loading={isLoading}
                 size="md"
                 variant="outline"
                 onClick={() => {
