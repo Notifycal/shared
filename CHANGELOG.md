@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.16.2](https://github.com/Notifycal/shared/compare/v7.16.1...v7.16.2) (2025-12-05)
+
+
+### Bug Fixes
+
+* tier card button loading ([88775be](https://github.com/Notifycal/shared/commit/88775be2031e7f10d00ac39d4a3a13e094e1fdb3))
+
 ## [7.16.1](https://github.com/Notifycal/shared/compare/v7.16.0...v7.16.1) (2025-12-02)
 
 
