@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.16.3](https://github.com/Notifycal/shared/compare/v7.16.2...v7.16.3) (2026-03-09)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency radashi to v12.7.2 ([#505](https://github.com/Notifycal/shared/issues/505)) ([712b2e2](https://github.com/Notifycal/shared/commit/712b2e2a349649b08ebcf566a350861de920fae5))
+* **deps:** Update dependency zod to v4.2.0 ([#455](https://github.com/Notifycal/shared/issues/455)) ([499cccc](https://github.com/Notifycal/shared/commit/499cccc95ba8ba80866166f61d024aa3817de353))
+* **deps:** Update dependency zod to v4.2.1 ([#457](https://github.com/Notifycal/shared/issues/457)) ([7b2940a](https://github.com/Notifycal/shared/commit/7b2940a5f9231d76f14cf12c344f769bd2230aec))
+* **deps:** Update dependency zod to v4.3.3 ([#458](https://github.com/Notifycal/shared/issues/458)) ([c9b3d5f](https://github.com/Notifycal/shared/commit/c9b3d5f7932f64d971b2da8e6dc53139d362a2cb))
+* **deps:** Update dependency zod to v4.3.4 ([#459](https://github.com/Notifycal/shared/issues/459)) ([42767b4](https://github.com/Notifycal/shared/commit/42767b4a4a86a280b8b0c4c5971a7d6df1482554))
+* **deps:** Update dependency zod to v4.3.5 ([#461](https://github.com/Notifycal/shared/issues/461)) ([cb5504e](https://github.com/Notifycal/shared/commit/cb5504ed505f0647fa5a60c871622fa62b5b78bc))
+* **deps:** Update dependency zod to v4.3.6 ([#480](https://github.com/Notifycal/shared/issues/480)) ([069925a](https://github.com/Notifycal/shared/commit/069925af7771cc7f75ca40dc01a7f360c76c5da0))
+
 ## [7.16.2](https://github.com/Notifycal/shared/compare/v7.16.1...v7.16.2) (2025-12-05)
 
 
