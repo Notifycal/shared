@@ -63,7 +63,7 @@ jobs:
     steps:
       - id: release-please
         if: github.event_name != 'pull_request'
-        uses: googleapis/release-please-action@v4
+        uses: googleapis/release-please-action@v5
         with:
           release-type: node
 
